@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Antonio Spurs — 2026 NBA Offseason GM Guide (War Room Edition)</title>
+<style>
+  :root{
+    --heat-red:#2f353b;      /* Spurs gunmetal */
+    --heat-red2:#8a959c;
+    --heat-yellow:#c4ced4;   /* Spurs silver */
+    --heat-black:#0b0b0f;
+    --ink:#0d1017;
+    --panel:#12141c;
+    --panel2:#171a24;
+    --line:#262a37;
+    --text:#e7e9ee;
+    --muted:#9aa0ad;
+    --good:#33c27f;
+    --warn:#f5b13d;
+    --bad:#e0473e;
+    --accent:#37b6ff;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:linear-gradient(180deg,#0b0b0f,#0d1017 40%,#0b0b0f);
+    color:var(--text);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--accent);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{display:flex;max-width:1400px;margin:0 auto;gap:0}
+  /* NAV */
+  nav{
+    position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;
+    width:260px;flex:0 0 260px;background:#0a0c12;border-right:1px solid var(--line);padding:18px 12px 60px;
+  }
+  nav .brand{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  nav .brand .logo{width:34px;height:34px;border-radius:8px;background:
+    radial-gradient(circle at 30% 30%,var(--heat-yellow),var(--heat-red2) 60%,var(--heat-red));display:grid;place-items:center;font-weight:800;color:#0b0b0f;font-size:15px}
+  nav .brand b{font-size:14px;letter-spacing:.5px}
+  nav .brand span{display:block;font-size:11px;color:var(--muted)}
+  nav a.link{display:block;color:var(--muted);padding:6px 10px;border-radius:7px;font-size:13px;margin:1px 0}
+  nav a.link:hover{background:var(--panel2);color:var(--text);text-decoration:none}
+  nav a.link.mia{color:var(--heat-yellow);font-weight:600}
+  nav .cat{font-size:10px;letter-spacing:1.5px;color:#5f6675;text-transform:uppercase;margin:14px 8px 4px}
+  main{flex:1 1 auto;min-width:0;padding:0 34px 120px}
+  /* HERO */
+  header.hero{padding:46px 0 22px;border-bottom:1px solid var(--line);margin-bottom:8px}
+  .kicker{display:inline-block;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--heat-yellow);
+    border:1px solid var(--heat-red);padding:4px 10px;border-radius:20px;margin-bottom:14px}
+  h1.title{font-size:40px;line-height:1.05;margin:0 0 8px;letter-spacing:-.5px}
+  h1.title b{color:var(--heat-red2)}
+  .sub{color:var(--muted);max-width:820px}
+  .metarow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  .chip{background:var(--panel);border:1px solid var(--line);padding:7px 12px;border-radius:8px;font-size:12px}
+  .chip b{color:var(--heat-yellow)}
+  /* SECTIONS */
+  section{padding:34px 0;border-bottom:1px solid var(--line);scroll-margin-top:12px}
+  h2{font-size:26px;margin:0 0 4px;letter-spacing:-.3px}
+  h2 .num{color:var(--heat-red2);font-weight:800;margin-right:8px}
+  h3{font-size:18px;margin:26px 0 8px;color:#fff}
+  h4{font-size:14px;margin:18px 0 6px;color:var(--heat-yellow);text-transform:uppercase;letter-spacing:.5px}
+  p{margin:8px 0}
+  .lead{font-size:16px;color:#d7dae2}
+  .muted{color:var(--muted)}
+  .callout{background:linear-gradient(180deg,#15121a,#12141c);border:1px solid var(--heat-red);border-left:4px solid var(--heat-red2);
+    padding:14px 16px;border-radius:10px;margin:16px 0}
+  .note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);padding:12px 14px;border-radius:8px;margin:14px 0;font-size:13.5px}
+  .warnbox{background:#1a1410;border:1px solid #5a3d18;border-left:3px solid var(--warn);padding:12px 14px;border-radius:8px;margin:14px 0;font-size:13.5px}
+  /* TABLES */
+  table{border-collapse:collapse;width:100%;margin:14px 0;font-size:13px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line)}
+  th{background:#0e1017;color:var(--heat-yellow);font-size:11px;letter-spacing:.6px;text-transform:uppercase;position:sticky}
+  tr:last-child td{border-bottom:none}
+  tbody tr:hover{background:#161a24}
+  td.r,th.r{text-align:right;font-variant-numeric:tabular-nums}
+  .grade{font-weight:800;padding:2px 8px;border-radius:6px;font-size:12px;display:inline-block}
+  .A{background:#123a26;color:#5ff0a8} .Aplus{background:#0f4d2e;color:#7dffba}
+  .B{background:#123049;color:#7cc7ff} .C{background:#3a2f12;color:#f5cd6b} .D{background:#3a1717;color:#ff9a92} .F{background:#3a1010;color:#ff7a70}
+  .pill{display:inline-block;font-size:11px;padding:2px 8px;border-radius:12px;border:1px solid var(--line);color:var(--muted)}
+  .pill.hot{border-color:var(--heat-red);color:var(--heat-yellow)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:16px}
+  .card h4{margin-top:0}
+  .stat{font-variant-numeric:tabular-nums}
+  .bar{height:9px;background:#20242f;border-radius:6px;overflow:hidden;margin:5px 0}
+  .bar > i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,var(--heat-red2),var(--heat-yellow))}
+  ul.tight{margin:6px 0;padding-left:18px} ul.tight li{margin:3px 0}
+  .two-col-list{columns:2;column-gap:26px}
+  /* TOOL */
+  #tool .toolbox{background:linear-gradient(180deg,#12141c,#0f1118);border:1px solid var(--heat-red);border-radius:16px;padding:20px;margin-top:14px}
+  .toolgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  label.fld{display:block;font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin:12px 0 5px}
+  select,input[type=range]{width:100%}
+  select{background:#0e1017;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:9px 10px;font-size:14px}
+  input[type=range]{accent-color:var(--heat-red2)}
+  .readout{background:#0c0e14;border:1px solid var(--line);border-radius:12px;padding:16px;margin-top:8px}
+  .bigdollar{font-size:30px;font-weight:800;font-variant-numeric:tabular-nums}
+  .line{display:flex;justify-content:space-between;align-items:center;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13px}
+  .line:last-child{border-bottom:none}
+  .thr{display:flex;justify-content:space-between;font-size:12.5px;padding:6px 0;border-bottom:1px solid var(--line)}
+  .thr b{font-variant-numeric:tabular-nums}
+  .flag{font-size:12px;font-weight:700;padding:3px 9px;border-radius:6px}
+  .flag.ok{background:#123a26;color:#5ff0a8}
+  .flag.tax{background:#3a2f12;color:#f5cd6b}
+  .flag.a1{background:#3a2417;color:#ffab6b}
+  .flag.a2{background:#3a1717;color:#ff8a80}
+  .barwrap{margin:14px 0 4px}
+  .barwrap .track{position:relative;height:26px;background:#0c0e14;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .barwrap .fill{position:absolute;left:0;top:0;bottom:0;background:linear-gradient(90deg,#3a6df0,#8a959c);opacity:.85}
+  .barwrap .mk{position:absolute;top:0;bottom:0;width:2px;background:#fff6}
+  .barwrap .mk span{position:absolute;top:-16px;left:50%;transform:translateX(-50%);font-size:9px;color:var(--muted);white-space:nowrap}
+  .foot{color:#5f6675;font-size:12px;margin-top:30px;padding-top:16px;border-top:1px solid var(--line)}
+  /* ===== HEAT THEMING ===== */
+  .heatstripe{height:7px;background:linear-gradient(90deg,var(--heat-red) 0%,var(--heat-red2) 35%,#aab7bf 60%,var(--heat-yellow) 100%)}
+  nav .brand .logo{background:none!important;width:40px;height:40px;padding:0;display:block}
+  nav .brand .logo svg{display:block}
+  header.hero{position:relative;overflow:hidden}
+  header.hero::before{content:"";position:absolute;right:-140px;top:-100px;width:460px;height:460px;
+    background:radial-gradient(circle,rgba(196,206,212,.16),transparent 62%);pointer-events:none;z-index:0}
+  header.hero::after{content:"";position:absolute;left:-160px;bottom:-180px;width:420px;height:420px;
+    background:radial-gradient(circle,rgba(138,149,156,.10),transparent 60%);pointer-events:none;z-index:0}
+  header.hero > *{position:relative;z-index:1}
+  .herohead{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+  .herohead .wordmark{line-height:.92}
+  .herohead .wordmark .m{display:block;color:#fff;font-size:15px;font-weight:800;letter-spacing:3px}
+  .herohead .wordmark .h{display:block;color:var(--heat-red2);font-size:40px;font-weight:900;letter-spacing:3px;text-shadow:0 2px 18px rgba(196,206,212,.35)}
+  .flamediv{height:4px;border:0;background:linear-gradient(90deg,var(--heat-red),var(--heat-yellow) 55%,var(--heat-red2));border-radius:4px;margin:20px 0 0;opacity:.92}
+  h2 .num{background:linear-gradient(180deg,var(--heat-red2),var(--heat-red));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tmpl-btn{background:linear-gradient(180deg,#14171b,#101317);border:1px solid var(--heat-red);color:var(--heat-yellow);border-radius:9px;padding:8px 13px;font-size:12.5px;font-weight:800;cursor:pointer;margin:0 7px 7px 0;letter-spacing:.3px}
+  .tmpl-btn:hover{background:var(--heat-red2);color:#0b0b0f;border-color:var(--heat-yellow)}
+  .nationbar{margin-top:26px;padding:14px 18px;border-radius:12px;text-align:center;font-weight:900;letter-spacing:4px;color:var(--heat-yellow);
+    background:linear-gradient(180deg,#101418,#0b0d10);border:1px solid var(--heat-red)}
+  /* ===== HERO LOGO (static, top-right) ===== */
+  header.hero{padding-right:300px}
+  header.hero > img.herologo{position:absolute;right:18px;top:50%;transform:translateY(-50%);width:250px;height:auto;z-index:1;
+    filter:drop-shadow(0 4px 14px rgba(0,0,0,.55)) drop-shadow(0 0 26px rgba(196,206,212,.35))}
+  @media(max-width:1100px){
+    header.hero{padding-right:0}
+    header.hero > img.herologo{position:static;transform:none;width:170px;display:block;margin:0 0 14px}
+  }
+  .navlogo{width:40px;height:40px;position:relative;display:grid;place-items:center}
+  .navlogo img{width:40px;height:40px;object-fit:contain;filter:drop-shadow(0 0 5px rgba(196,206,212,.6))}
+  .navlogo .nf{font-size:22px;filter:drop-shadow(0 0 6px #c8102e)}
+  /* ===== NEWSWIRE HUB ===== */
+  .wireGrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .wireCard{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px}
+  .wireCard h4{margin:0 0 8px}
+  .wireCard a{display:inline-flex;align-items:center;gap:6px;background:#0e1017;border:1px solid var(--line);border-radius:8px;
+    padding:6px 10px;margin:3px 5px 3px 0;font-size:12.5px;color:var(--text)}
+  .wireCard a:hover{border-color:var(--heat-red);color:var(--heat-yellow);text-decoration:none}
+  .wireCard a .dot{width:7px;height:7px;border-radius:50%;background:var(--heat-red2)}
+  .feed{border-left:2px solid var(--heat-red);margin:8px 0;padding-left:14px}
+  .feed .item{position:relative;padding:9px 0;border-bottom:1px dashed var(--line)}
+  .feed .item:last-child{border-bottom:none}
+  .feed .item .d{font-size:11px;color:var(--heat-yellow);letter-spacing:.5px;text-transform:uppercase}
+  .feed .item .h{font-weight:600;color:#fff}
+  .feed .item .s{font-size:12px}
+  .breaking{display:inline-block;background:var(--heat-red2);color:#0b0b0f;font-size:10px;font-weight:800;letter-spacing:1px;
+    padding:2px 7px;border-radius:5px;margin-right:6px;text-transform:uppercase}
+  @media(max-width:1000px){.wireGrid{grid-template-columns:1fr}}
+  .toc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px 24px;margin-top:10px}
+  .toc-grid a{font-size:13px;padding:3px 0;display:block}
+  details{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:4px 14px;margin:10px 0}
+  details summary{cursor:pointer;padding:10px 0;font-weight:600;color:#fff}
+  details[open] summary{border-bottom:1px solid var(--line);margin-bottom:8px}
+  .teamhdr{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+  .teamhdr .rec{color:var(--muted);font-size:13px}
+  .scout{font-size:13.5px}
+  @media(max-width:1000px){
+    nav{display:none}
+    main{padding:0 18px 90px}
+    .toolgrid,.grid2,.grid3,.toc-grid,.two-col-list{grid-template-columns:1fr;columns:1}
+    h1.title{font-size:30px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ============ NAV ============ -->
+<nav>
+  <div class="brand">
+    <div class="logo">
+      <div class="navlogo">
+        <img src="san-antonio-spurs-logo/san-antonio-spurs-logo-transparent.png" alt="San Antonio Spurs" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+        <span class="nf" style="display:none">🔥</span>
+      </div>
+    </div>
+    <div><b>SPURS WAR ROOM</b><span>2026 Offseason GM Guide</span></div>
+  </div>
+  <a class="link" href="Heat_GM_Guide_2026.html" style="color:#f9a01b;font-weight:700;border:1px solid #5a2430;border-radius:8px;margin-bottom:4px">&#8644; Heat War Room</a>
+  <a class="link" href="Bulls_GM_Guide_2026.html" style="color:#ce1141;font-weight:700;border:1px solid #4a1620;border-radius:8px;margin-bottom:6px">&#8644; Bulls War Room</a>
+  <a class="link" href="#newswire">Newswire Hub</a>
+  <a class="link" href="#tool">Salary Cap Machine</a>
+  <a class="link" href="#trademachine">Trade Machine</a>
+  <div class="cat">Front Office</div>
+  <a class="link" href="#exec">Executive Summary</a>
+  <a class="link" href="#league">League Overview</a>
+  <a class="link" href="#timeline">Timeline</a>
+  <div class="cat">Transactions</div>
+  <a class="link" href="#draft">Draft Recap</a>
+  <a class="link" href="#trades">Trade Database</a>
+  <a class="link" href="#fa">Free Agency</a>
+  <a class="link" href="#options">Options / QOs / Waivers</a>
+  <div class="cat">San Antonio — Priority</div>
+  <a class="link mia" href="#war">Spurs War Room</a>
+  <a class="link mia" href="#lebron">LeBron Suitor Ranking</a>
+  <a class="link mia" href="#shooting">Shot Creation Report</a>
+  <a class="link mia" href="#creative">Creative Trades</a>
+  <a class="link mia" href="#bigboard">Front Office Big Board</a>
+  <a class="link mia" href="#dreamboard">Dream Board</a>
+  <a class="link mia" href="#blueprint">Championship Blueprint</a>
+  <div class="cat">League</div>
+  <a class="link" href="#teams">30-Team Reports</a>
+  <a class="link" href="#power">Power Rankings</a>
+  <a class="link" href="#contracts">Best/Worst Contracts</a>
+  <a class="link" href="#predictions">Predictions & Awards</a>
+  <div class="cat">Meta</div>
+  <a class="link" href="#changelog">Changelog</a>
+  <a class="link" href="#sources">Sources</a>
+</nav>
+
+<!-- ============ MAIN ============ -->
+<main>
+
+<div class="heatstripe"></div>
+<header class="hero">
+  <img class="herologo" src="" alt="San Antonio Spurs">
+  <div class="herohead">
+    <div class="wordmark"><span class="m">SAN ANTONIO</span><span class="h">SPURS</span></div>
+  </div>
+  <span class="kicker">Internal Front-Office Report · San Antonio Spurs · Confidential</span>
+  <h1 class="title">The <b>Wemby Window</b> Opens:<br>2026 Offseason GM Guide</h1>
+  <p class="sub lead">A living strategic document covering the entire 2026 NBA offseason through July 1, 2026 — every trade, signing, option, and draft pick — built around one question: <b>after winning the West and losing the Finals in five, how do the Spurs buy the one thing they were missing — Finals-level shot creation — without breaking the Wembanyama timeline?</b></p>
+  <div class="metarow">
+    <div class="chip">Report date: <b>July 1, 2026</b></div>
+    <div class="chip">Version <b>1.1 · Spurs Edition</b></div>
+    <div class="chip">2026-27 Cap: <b>$164.96M</b></div>
+    <div class="chip">1st Apron: <b>$209.02M</b></div>
+    <div class="chip">2nd Apron: <b>$221.69M</b></div>
+    <div class="chip">Spurs status: <b>Not hard-capped · full toolbox</b></div>
+  </div>
+  <div class="note" style="margin-top:20px">
+    <b>How to use this document.</b> It is a <b>living guide</b>. Jump to the <a href="#tool">Salary Cap Machine</a> to drop any free agent or trade target onto any team and instantly see the effect on cap, tax, and both aprons. Say <b>“Update the Guide”</b> at any time and every affected section — depth charts, cap sheets, championship odds, big board — will be re-researched and revised, followed by a changelog. Figures verified against multiple public sources (ESPN, NBA.com, Spotrac, Hot Hot Hoops, Yahoo, B/R) as of the report date; forward-looking projections are explicitly labeled.
+  </div>
+  <hr class="flamediv">
+  <div class="nationbar">GO SPURS GO · POUND THE ROCK · WEST CHAMPS · UNFINISHED BUSINESS</div>
+</header>
+
+<!-- ============ INTERACTIVE TOOL ============ -->
+<section id="tool">
+  <h2>Salary Cap Machine <span class="pill hot">v2 · All 30 teams</span></h2>
+  <p class="muted">Place any player on any team and watch the money move. Pick a destination and a target, choose how you'd acquire him, and drag the salary slider — the machine recalculates total payroll, the distance to every line, an <b>estimated luxury-tax bill</b>, and a live list of <b>exactly which roster tools that team loses</b> at its new spending tier. Committed payrolls are projected 2026-27 figures; confirm against Spotrac before any real transaction.</p>
+
+  <div class="toolbox">
+    <div class="toolgrid">
+      <div>
+        <label class="fld" for="teamSel">Destination team</label>
+        <select id="teamSel"></select>
+        <div class="muted" id="teamMeta" style="font-size:12px;margin-top:4px"></div>
+
+        <label class="fld" for="playerSel">Player to add</label>
+        <select id="playerSel"></select>
+
+        <label class="fld" for="salRange">Incoming first-year salary: <b id="salLabel" style="color:var(--heat-yellow)"></b></label>
+        <input id="salRange" type="range" min="1.3" max="65" step="0.1" value="20">
+
+        <label class="fld" for="method">Acquisition method</label>
+        <select id="method">
+          <option value="cap">Cap space / outright signing</option>
+          <option value="bird">Bird rights (re-sign own FA)</option>
+          <option value="mle">Non-taxpayer MLE (~$14.1M) — hard-caps @ 1st apron</option>
+          <option value="taxmle">Taxpayer MLE (~$5.7M)</option>
+          <option value="bae">Bi-Annual Exception (~$5.2M) — hard-caps @ 1st apron</option>
+          <option value="min">Veteran minimum (~$2.3M)</option>
+          <option value="snt">Sign-and-trade — hard-caps @ 1st apron</option>
+          <option value="trade">Trade (matching salary goes out)</option>
+        </select>
+
+        <div class="note" id="methodNote" style="margin-top:14px"></div>
+      </div>
+
+      <div>
+        <div class="readout">
+          <div class="muted" style="font-size:12px;letter-spacing:1px;text-transform:uppercase" id="roTeam">San Antonio Spurs</div>
+          <div class="bigdollar" id="roTotal">$0.0M</div>
+          <div class="muted" style="font-size:12px" id="roSub">Projected total team salary after move</div>
+
+          <div class="barwrap" style="margin-top:26px">
+            <div class="track">
+              <div class="fill" id="barFill" style="width:0%"></div>
+              <div class="mk" id="mkCap"><span>Cap</span></div>
+              <div class="mk" id="mkTax"><span>Tax</span></div>
+              <div class="mk" id="mkA1"><span>1st Apron</span></div>
+              <div class="mk" id="mkA2"><span>2nd Apron</span></div>
+            </div>
+          </div>
+
+          <div style="margin-top:20px" id="flags"></div>
+
+          <div class="line" style="margin-top:10px"><span>Distance to luxury tax</span><b id="dTax">—</b></div>
+          <div class="line"><span>Distance to 1st apron</span><b id="dA1">—</b></div>
+          <div class="line"><span>Distance to 2nd apron</span><b id="dA2">—</b></div>
+          <div class="line"><span>Estimated luxury-tax bill</span><b id="taxBill" style="color:var(--heat-yellow)">—</b></div>
+
+          <div id="verdict" class="scout" style="margin-top:12px;font-size:13.5px"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- consequence panel -->
+    <div style="margin-top:18px">
+      <h4 style="margin:6px 0">What this spending tier means for <span id="consTeam" style="color:#fff">San Antonio</span></h4>
+      <div id="consequences" class="scout"></div>
+    </div>
+  </div>
+
+  <!-- static reference: the apron ladder -->
+  <h3>The apron ladder — what each line actually does</h3>
+  <div class="grid3">
+    <div class="card">
+      <h4 style="color:#f5cd6b">Luxury Tax · $200.43M</h4>
+      <p class="scout">A <b>dollar penalty</b>, not a hard restriction. Teams pay an escalating tax on every dollar over the line ($1.50 → $1.75 → $2.50 → $3.25 …). <b>Repeater</b> teams (taxed in 3 of the last 4 years) pay a punitive surcharge on top. You can still sign, trade, and use every exception.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#ffab6b">First Apron · $209.02M</h4>
+      <p class="scout">The first real handcuff. A team over it <b>cannot</b>: use the full non-taxpayer MLE (drops to the ~$5.7M taxpayer MLE), use the Bi-Annual Exception, acquire players via sign-and-trade, sign a buyout player who earned above the NT-MLE, or take back more salary than it sends in a trade. Using the NT-MLE, BAE, or a sign-and-trade <b>hard-caps</b> you here for the whole season.</p>
+    </div>
+    <div class="card">
+      <h4 style="color:#ff8a80">Second Apron · $221.69M</h4>
+      <p class="scout">The nuclear tier. Everything above <b>plus</b>: no MLE at all, cannot aggregate two+ salaries in a trade, cannot send cash in trades, cannot trade a first-round pick seven years out (and it gets frozen/moved to the back of round one). This is designed to force even the richest owners to break up rosters.</p>
+    </div>
+  </div>
+  <p class="muted" style="font-size:12px;margin-top:10px">Planning aid, not the league's official calculator. Trade mode applies simplified salary-matching (outgoing salary offsets most of the incoming figure); real matching bands and pick/aggregation rules require a capologist's review.</p>
+</section>
+
+<!-- ============ TRADE MACHINE ============ -->
+<section id="trademachine">
+  <h2>Trade Machine <span class="pill hot">v2 · 2 &amp; 3-team</span></h2>
+  <p class="muted">Build a two- OR three-team trade and test whether it's legal. For each team, add the salary it <b>sends out</b> (quick-pick a team's notable contracts or type a custom figure) and set how much it <b>takes back</b>. The machine checks per-team salary-matching, apron restrictions (100% take-back over the first apron, no aggregation over the second), hard caps, and whether the whole deal <b>balances</b> — then shows every team's post-trade payroll and apron tier.</p>
+
+  <div style="margin:6px 0 14px">
+    <label class="fld" style="display:inline;margin-right:8px">Teams in deal:</label>
+    <label style="margin-right:14px"><input type="radio" name="tmMode" value="2" checked> 2 teams</label>
+    <label><input type="radio" name="tmMode" value="3"> 3 teams</label>
+  </div>
+
+  <div style="margin:0 0 14px">
+    <span class="fld" style="display:inline;margin-right:6px">Dream templates:</span>
+    <button class="tmpl-btn" data-tpl="simons">Simons → SAS (2-team)</button>
+    <button class="tmpl-btn" data-tpl="mpj">Markkanen → SAS (2-team)</button>
+    <button class="tmpl-btn" data-tpl="brown">Jaylen Brown → SAS (3-team)</button>
+  </div>
+
+  <div class="toolbox">
+    <div class="grid3" id="tmTeamGrid"><!-- team cards injected --></div>
+
+    <div class="readout" style="margin-top:16px">
+      <div id="tmVerdict" style="font-size:17px;font-weight:800;margin-bottom:6px">Add salary to evaluate…</div>
+      <div class="line"><span>Total sent (all teams)</span><b id="tmSumOut">$0.0M</b></div>
+      <div class="line"><span>Total taken back (all teams)</span><b id="tmSumIn">$0.0M</b></div>
+      <div class="line"><span>Deal balance</span><b id="tmBalance">—</b></div>
+      <div id="tmResults" style="margin-top:12px"></div>
+      <div id="tmNotes" class="scout" style="margin-top:12px;font-size:13px"></div>
+      <button id="tmReset" class="tmbtn" style="margin-top:12px">Reset trade</button>
+    </div>
+  </div>
+  <p class="muted" style="font-size:12px;margin-top:10px">Simplified matching: under the first apron a team may take back up to ~200%+$0.25M of what it sends; over the first apron it's capped at ~100%+$0.25M; over the second apron it's 100% and it cannot aggregate multiple outgoing salaries into one incoming player. In a valid trade, total taken back must equal total sent (within rounding). Draft picks/cash aren't modeled — add them around a balanced core. Confirm with a capologist before any real deal.</p>
+</section>
+<style>
+.tmbtn{background:var(--heat-red2);color:#fff;border:none;border-radius:8px;padding:9px 12px;font-size:13px;font-weight:600;cursor:pointer}
+.tmbtn:hover{background:var(--heat-red)}
+.tmchip{display:inline-flex;align-items:center;gap:6px;background:#0e1017;border:1px solid var(--line);border-radius:14px;padding:4px 10px;font-size:12px;margin:3px 4px 3px 0}
+.tmchip button{background:none;border:none;color:var(--bad);cursor:pointer;font-size:14px;line-height:1;padding:0}
+.tmnum{background:#0e1017;color:var(--text);border:1px solid var(--line);border-radius:8px;padding:9px 10px;width:100%}
+.tmnum:disabled{opacity:.55}
+.tmcard-res{background:#0c0e14;border:1px solid var(--line);border-radius:10px;padding:12px;margin:6px 0}
+</style>
+
+<!-- ============ NEWSWIRE HUB ============ -->
+<section id="newswire">
+  <h2>Newswire Hub <span class="pill hot">Your offseason command center</span></h2>
+  <p class="lead">One place to find anything and everything about the 2026 offseason — every insider, every tracker, every cap sheet, one click away — plus a running feed of reports I've already verified.</p>
+  <div class="note"><b>How this works:</b> a saved document can't stream live tweets on its own, so the launchpad below opens the <b>real, live</b> sources (Shams, Windhorst, Haynes, ESPN, NBA.com, Spotrac) in a new tab — always current. The <b>Latest Verified Reports</b> feed underneath is maintained by me: say <b>“Update the Guide”</b> and I re-scan every source and refresh it, or ask me to set a <b>daily auto-refresh</b> so it updates itself each morning.</p></div>
+
+  <h3>Live launchpad</h3>
+  <div class="wireGrid">
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Insiders on X (live)</h4>
+      <a href="https://x.com/ShamsCharania" target="_blank"><span class="dot"></span>Shams Charania</a>
+      <a href="https://x.com/ChrisBHaynes" target="_blank"><span class="dot"></span>Chris Haynes</a>
+      <a href="https://x.com/WindhorstESPN" target="_blank"><span class="dot"></span>Brian Windhorst</a>
+      <a href="https://x.com/TheSteinLine" target="_blank"><span class="dot"></span>Marc Stein</a>
+      <a href="https://x.com/JakeLFischer" target="_blank"><span class="dot"></span>Jake Fischer</a>
+      <a href="https://x.com/HoopsRumors" target="_blank"><span class="dot"></span>Hoops Rumors</a>
+      <a href="https://x.com/Underdog__NBA" target="_blank"><span class="dot"></span>Underdog NBA</a>
+    </div>
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Trade &amp; FA trackers (live)</h4>
+      <a href="https://www.espn.com/nba/story/_/id/48957844/" target="_blank"><span class="dot"></span>ESPN Trade Tracker</a>
+      <a href="https://www.nba.com/news/2026-offseason-trade-tracker" target="_blank"><span class="dot"></span>NBA.com Tracker</a>
+      <a href="https://www.hoopsrumors.com/" target="_blank"><span class="dot"></span>Hoops Rumors</a>
+      <a href="https://sports.yahoo.com/nba/" target="_blank"><span class="dot"></span>Yahoo NBA</a>
+      <a href="https://www.nbcsports.com/nba" target="_blank"><span class="dot"></span>NBC Sports Live</a>
+      <a href="https://basketball.realgm.com/wiretap" target="_blank"><span class="dot"></span>RealGM Wiretap</a>
+    </div>
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Cap &amp; contracts</h4>
+      <a href="https://www.spotrac.com/nba/" target="_blank"><span class="dot"></span>Spotrac</a>
+      <a href="https://www.basketball-reference.com/contracts/" target="_blank"><span class="dot"></span>Basketball-Reference</a>
+      <a href="https://www.spotrac.com/nba/cap/" target="_blank"><span class="dot"></span>Team Cap Tracker</a>
+      <a href="https://fanspo.com/nba" target="_blank"><span class="dot"></span>Fanspo (trade sim)</a>
+      <a href="https://sportsbusinessclassroom.com/nba-2026-27-apron-tracker/" target="_blank"><span class="dot"></span>Apron Tracker</a>
+    </div>
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Spurs beat</h4>
+      <a href="https://www.poundingtherock.com/" target="_blank"><span class="dot"></span>Pounding the Rock</a>
+      <a href="https://www.si.com/nba/spurs" target="_blank"><span class="dot"></span>SI / OnSI Spurs</a>
+      <a href="https://clutchpoints.com/nba/san-antonio-spurs" target="_blank"><span class="dot"></span>ClutchPoints Spurs</a>
+      <a href="https://www.expressnews.com/sports/spurs/" target="_blank"><span class="dot"></span>Express-News</a>
+      <a href="https://airalamo.com/" target="_blank"><span class="dot"></span>Air Alamo</a>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">Latest Verified Reports <span class="muted" style="font-size:12px">— last refreshed Jul 1, 2026 (late night)</span></h3>
+  <div class="feed">
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">Kuminga U-turn: after Atlanta declined his $24.3M team option, the Hawks re-signed him at $24.3M. Also: Kelly Oubre Jr. → Pacers (2yr/~$17M), Julian Champagnie re-signs SAS (3/$45M), Sandro Mamukelashvili → Lakers (4/$52M).</div><div class="s muted"><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>CBS/Yahoo</div><div class="h">Mitchell Robinson's Boston deal lands at 3yr/$47.4M. RFA Jalen Duren meets the Lakers again Wednesday; Detroit intends to keep him and Sacramento is lurking.</div><div class="s muted"><a href="https://www.cbssports.com/nba/news/nba-free-agency-2026-live-updates-trade-rumors-news-june-30/live/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Yahoo</div><div class="h">Draymond Green's opt-out (walking away from a guaranteed $27.7M) was engineered to open the Warriors' $15.1M MLE for a LeBron run — GSW now the clear market leader.</div><div class="s muted"><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">Day-1 signing flurry: Austin Reaves re-signs LAL (4yr/$185M), Coby White re-signs CHA (3/$74M), Al Horford declines $6M option &amp; returns to GSW (2/$14M), Mark Williams → Suns (3/$38M), Bogdan Bogdanović → Rockets (1yr).</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">More Day-1 deals: Tobias Harris → Spurs (2/$31M), Jaxson Hayes → Jazz (2/$12M), Jonathan Isaac re-signs ORL (1/$8M), Precious Achiuwa re-signs SAC (2/$11.5M), Mitchell Robinson → Celtics.</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Yahoo/HR</div><div class="h">James Harden declines his option and is negotiating with Cleveland — the Cavs' answer to their half-court creation gap.</div><div class="s muted"><a href="https://sports.yahoo.com/nba/live/nba-free-agency-2026-james-harden-declines-option-while-negotiating-with-cavs-lebron-james-lakers-decision-looms-182955882.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">Watch</span>ESPN</div><div class="h">LeBron James will not return to the Lakers; UFA weighing Golden State (can offer the $15.1M MLE), Cleveland (vet-min money only without a S&amp;T) &amp; San Antonio — 76ers and Magic have also registered interest. Cannot sign until July 6.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49226472/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · Chris Haynes</div><div class="h">Heat sign Tim Hardaway Jr. (1yr/$6.5M) and re-sign Simone Fontecchio — adding bench shooting around Giannis.</div><div class="s muted"><a href="https://clutchpoints.com/nba/miami-heat/heat-news-tim-hardaway-jr-joins-giannis-antetokounmpo-in-miami" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · ESPN</div><div class="h">Andrew Wiggins opts in ($30.2M) and signs an opt-in-and-extend with Miami (3yr/$64M).</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49216841/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · Multiple</div><div class="h">Lakers land Quentin Grimes (4yr/$60M) and Collin Sexton (2yr/$19M); re-sign Austin Reaves (4/max).</div><div class="s muted"><a href="https://sports.yahoo.com/nba/live/nba-free-agency-news-trade-rumors-contracts-signings-live-updates-lebron-james-kawhi-leonard-jaylen-brown-144958712.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · NBC/ESPN</div><div class="h">Grizzlies trade Ja Morant to Portland for Jerami Grant &amp; Kris Murray.</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 29 · NBA.com</div><div class="h">Raptors acquire Kawhi Leonard from the Clippers for Brandon Ingram, Gradey Dick &amp; picks.</div><div class="s muted"><a href="https://www.nba.com/news/raptors-clippers-kawhi-leonard-trade" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 24 · ESPN</div><div class="h"><span class="breaking">Blockbuster</span>Bucks trade Giannis Antetokounmpo &amp; Bobby Portis to the Heat; Miami hard-capped at the first apron.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49149967/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 24 · ESPN</div><div class="h">Hornets trade LaMelo Ball &amp; Josh Green to Minnesota for Naz Reid, a 2033 first, three swaps and three seconds.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/48957844/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · Hoops Rumors</div><div class="h">RFA holding pattern breaks: Josh Giddey re-signs with Chicago; Jonathan Kuminga hits UFA after Atlanta declines his $24.3M option.</div><div class="s muted"><a href="https://www.hoopsrumors.com/2026/07/free-agent-rumors-lebron-wolves-grimes-s-jones-bulls.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun · League</div><div class="h">2026-27 cap set: $164.96M cap · $200.43M tax · $209.02M first apron · $221.69M second apron.</div><div class="s muted"><a href="https://hoopswire.com/nba-officially-sets-salary-cap-tax-aprons-for-2026-27-season/" target="_blank">Source ↗</a></div></div>
+  </div>
+  <p class="muted" style="font-size:12px">Feed maintained from verified reporting. For breaking, unconfirmed items in real time, use the live launchpad above — then tell me “Update the Guide” to fold anything new into this feed and the rest of the document.</p>
+</section>
+
+<!-- ============ EXECUTIVE SUMMARY ============ -->
+<section id="exec">
+  <h2><span class="num">01</span>Executive Summary</h2>
+  <p class="lead">San Antonio's 2025-26 season ended one series short: the Spurs won the West — beating 62-win Oklahoma City 111–103 in a Game 7 for the franchise's first Finals since 2014 — and then ran out of halfcourt offense against New York, losing the Finals in five. The diagnosis is unusually clean for a Finals team: <b>the roster is young, deep, defensively elite, and one proven shot-creator short.</b> This guide is the plan to buy that last piece without breaking the Wembanyama timeline.</p>
+
+  <div class="grid3" style="margin-top:8px">
+    <div class="card"><h4>The Headline</h4><p class="scout">Victor Wembanyama is the best defensive player alive and the franchise's everything; he becomes eligible for a projected <b>5yr/$251M rookie-max extension</b> that would start in 2027-28. De'Aaron Fox ($49.5M) gives the Spurs a downhill engine; Castle, Harper and Bryant give them the league's best young guard depth.</p></div>
+    <div class="card"><h4>The Work So Far</h4><p class="scout">Early moves target the Finals gap at the margins: <b>Tobias Harris</b> (2yr/$31M) adds veteran forward shot-making, <b>Julian Champagnie</b> re-signed (3yr/$45M), and the draft added Jayden Quaintance (No. 20), Tarris Reed Jr. (No. 26), Ja'Kobi Gillespie (No. 42) and Maliq Brown (No. 44).</p></div>
+    <div class="card"><h4>The Wildcard</h4><p class="scout"><b>LeBron James.</b> San Antonio is the one suitor that can engineer real money for him rather than a minimum — and he is precisely the Finals-level creator and closer the Knicks series exposed the need for. The <a href="#lebron">suitor ranking</a> has GSW ahead, but the Spurs' pitch is the strongest basketball case.</p></div>
+  </div>
+
+  <h3>Front-office verdict</h3>
+  <p>Unlike almost every other contender, San Antonio is <b>not hard-capped and not apron-squeezed</b> — roughly $188M committed (projected) against a $200.43M tax line, with the full mid-level available and movable mid-size salaries (Keldon Johnson $17.5M expiring, Luke Kornet ~$10.3M) as clean trade ballast. The asset chest (own picks plus a strong swap/second stock) remains among the league's best. Grade for the offseason to date: <span class="grade A">A-</span> — smart marginal adds, with the big swing still to come.</p>
+
+  <div class="callout"><b>Three priorities from today to opening night:</b> (1) Land a Finals-level creator — LeBron with engineered room, or Simons/Markkanen by trade. (2) Keep the defensive identity intact — don't overpay for offense with Wemby's supporting shell. (3) Re-sign the useful vets (Olynyk, Barnes) on minimums and preserve July flexibility for the swing.</div>
+</section>
+
+<!-- ============ LEAGUE OVERVIEW ============ -->
+<section id="league">
+  <h2><span class="num">02</span>League Overview</h2>
+  <p>The 2026-27 salary environment is the tightest in NBA history. The second apron's punitive machinery — frozen draft picks, no aggregation, no cash in trades, a hard cap — has pushed nearly every contender toward youth and internal development. Cap space is scarce league-wide — the RFA class resolved fast and cheap (Giddey re-signed, Grimes took Lakers money, Kuminga boomeranged back to Atlanta), with Cam Thomas and Jalen Duren the last standoffs.</p>
+
+  <div class="grid2">
+    <div class="card">
+      <h4>2026-27 Financial Thresholds</h4>
+      <table>
+        <tr><th>Line</th><th class="r">Amount</th></tr>
+        <tr><td>Salary Cap</td><td class="r">$164.96M</td></tr>
+        <tr><td>Luxury Tax</td><td class="r">$200.43M</td></tr>
+        <tr><td>First Apron</td><td class="r">$209.02M</td></tr>
+        <tr><td>Second Apron</td><td class="r">$221.69M</td></tr>
+        <tr><td>Non-Taxpayer MLE</td><td class="r">~$14.1M</td></tr>
+        <tr><td>Taxpayer MLE</td><td class="r">~$5.7M</td></tr>
+        <tr><td>Vet Minimum (10+ yrs)</td><td class="r">~$3.6M</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h4>Conference Balance of Power</h4>
+      <p class="scout"><b>East</b>: Reshuffled at the top. The champion Knicks run it back minus Mitchell Robinson; Miami adds Giannis; Cleveland retools around Mitchell/Mobley (and is negotiating with James Harden); New York and Detroit remain physical; Toronto imports Kawhi Leonard for a win-now push; Orlando and Atlanta hover.</p>
+      <p class="scout"><b>West</b>: San Antonio rules it after the Finals run; Oklahoma City reloads from the Game-7 WCF loss (Hartenstein extended 3/$75M). The Lakers pivot to Doncic + Reaves + Walker Kessler post-LeBron. Golden State chases LeBron/AD. Minnesota lands LaMelo Ball. Portland adds Ja Morant. Depth of contenders far exceeds the East.</p>
+    </div>
+  </div>
+  <div class="note">Data-confidence note: several returns in blockbuster deals (LaMelo Ball, Ja Morant) were still being finalized at report time and are marked <b>TBD</b> below. These will be locked on the next "Update the Guide."</div>
+</section>
+
+<!-- ============ TIMELINE ============ -->
+<section id="timeline">
+  <h2><span class="num">03</span>Chronological Timeline of the Offseason</h2>
+  <table>
+    <tr><th>Date</th><th>Event</th><th>Significance</th></tr>
+    <tr><td>May 2026</td><td>Washington wins the Draft Lottery</td><td>Wizards secure No. 1 and the AJ Dybantsa sweepstakes</td></tr>
+    <tr><td>May 30</td><td>Spurs win the West</td><td>San Antonio beats OKC 111–103 in Game 7 of the WCF — first Finals since 2014</td></tr>
+    <tr><td>Mid-Jun</td><td><b>Knicks win the 2026 title</b></td><td>New York beats San Antonio 4–1 — first championship since 1973</td></tr>
+    <tr><td>Jun 23</td><td>NBA Draft Round 1</td><td>Dybantsa No. 1; Peterson, Boozer, C. Wilson round out the top 4</td></tr>
+    <tr><td>Jun 24</td><td>Draft Round 2 + <b>Giannis blockbuster</b></td><td>Bucks trade Giannis & Portis to Miami; Heat hard-capped</td></tr>
+    <tr><td>Late Jun</td><td>Option deadlines</td><td>Harden & Draymond decline options; ATL declines Kuminga's $24.3M option</td></tr>
+    <tr><td>Jun 29-30</td><td>Kawhi Leonard traded to Toronto</td><td>Clippers begin youth pivot; Raptors go win-now</td></tr>
+    <tr><td>Jun 30, 6pm ET</td><td><b>Free agency opens</b></td><td>Wiggins→MIA, Powell→CHI, Reaves→LAL, Young→WAS, Kessler→LAL</td></tr>
+    <tr><td>Jul 1 (early)</td><td>LeBron informs Lakers he's leaving</td><td>UFA; cannot sign until Jul 6 — league on hold</td></tr>
+    <tr><td>Jul 1</td><td>Harden declines option</td><td>Negotiating with Cleveland for the half-court creation role</td></tr>
+    <tr><td>Jul 1</td><td><b>Day-1 signing flurry</b></td><td>Reaves re-signs LAL (4/$185M); C. White CHA (3/$74M); Horford GSW (2/$14M); M. Williams→PHX (3/$38M); Harris→SAS (2/$31M); Hayes→UTA; Robinson→BOS; Isaac ORL; Achiuwa SAC; Bogdanović→HOU; Heat add THJ &amp; Fontecchio</td></tr>
+    <tr><td>Jul 1 (late)</td><td><b>Kuminga U-turn + second wave</b></td><td>Kuminga re-signs ATL ($24.3M); Oubre→IND; Champagnie re-signs SAS (3/$45M); Mamukelashvili→LAL (4/$52M); Robinson's BOS terms land at 3/$47.4M; Duren RFA talks (LAL/DET/SAC)</td></tr>
+    <tr><td>Jul 1 (late)</td><td>LeBron market takes shape</td><td>GSW ($15.1M MLE) &amp; CLE lead; SAS the only outright-cap suitor; PHI &amp; ORL register interest</td></tr>
+    <tr><td>Jul 6</td><td>Moratorium ends (upcoming)</td><td>Deals can be signed; LeBron & RFA dominoes expected to fall</td></tr>
+  </table>
+</section>
+
+<!-- ============ DRAFT ============ -->
+<section id="draft">
+  <h2><span class="num">04</span>NBA Draft Recap &amp; Draft-Night Trades</h2>
+  <p>A freshman-heavy lottery headlined by three potential franchise cornerstones. Miami's original No. 13 pick (Nate Ament) was routed to Milwaukee inside the Giannis deal. The board loads in pages — use the button below the table to reveal the next block of picks.</p>
+  <table id="draftTable">
+    <tr><th>Pk</th><th>Team</th><th>Player</th><th>School</th><th>Note</th></tr>
+    <tr><td>1</td><td>Washington</td><td>AJ Dybantsa</td><td>BYU</td><td>Franchise wing; face of the rebuild</td></tr>
+    <tr><td>2</td><td>Utah</td><td>Darryn Peterson</td><td>Kansas</td><td>Two-way lead guard</td></tr>
+    <tr><td>3</td><td>Memphis</td><td>Cameron Boozer</td><td>Duke</td><td>Plug-and-play PF; wins now</td></tr>
+    <tr><td>4</td><td>Chicago</td><td>Caleb Wilson</td><td>UNC</td><td>Pairs with Giddey/Powell core</td></tr>
+    <tr><td>5</td><td>LA Clippers</td><td>Keaton Wagler</td><td>Illinois</td><td>Part of youth pivot</td></tr>
+    <tr><td>6</td><td>Brooklyn</td><td>Mikel Brown Jr.</td><td>Louisville</td><td>Shot creation</td></tr>
+    <tr><td>7</td><td>Sacramento</td><td>Darius Acuff Jr.</td><td>Arkansas</td><td>Guard of the future</td></tr>
+    <tr><td>8</td><td>Atlanta</td><td>Kingston Flemings</td><td>Houston</td><td>Defensive guard</td></tr>
+    <tr><td>9</td><td>Dallas</td><td>Morez Johnson Jr.</td><td>Michigan</td><td>Frontcourt energy</td></tr>
+    <tr><td>10</td><td>Milwaukee</td><td>Brayden Burries</td><td>Arizona</td><td>Post-Giannis rebuild piece</td></tr>
+    <tr><td>11</td><td>Golden State</td><td>Yaxel Lendeborg</td><td>Michigan</td><td>Ready-made role player</td></tr>
+    <tr><td>12</td><td>Oklahoma City</td><td>Aday Mara</td><td>Michigan</td><td>Center depth for a 60-win contender</td></tr>
+    <tr><td>13</td><td>Milwaukee <span class="muted">(via MIA)</span></td><td>Nate Ament</td><td>Tennessee</td><td>Acquired in Giannis trade</td></tr>
+    <tbody class="draftPage" style="display:none">
+    <tr><td>14</td><td>Charlotte</td><td>Hannes Steinbach</td><td>Washington</td><td>Skilled international big</td></tr>
+    <tr><td>15</td><td>Chicago</td><td>Dailyn Swain</td><td>Texas</td><td>Long two-way wing</td></tr>
+    <tr><td>16</td><td>Memphis <span class="muted">(→ OKC)</span></td><td>Bennett Stirtz</td><td>Iowa</td><td>Crafty lead guard; dealt to the champs</td></tr>
+    <tr><td>17</td><td>Oklahoma City <span class="muted">(→ DET)</span></td><td>Ebuka Okorie</td><td>Stanford</td><td>Physical guard; rerouted to Detroit</td></tr>
+    <tr><td>18</td><td>Charlotte</td><td>Christian Anderson</td><td>Texas Tech</td><td>Shot-making guard</td></tr>
+    <tr><td>19</td><td>Toronto</td><td>Allen Graves</td><td>Santa Clara</td><td>Wing shooting for a Kawhi push</td></tr>
+    <tr><td>20</td><td>San Antonio</td><td>Jayden Quaintance</td><td>—</td><td>Defensive frontcourt upside next to Wemby</td></tr>
+    <tr><td>21</td><td>Detroit <span class="muted">(→ MEM)</span></td><td>Karim López</td><td>NZ Breakers</td><td>International forward; to Memphis</td></tr>
+    <tr><td>22</td><td>Philadelphia</td><td>Labaron Philon Jr.</td><td>Alabama</td><td>Guard depth behind Maxey/McCain</td></tr>
+    <tr><td>23</td><td>Atlanta</td><td>Zuby Ejiofor</td><td>St. John's</td><td>Motor big, rebounding</td></tr>
+    <tr><td>24</td><td>New York <span class="muted">(→ LAL)</span></td><td>Cameron Carr</td><td>Baylor</td><td>Athletic wing; to the Lakers</td></tr>
+    <tr><td>25</td><td>LA Lakers <span class="muted">(→ DAL)</span></td><td>Sergio De Larrea</td><td>Valencia</td><td>International guard; to Dallas</td></tr>
+    <tr><td>26</td><td>Denver <span class="muted">(→ SAS)</span></td><td>Tarris Reed Jr.</td><td>UConn</td><td>Rim-protecting big; to San Antonio</td></tr>
+    <tr><td>27</td><td>Boston</td><td>Chris Cenac Jr.</td><td>Houston</td><td>Frontcourt youth for a capped-out roster</td></tr>
+    <tr><td>28</td><td>Minnesota <span class="muted">(→ BKN)</span></td><td>Joshua Jefferson</td><td>Iowa State</td><td>Versatile forward; to Brooklyn</td></tr>
+    <tr><td>29</td><td>Cleveland <span class="muted">(→ SAC)</span></td><td>Alex Karaban</td><td>UConn</td><td>Ready-made shooting forward; to Sacramento</td></tr>
+    <tr><td>30</td><td>Dallas <span class="muted">(→ PHX)</span></td><td>Koa Peat</td><td>Arizona</td><td>Physical forward; to Phoenix</td></tr>
+    </tbody>
+    <tbody class="draftPage" style="display:none">
+    <tr><td>31</td><td>New York <span class="muted">(→ HOU)</span></td><td>Bruce Thornton</td><td>Ohio State</td><td>Strong lead guard; to Houston</td></tr>
+    <tr><td>32</td><td>Memphis</td><td>Richie Saunders</td><td>BYU</td><td>Shooting wing</td></tr>
+    <tr><td>33</td><td>Brooklyn <span class="muted">(→ MIN)</span></td><td>Isaiah Evans</td><td>Duke</td><td>Microwave scorer; to Minnesota</td></tr>
+    <tr><td>34</td><td>Sacramento <span class="muted">(→ CLE)</span></td><td>Meleek Thomas</td><td>Arkansas</td><td>Scoring guard; to Cleveland</td></tr>
+    <tr><td>35</td><td>San Antonio <span class="muted">(→ DEN)</span></td><td>Trevon Brazile</td><td>Arkansas</td><td>Bouncy forward; to Denver</td></tr>
+    <tr><td>36</td><td>LA Clippers</td><td>Baba Miller</td><td>Cincinnati</td><td>Long, mobile forward</td></tr>
+    <tr><td>37</td><td>Oklahoma City <span class="muted">(→ MIA)</span></td><td>Ryan Conwell</td><td>Louisville</td><td><b>To Miami</b> — the shooter on the Heat's roster sheet</td></tr>
+    <tr><td>38</td><td>Chicago <span class="muted">(→ IND)</span></td><td>Braden Smith</td><td>Purdue</td><td>Floor general; to Indiana</td></tr>
+    <tr><td>39</td><td>Houston <span class="muted">(→ NYK)</span></td><td>Jack Kayil</td><td>Alba Berlin</td><td>International guard; to New York</td></tr>
+    <tr><td>40</td><td>Boston</td><td>Dillon Mitchell</td><td>St. John's</td><td>Athletic wing on a cost-controlled deal</td></tr>
+    <tr><td>41</td><td>Miami <span class="muted">(→ OKC)</span></td><td>Otega Oweh</td><td>Kentucky</td><td>Heat's own 2nd routed to the champs (Conwell swap)</td></tr>
+    <tr><td>42</td><td>San Antonio</td><td>Ja'Kobi Gillespie</td><td>Tennessee</td><td>Quick guard depth</td></tr>
+    <tr><td>43</td><td>Brooklyn</td><td>Tyler Bilodeau</td><td>UCLA</td><td>Skilled big</td></tr>
+    <tr><td>44</td><td>San Antonio</td><td>Maliq Brown</td><td>Duke</td><td>Switchable defender</td></tr>
+    <tr><td>45</td><td>Sacramento</td><td>Emanuel Sharp</td><td>Houston</td><td>3&amp;D guard</td></tr>
+    <tr><td>46</td><td>Orlando <span class="muted">(→ WAS)</span></td><td>Felix Okpara</td><td>Tennessee</td><td>Rim protector; to Washington</td></tr>
+    <tr><td>47</td><td>Phoenix <span class="muted">(→ NYK)</span></td><td>Tyler Nickel</td><td>Vanderbilt</td><td>Shooting forward; to New York</td></tr>
+    <tr><td>48</td><td>Dallas</td><td>Tobi Lawal</td><td>Virginia Tech</td><td>Energy forward</td></tr>
+    <tr><td>49</td><td>Denver</td><td>Bryce Hopkins</td><td>St. John's</td><td>Physical scorer for a thin bench</td></tr>
+    <tr><td>50</td><td>Toronto</td><td>Jaden Bradley</td><td>Arizona</td><td>Defensive guard</td></tr>
+    <tr><td>51</td><td>Washington <span class="muted">(→ ORL)</span></td><td>Izaiyah Nelson</td><td>South Florida</td><td>Athletic big; to Orlando</td></tr>
+    <tr><td>52</td><td>LA Clippers <span class="muted">(→ ATL)</span></td><td>Henri Veesaar</td><td>North Carolina</td><td>Slid on draft night; to Atlanta</td></tr>
+    <tr><td>53</td><td>Houston <span class="muted">(→ DET)</span></td><td>Ugonna Onyenso</td><td>Virginia</td><td>Shot blocker; to Detroit</td></tr>
+    <tr><td>54</td><td>Golden State</td><td>Lajae Jones</td><td>Florida State</td><td>Wing depth on the cheap</td></tr>
+    <tr><td>55</td><td>New York <span class="muted">(→ LAC)</span></td><td>Nick Martinelli</td><td>Northwestern</td><td>Crafty scorer; to the Clippers</td></tr>
+    <tr><td>56</td><td>Chicago <span class="muted">(→ DAL)</span></td><td>Vsevolod Ishchenko</td><td>Lokomotiv Kuban</td><td>Draft-and-stash; to Dallas</td></tr>
+    <tr><td>57</td><td>Atlanta <span class="muted">(→ LAC)</span></td><td>Narcisse Ngoy</td><td>Poitiers</td><td>Draft-and-stash; to the Clippers</td></tr>
+    <tr><td>58</td><td>New Orleans</td><td>Jaron Pierre Jr.</td><td>SMU</td><td>Scoring guard flier</td></tr>
+    <tr><td>59</td><td>Minnesota</td><td>Trey Kaufman-Renn</td><td>Purdue</td><td>Productive college big</td></tr>
+    <tr><td>60</td><td>Washington <span class="muted">(→ MIL)</span></td><td>Malique Lewis</td><td>SE Melbourne</td><td>Mr. Irrelevant; to Milwaukee's rebuild</td></tr>
+    </tbody>
+  </table>
+  <button id="draftMoreBtn" class="tmbtn" style="margin:4px 0 10px">Show picks 14–30</button>
+  <div class="note"><b>Board complete:</b> all 60 picks verified, with draft-night trade routings shown inline. Miami turned pick 41 (Otega Oweh, to OKC) into pick 37 <b>Ryan Conwell</b> — the developmental shooter now on the Heat roster sheet.</div>
+  <h4>Notable draft-night trades</h4>
+  <ul class="tight">
+    <li><b>Giannis megadeal (Jun 24)</b> — included No. 13 (Nate Ament) heading to Milwaukee. Full breakdown in the <a href="#trades">Trade Database</a>.</li>
+    <li>Additional pick-swaps and second-rounders changed hands around picks 30–45; to be itemized on update.</li>
+  </ul>
+</section>
+
+<!-- ============ TRADE DATABASE ============ -->
+<section id="trades">
+  <h2><span class="num">05</span>Complete Trade Database</h2>
+  <p class="muted">Every confirmed 2026-offseason trade with full detail, salary-matching logic, tax/apron implications, and per-team grades. Expand each deal.</p>
+
+  <details open>
+    <summary>Jun 24 — Milwaukee ⇄ Miami: The Giannis Blockbuster <span class="grade B" style="float:right">See grades</span></summary>
+    <table>
+      <tr><th>Miami receives</th><th>Milwaukee receives</th></tr>
+      <tr><td>Giannis Antetokounmpo (F)<br>Bobby Portis (F)</td><td>Tyler Herro (G)<br>Kel'el Ware (C)<br>Jaime Jaquez Jr. (F)<br>Kašparas Jakučionis (G)<br>No. 13 pick — Nate Ament<br>2031 &amp; 2033 unprotected 1st-round picks<br>2030 pick swap · 2033 2nd</td></tr>
+    </table>
+    <p class="scout"><b>Salary matching:</b> Miami absorbed Giannis (~$58.5M) and Portis (~$13.4M) — roughly $71.9M in — using the outgoing salaries of Herro (~$33M), Ware, Jaquez, and Jakučionis plus a 125% expanded trade exception. Using that expanded exception is what <b>hard-caps Miami at the first apron</b> for the entire 2026-27 league year. Portis was routed via the Duncan Robinson trade exception.</p>
+    <p class="scout"><b>Why Miami says yes:</b> A top-5 player in the world, still in his prime, next to Bam Adebayo. Instantly the best defensive frontcourt in the NBA and a genuine title dark horse in a softened East. <b>Why Milwaukee says yes:</b> With Lillard's situation and an aging core, Milwaukee chose a clean reset — a young, cost-controlled package (Ware, Jaquez, Jakučionis), a lottery pick, and two unprotected firsts that could headline a future rebuild.</p>
+    <p><b>Grades:</b> Miami <span class="grade B">B+</span> (elite talent, but stripped spacing &amp; depth and mortgaged 2031/2033) · Milwaukee <span class="grade B">B</span> (best realistic haul, but trading a top-5 player rarely nets equal value). <b>Immediate winner:</b> Miami. <b>Long-term winner:</b> Milwaukee, if the picks hit.</p>
+  </details>
+
+  <details>
+    <summary>Jun 29 — LA Clippers ⇄ Toronto: Kawhi Leonard</summary>
+    <table>
+      <tr><th>Toronto receives</th><th>Clippers receive</th></tr>
+      <tr><td>Kawhi Leonard (F) — $50.3M expiring</td><td>Brandon Ingram (F)<br>Gradey Dick (G)<br>2031 &amp; 2033 unprotected 1sts<br>2027 pick swap · two 2nds</td></tr>
+    </table>
+    <p class="scout"><b>Why Toronto says yes:</b> A homecoming for the 2019 Finals MVP and a win-now swing in a wide-open East around Barnes and the young core. <b>Why the Clippers say yes:</b> Final step of a five-month teardown — they get younger (Ingram, Dick) and reclaim picks. <b>Grades:</b> Toronto <span class="grade C">C+</span> (Kawhi's health is the whole bet) · Clippers <span class="grade B">B</span>.</p>
+  </details>
+
+  <details>
+    <summary>Jun 30 — Utah ⇄ LA Lakers: Walker Kessler</summary>
+    <table>
+      <tr><th>Lakers receive</th><th>Utah receives</th></tr>
+      <tr><td>Walker Kessler (C) → then re-signs 4yr/$130M</td><td>2031 &amp; 2033 unprotected 1sts<br>2028 &amp; 2030 pick swaps</td></tr>
+    </table>
+    <p class="scout"><b>Why LAL says yes:</b> The rim-running, shot-blocking center Doncic has lacked; solves the biggest roster hole post-LeBron. <b>Why Utah says yes:</b> Four premium pick assets to feed the Dybantsa-era... (Utah drafted Peterson) rebuild. <b>Grades:</b> Lakers <span class="grade A">A-</span> · Utah <span class="grade B">B+</span>.</p>
+  </details>
+
+  <details>
+    <summary>Jun — Charlotte ⇄ Phoenix: Miles Bridges</summary>
+    <table>
+      <tr><th>Phoenix receives</th><th>Charlotte receives</th></tr>
+      <tr><td>Miles Bridges (F)</td><td>Grayson Allen (G)<br>Royce O'Neale (F)<br>2033 1st-round pick</td></tr>
+    </table>
+    <p class="scout"><b>Why PHX says yes:</b> A downhill scoring wing to modernize the roster. <b>Why CHA says yes:</b> Shooting (Allen), a 3&amp;D vet (O'Neale), and a first to accelerate the rebuild. <b>Grades:</b> Suns <span class="grade C">C+</span> · Hornets <span class="grade B">B</span>.</p>
+  </details>
+
+  <details>
+    <summary>Jun 24 — Charlotte ⇄ Minnesota: LaMelo Ball <span class="pill">return LOCKED</span></summary>
+    <table>
+      <tr><th>Minnesota receives</th><th>Charlotte receives</th></tr>
+      <tr><td>LaMelo Ball (G)<br>Josh Green (G/F)</td><td>Naz Reid (F/C)<br>2033 unprotected 1st<br>2028, 2029 &amp; 2030 pick swaps<br>2029, 2032 &amp; 2033 2nds</td></tr>
+    </table>
+    <p class="scout"><b>Why Minnesota says yes:</b> a dynamic shot-creating engine next to Edwards, raising a stagnant half-court offense. <b>Why Charlotte says yes:</b> a massive pick haul plus a productive, movable vet in Naz Reid to accelerate the rebuild. <b>Salary/apron:</b> pushes Minnesota firmly into the second apron, freezing its trade flexibility. <b>Grades:</b> Minnesota <span class="grade B">B</span> (talent, but defense + apron cost) · Charlotte <span class="grade B">B+</span> (excellent asset return).</p>
+  </details>
+
+  <details>
+    <summary>Jun 30 — Memphis ⇄ Portland: Ja Morant <span class="pill">return LOCKED</span></summary>
+    <table>
+      <tr><th>Portland receives</th><th>Memphis receives</th></tr>
+      <tr><td>Ja Morant (PG)</td><td>Jerami Grant (F)<br>Kris Murray (F)</td></tr>
+    </table>
+    <p class="scout"><b>Why Portland says yes:</b> a downhill star point guard to headline an athletic young core alongside newly-extended Robert Williams III. <b>Why Memphis says yes:</b> a clean pivot — Grant's scoring/shooting on an expiring-ish deal plus a young wing in Murray, opening the floor to rebuild around No. 3 pick Cameron Boozer. <b>Grades:</b> Portland <span class="grade B">B</span> (upside, health/fit risk) · Memphis <span class="grade C">C+</span>.</p>
+  </details>
+
+  <div class="note">More deals (secondary trades, pick-only swaps, and the finalized LaMelo/Morant returns) will be appended and graded on the next "Update the Guide."</div>
+</section>
+
+<!-- ============ FREE AGENCY ============ -->
+<section id="fa">
+  <h2><span class="num">06</span>Free Agency Board</h2>
+  <p class="muted">Two boards: a <b>power ranking of who's still available</b>, and a complete <b>moves tracker</b> showing every agreement and where each player landed. Terms per public reporting; formal signings occur after the July 6 moratorium.</p>
+
+  <h3>Available Free Agents — Power Ranking</h3>
+  <p class="muted" style="font-size:13px">Ranked by market impact. Updated through the evening of July 1.</p>
+  <table>
+    <tr><th>#</th><th>Player</th><th>Status</th><th>Market</th><th>Miami angle</th></tr>
+    <tr><td><b>1</b></td><td><b>LeBron James</b></td><td>UFA · can't sign until Jul 6</td><td>GSW &amp; CLE lead; SAS the only outright-money suitor; PHI/ORL interested</td><td>Minimum-only long shot — see the <a href="#lebron">suitor ranking</a></td></tr>
+    <tr><td><b>2</b></td><td><b>James Harden</b></td><td>UFA · declined option</td><td>Deep in negotiations with Cleveland</td><td>None — money doesn't fit</td></tr>
+    <tr><td><b>3</b></td><td><b>Jalen Duren</b></td><td>RFA (DET)</td><td>Lakers met him twice; Detroit intends to keep, Kings lurking</td><td>No fit — Bam/Portis own the middle</td></tr>
+    <tr><td><b>4</b></td><td><b>Cam Thomas</b></td><td>RFA · ~$6M QO</td><td>RFA logjam; QO deadline Oct 1</td><td>Shot creation, but S&amp;T friction + defensive cost</td></tr>
+    <tr><td><b>5</b></td><td><b>Draymond Green</b></td><td>UFA · declined option</td><td>Opt-out engineered to open GSW's $15.1M MLE for LeBron; expected to re-sign after</td><td>None</td></tr>
+    <tr><td><b>6</b></td><td><b>Gary Trent Jr.</b></td><td>UFA</td><td>3&amp;D guard market</td><td><b>Top realistic target</b> — partial-MLE priority</td></tr>
+    <tr><td><b>7</b></td><td><b>Malik Beasley</b></td><td>UFA</td><td>Movement-shooter market</td><td><b>Target</b> — MLE/min gravity add</td></tr>
+    <tr><td><b>8</b></td><td><b>De'Anthony Melton</b></td><td>UFA</td><td>Two-way guard market</td><td>Target — 3&amp;D + point-of-attack defense</td></tr>
+    <tr><td><b>9</b></td><td><b>Duncan Robinson</b></td><td>UFA / market</td><td>Movement-shooting specialist tier</td><td>Historic Heat fit on a minimum</td></tr>
+    <tr><td><b>10</b></td><td><b>Buddy Hield</b></td><td>UFA / market</td><td>Vet sniper tier</td><td>Value — minimum spacing</td></tr>
+    <tr><td><b>11</b></td><td><b>Gary Harris</b></td><td>UFA</td><td>Vet 3&amp;D tier</td><td>Fill — low-usage minimum spacer</td></tr>
+  </table>
+
+  <h3>Completed Moves Tracker</h3>
+  <p class="muted" style="font-size:13px">Every agreement so far, newest first. <span class="pill hot">NEW</span> = added this update.</p>
+  <table>
+    <tr><th>Date</th><th>Player</th><th>Signed With</th><th>Terms</th><th>Type</th><th>Grade</th></tr>
+    <tr><td>Jul 1</td><td>Jonathan Kuminga <span class="pill hot">NEW</span></td><td><b>Atlanta</b> (re-sign after option declined)</td><td>$24.3M</td><td>Re-sign</td><td><span class="grade C">C+</span></td></tr>
+    <tr><td>Jul 1</td><td>Kelly Oubre Jr. <span class="pill hot">NEW</span></td><td><b>Indiana</b></td><td>2yr / ~$17M</td><td>UFA</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Julian Champagnie <span class="pill hot">NEW</span></td><td><b>San Antonio</b> (re-sign)</td><td>3yr / $45M</td><td>Re-sign</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Sandro Mamukelashvili <span class="pill hot">NEW</span></td><td><b>LA Lakers</b></td><td>4yr / $52M</td><td>UFA</td><td><span class="grade B">B-</span></td></tr>
+    <tr><td>Jul 1</td><td>Tobias Harris <span class="pill hot">NEW</span></td><td><b>San Antonio</b></td><td>2yr / $31M</td><td>UFA</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Al Horford <span class="pill hot">NEW</span></td><td><b>Golden State</b> (re-sign)</td><td>2yr / $14M (declined $6M PO)</td><td>Re-sign</td><td><span class="grade A">A-</span></td></tr>
+    <tr><td>Jul 1</td><td>Coby White <span class="pill hot">NEW</span></td><td><b>Charlotte</b> (re-sign)</td><td>3yr / $74M</td><td>Re-sign</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Mark Williams <span class="pill hot">NEW</span></td><td><b>Phoenix</b></td><td>3yr / $38M</td><td>UFA</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Bogdan Bogdanović <span class="pill hot">NEW</span></td><td><b>Houston</b></td><td>1yr</td><td>UFA</td><td><span class="grade B">B+</span></td></tr>
+    <tr><td>Jul 1</td><td>Jaxson Hayes <span class="pill hot">NEW</span></td><td><b>Utah</b></td><td>2yr / $12M (TO yr 2)</td><td>UFA</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Jonathan Isaac <span class="pill hot">NEW</span></td><td><b>Orlando</b> (re-sign)</td><td>1yr / $8M</td><td>Re-sign</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jul 1</td><td>Precious Achiuwa <span class="pill hot">NEW</span></td><td><b>Sacramento</b> (re-sign)</td><td>2yr / $11.5M</td><td>Re-sign</td><td><span class="grade B">B-</span></td></tr>
+    <tr><td>Jul 1</td><td>Tim Hardaway Jr.</td><td><b>Miami</b></td><td>1yr / $6.5M</td><td>UFA</td><td><span class="grade A">A-</span></td></tr>
+    <tr><td>Jul 1</td><td>Simone Fontecchio</td><td><b>Miami</b> (re-sign)</td><td>re-sign (Bird)</td><td>Re-sign</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jun 30</td><td>Austin Reaves</td><td><b>LA Lakers</b> (re-sign)</td><td>4yr / $185M</td><td>Re-sign</td><td><span class="grade A">A</span></td></tr>
+    <tr><td>Jun 30</td><td>Andrew Wiggins</td><td><b>Miami</b> (opt-in + extend)</td><td>$30.2M opt-in, then 3yr/$64M</td><td>Extension</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jun 30</td><td>Norman Powell</td><td><b>Chicago</b></td><td>2yr / $45M</td><td>UFA</td><td><span class="grade A">A-</span></td></tr>
+    <tr><td>Jun 30</td><td>Trae Young</td><td><b>Washington</b> (re-sign)</td><td>4yr / $212M</td><td>Re-sign</td><td><span class="grade C">C+</span></td></tr>
+    <tr><td>Jun 30</td><td>Walker Kessler</td><td><b>LA Lakers</b> (trade + extend)</td><td>4yr / $130M</td><td>Trade+ext</td><td><span class="grade A">A-</span></td></tr>
+    <tr><td>Jun 30</td><td>Quentin Grimes</td><td><b>LA Lakers</b></td><td>4yr / $60M</td><td>RFA→UFA</td><td><span class="grade B">B+</span></td></tr>
+    <tr><td>Jun 30</td><td>Collin Sexton</td><td><b>LA Lakers</b></td><td>2yr / $19M</td><td>UFA</td><td><span class="grade A">A-</span></td></tr>
+    <tr><td>Jun 30</td><td>Josh Giddey</td><td><b>Chicago</b> (re-sign)</td><td>multi-year</td><td>RFA re-sign</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jun 30</td><td>Mitchell Robinson</td><td><b>Boston</b></td><td>3yr / $47.4M</td><td>UFA</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jun 30</td><td>John Collins</td><td><b>Detroit</b></td><td>reported</td><td>UFA/trade</td><td><span class="grade B">B-</span></td></tr>
+    <tr><td>Jun 30</td><td>Dean Wade</td><td><b>Philadelphia</b></td><td>4yr / $39M</td><td>UFA</td><td><span class="grade B">B</span></td></tr>
+    <tr><td>Jun</td><td>Isaiah Hartenstein</td><td><b>Oklahoma City</b> (ext)</td><td>3yr / $75M</td><td>Extension</td><td><span class="grade A">A</span></td></tr>
+    <tr><td>Jun</td><td>Robert Williams III</td><td><b>Portland</b> (ext)</td><td>3yr / $44M</td><td>Extension</td><td><span class="grade B">B</span></td></tr>
+  </table>
+  <p class="muted" style="font-size:12px">Miami's remaining shooting options run through the available-FA board above (Trent, Beasley, Melton tiers), the buyout/minimum market, and a possible Jović trade — see the <a href="#shooting">shooting search</a>.</p>
+</section>
+
+<!-- ============ OPTIONS ============ -->
+<section id="options">
+  <h2><span class="num">07</span>Options · Extensions · Qualifying Offers · Waivers · Two-Ways</h2>
+  <div class="grid2">
+    <div class="card">
+      <h4>Options Declined (→ Free Agency)</h4>
+      <ul class="tight">
+        <li><b>LeBron James</b> — declined Lakers option, hitting the market</li>
+        <li><b>James Harden</b> — declined option, negotiating with Cleveland</li>
+        <li><b>Draymond Green</b> — declined option (Warriors) amid LeBron/AD pursuit</li>
+        <li><b>Al Horford</b> — declined $6M option, then re-signed with GSW (2/$14M)</li>
+      </ul>
+      <h4>Options Exercised (Opted In)</h4>
+      <ul class="tight">
+        <li><b>Andrew Wiggins</b> — opted in at $30.2M, then signed an opt-in-and-extend (3/$64M) with Miami</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Team Options Declined</h4>
+      <ul class="tight">
+        <li><b>Jonathan Kuminga</b> — Atlanta declined his $24.3M team option → brief UFA → re-signed with ATL at $24.3M</li>
+      </ul>
+      <h4>Extensions</h4>
+      <ul class="tight">
+        <li>Isaiah Hartenstein (OKC) 3/$75M · Robert Williams III (POR) 3/$44M</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Qualifying Offers Outstanding</h4>
+      <ul class="tight">
+        <li>Cam Thomas ~$6M (Giddey &amp; Grimes have signed) · RFA standoff: Jalen Duren (DET)</li>
+        <li>Deadline to sign QOs: Oct 1</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Waivers &amp; Two-Ways</h4>
+      <p class="scout">No franchise-altering waivers at report time. Two-way and Exhibit-10 activity (including Miami's Ryan Conwell / Myron Gardner situations) will populate here through Summer League and training camp.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SPURS WAR ROOM ============ -->
+<section id="war">
+  <h2><span class="num">08</span>San Antonio Spurs War Room <span class="pill hot">Priority Section</span></h2>
+  <p class="lead">This is the document's core. Everything above sets the table; what follows is the plan the Spurs front office would run from July 1 to opening night.</p>
+
+  <div class="teamhdr" style="margin-top:8px">
+    <h3 style="margin:0">San Antonio Spurs</h3>
+    <span class="rec">Reigning West champions · Finals runner-up · Not hard-capped</span>
+  </div>
+
+  <h3>Current roster (projected 2026-27)</h3>
+  <table>
+    <tr><th>Player</th><th>Pos</th><th class="r">2026-27 (proj.)</th><th>Status</th><th>Role</th></tr>
+    <tr><td>De'Aaron Fox</td><td>PG</td><td class="r">$49.5M</td><td>Yr 1 of 4-yr max ext</td><td>Downhill engine, closer</td></tr>
+    <tr><td>Devin Vassell</td><td>SG/SF</td><td class="r">~$27.0M</td><td>Under contract</td><td>Two-way wing, movement shooting</td></tr>
+    <tr><td>Keldon Johnson</td><td>SF/PF</td><td class="r">$17.5M</td><td>Final year</td><td>Bench scoring — <b>prime trade ballast</b></td></tr>
+    <tr><td>Victor Wembanyama</td><td>C</td><td class="r">$16.9M</td><td>Rookie scale · ext-eligible (5/$251M proj., starts 27-28)</td><td>Franchise cornerstone, DPOY favorite</td></tr>
+    <tr><td>Tobias Harris <span class="pill hot">NEW</span></td><td>PF</td><td class="r">~$15.2M</td><td>Signed 2yr/$31M</td><td>Veteran forward shot-making</td></tr>
+    <tr><td>Julian Champagnie <span class="pill hot">NEW</span></td><td>SF</td><td class="r">~$14.4M</td><td>Re-signed 3yr/$45M</td><td>3&amp;D wing depth</td></tr>
+    <tr><td>Dylan Harper</td><td>G</td><td class="r">$13.0M</td><td>Rookie scale (No. 2, 2025)</td><td>Sixth man, secondary creation</td></tr>
+    <tr><td>Luke Kornet</td><td>C</td><td class="r">~$10.3M</td><td>Under contract</td><td>Backup 5, drop coverage</td></tr>
+    <tr><td>Stephon Castle</td><td>G</td><td class="r">$10.0M</td><td>Rookie scale</td><td>Starting 2, POA defense</td></tr>
+    <tr><td>Carter Bryant</td><td>F</td><td class="r">~$5.9M</td><td>Rookie scale (No. 14, 2025)</td><td>Developmental 3&amp;D wing</td></tr>
+    <tr><td>Jayden Quaintance <span class="pill hot">NEW</span></td><td>PF/C</td><td class="r">~$3.4M</td><td>Rookie (No. 20)</td><td>Defensive frontcourt upside</td></tr>
+    <tr><td>Tarris Reed Jr. <span class="pill hot">NEW</span></td><td>C</td><td class="r">~$2.9M</td><td>Rookie (No. 26, via DEN)</td><td>Rim-protecting depth</td></tr>
+    <tr><td>Ja'Kobi Gillespie <span class="pill hot">NEW</span></td><td>PG</td><td class="r">~$1.3M</td><td>2nd rd (No. 42)</td><td>Guard depth / two-way</td></tr>
+    <tr><td>Maliq Brown <span class="pill hot">NEW</span></td><td>F</td><td class="r">~$1.3M</td><td>2nd rd (No. 44)</td><td>Switchable defender / two-way</td></tr>
+  </table>
+  <p class="muted" style="font-size:12px"><span class="pill hot">NEW</span> = added this offseason. Salaries for Vassell, Harris, Champagnie, Kornet, Bryant and rookies are projected pending Spotrac confirmation; Fox/Wemby/Harper/Castle/Keldon figures anchored to reporting. UFAs from last season's roster: Harrison Barnes, Kelly Olynyk, Bismack Biyombo, Jordan McLaughlin, Lindy Waters III — Olynyk and Barnes are minimum-priority re-signs.</p>
+
+  <h3>Salary cap &amp; flexibility breakdown</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>Where San Antonio sits</h4>
+      <div class="line"><span>Projected committed (14 players)</span><b>~$188.6M</b></div>
+      <div class="line"><span>Luxury tax</span><b>$200.43M</b></div>
+      <div class="line"><span>Room below the tax</span><b style="color:var(--heat-yellow)">~$11.8M</b></div>
+      <div class="line"><span>Room below the 1st apron</span><b>~$20.4M</b></div>
+      <div class="line"><span>Hard cap?</span><b>No — full toolbox available</b></div>
+    </div>
+    <div class="card">
+      <h4>What the flexibility means</h4>
+      <p class="scout">San Antonio is the rare contender with every roster tool live:</p>
+      <ul class="tight scout">
+        <li>Full <b>Non-Taxpayer MLE (~$14.1M)</b> — usable on a starter-level shooter.</li>
+        <li><b>Bi-Annual Exception</b> and minimums for depth.</li>
+        <li>Can <b>aggregate salaries and absorb up to ~200% + $0.25M</b> in trades — Keldon ($17.5M) + Kornet ($10.3M) legally returns a ~$27–46M player when paired.</li>
+        <li>The LeBron path: clear Keldon (and renounce holds) to engineer <b>$15–20M of real money</b> — more than any rival can offer.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>Exceptions &amp; assets available</h4>
+  <table>
+    <tr><th>Tool</th><th>Value</th><th>Usable?</th><th>Notes</th></tr>
+    <tr><td>Non-Taxpayer MLE</td><td>~$14.1M</td><td><b>Yes — in full</b></td><td>Hard-caps at the 1st apron if used, with ~$20M of headroom</td></tr>
+    <tr><td>Bi-Annual Exception</td><td>~$5.2M</td><td>Yes</td><td>Depth tool</td></tr>
+    <tr><td>Minimum exception</td><td>~$2.3–3.6M</td><td>Yes</td><td>Olynyk / Barnes re-signs</td></tr>
+    <tr><td>Tradable salary</td><td>Keldon ($17.5M exp) · Kornet (~$10.3M) · Vassell (~$27M)</td><td>Yes</td><td>Clean matching for any mid-to-star salary</td></tr>
+    <tr><td>Draft capital</td><td>Own firsts + swap/second stock</td><td>Yes</td><td>Among the league's best chests — the blockbuster currency</td></tr>
+  </table>
+
+  <h3>Rotation analysis</h3>
+  <div class="grid2">
+    <div class="card">
+      <h4>Projected starting five</h4>
+      <ol class="tight">
+        <li><b>PG</b> — De'Aaron Fox</li>
+        <li><b>SG</b> — Stephon Castle</li>
+        <li><b>SF</b> — Devin Vassell</li>
+        <li><b>PF</b> — Tobias Harris</li>
+        <li><b>C</b> — Victor Wembanyama</li>
+      </ol>
+      <p class="scout">Elite defensively with real size at every spot. The halfcourt still runs dry late in playoff games — that's the summer's one job.</p>
+    </div>
+    <div class="card">
+      <h4>Bench &amp; closing lineup</h4>
+      <p class="scout"><b>Bench:</b> Dylan Harper (6th man), Julian Champagnie, Keldon Johnson (until traded), Luke Kornet, Carter Bryant, rookies.</p>
+      <p class="scout"><b>Projected closing five:</b> Fox — Harper/Castle — Vassell — <b>[creator TBD]</b> — Wemby. Slot LeBron, Simons or Markkanen into that fourth spot and this is the best closing lineup in the sport.</p>
+    </div>
+  </div>
+
+  <h3>Strengths, weaknesses &amp; identity</h3>
+  <div class="grid3">
+    <div class="card"><h4>Strengths</h4><ul class="tight scout"><li>Wembanyama — the sport's most dominant defender</li><li>Elite young guard depth (Castle, Harper, Bryant)</li><li>Financial flexibility no contender can match</li><li>West-champion experience, deep pick chest</li></ul></div>
+    <div class="card"><h4>Weaknesses</h4><ul class="tight scout"><li>Finals-level halfcourt creation (NYK series, 4-1)</li><li>Late-game shot-making beyond Fox</li><li>Physicality next to Wemby vs. jumbo frontcourts</li><li>Free-throw-line offense in slow games</li></ul></div>
+    <div class="card"><h4>Identity</h4><p class="scout"><b>Defense:</b> Wemby-anchored, top-2 unit — wall the rim, run shooters off the line. <b>Offense:</b> Fox rim pressure, Wemby short-roll hub, five-out spacing. The missing gear is a second closer when the pace dies in May and June.</p></div>
+  </div>
+
+  <h3>Projections</h3>
+  <div class="grid3">
+    <div class="card"><h4>Offense</h4><p class="stat" style="font-size:22px">~117 <span class="muted" style="font-size:13px">ORtg (proj.)</span></p><div class="bar"><i style="width:70%"></i></div><p class="scout">Top-8; jumps to top-3 with a creator.</p></div>
+    <div class="card"><h4>Defense</h4><p class="stat" style="font-size:22px">~107 <span class="muted" style="font-size:13px">DRtg (proj.)</span></p><div class="bar"><i style="width:92%"></i></div><p class="scout">Best in the league. Wemby's floor.</p></div>
+    <div class="card"><h4>Net / Odds</h4><p class="stat" style="font-size:22px">+7 to +9 <span class="muted" style="font-size:13px">Net (proj.)</span></p><div class="bar"><i style="width:82%"></i></div><p class="scout">Title odds ~<b>+700</b>; co-favorite territory with the creator landed.</p></div>
+  </div>
+
+  <div class="callout"><b>War Room bottom line:</b> the Spurs are a finished defense and an unfinished offense. New York proved it in five games. Every move below is built to add <b>one Finals-level shot creator and one more shooter</b> while keeping Castle, Harper, Bryant and the pick chest as intact as possible.</div>
+</section>
+
+<!-- ============ LEBRON MATRIX ============ -->
+<section id="lebron">
+  <h2><span class="num">09</span>LeBron Suitor Power Ranking</h2>
+  <p>LeBron declined his Lakers option and is an unrestricted free agent who cannot sign until July 6 — and he's <b>not returning to Los Angeles</b>. Suitors ranked from most to least likely, blending betting markets, reporting, and cap mechanics. Golden State can offer its $15.1M MLE; Cleveland is limited to the veteran minimum (~$3.9M) without a sign-and-trade; the 76ers and Magic have also registered interest. Priority per reporting: a realistic chance to compete for a title.</p>
+  <table>
+    <tr><th>Rank</th><th>Team</th><th class="r">Likelihood</th><th>Can sign outright?</th><th>Mechanism</th><th>Apron impact</th><th>Roster after</th></tr>
+    <tr><td style="font-size:20px;font-weight:800;color:var(--heat-yellow)">1</td><td><b>Golden State</b></td><td class="r"><b>34%</b></td><td>No — over cap</td><td>$15.1M MLE (opened by Draymond's engineered opt-out) or S&amp;T; possibly paired with AD</td><td>Pushes hard into the 2nd apron; frozen picks, no aggregation</td><td>Curry–Butler–LeBron "now-or-never" trio</td></tr>
+    <tr><td style="font-size:20px;font-weight:800;color:var(--heat-yellow)">2</td><td><b>Cleveland</b></td><td class="r"><b>24%</b></td><td>No — over cap</td><td>Vet min (~$3.9M) or S&amp;T; balancing Harden talks</td><td>Second-apron risk</td><td>Mitchell–Mobley–LeBron; East threat</td></tr>
+    <tr><td style="font-size:20px;font-weight:800;color:var(--heat-yellow)">3</td><td><b>San Antonio</b></td><td class="r"><b>14%</b></td><td><b>Yes</b> — cap flexibility</td><td>Cap space / outright — the only suitor who can just sign him</td><td>Far from the tax; four core players on rookie scale</td><td>Wembanyama–Fox–LeBron on the reigning West champs — the exact Finals-gap fix</td></tr>
+    <tr><td style="font-size:20px;font-weight:800;color:var(--heat-yellow)">4</td><td><b>Field</b> <span class="muted">(PHI · ORL · other)</span></td><td class="r"><b>13%</b></td><td>Varies</td><td>MLE / min / S&amp;T</td><td>Varies</td><td>Both PHI and ORL have registered interest per reporting</td></tr>
+    <tr><td style="font-size:20px;font-weight:800;color:var(--heat-yellow)">5</td><td><b>Minnesota</b></td><td class="r"><b>8%</b></td><td>No</td><td>Min / S&amp;T</td><td>Already deep in the 2nd apron</td><td>Edwards–LaMelo–LeBron shot-making overload</td></tr>
+    <tr><td style="font-size:20px;font-weight:800;color:var(--heat-yellow)">6</td><td><b>Miami</b></td><td class="r"><b>7%</b></td><td><b>No</b> — hard-capped</td><td>Only a <b>minimum</b> fits under $209.02M</td><td>Must shed salary (e.g., Jović) just to sign the minimum</td><td>Giannis–Bam–LeBron superteam (spacing still an issue)</td></tr>
+  </table>
+  <div class="note"><b>Why San Antonio is the sleeper:</b> the Spurs have the most financial freedom of any suitor (four rookie-scale core players, well under the tax), so they're the <b>only team that could sign LeBron to real money outright</b> rather than scrounging a minimum. The fit — a title-hunting playmaker and mentor next to Victor Wembanyama — addresses San Antonio's one Finals-caliber weakness: shot creation. If LeBron prioritizes a genuine two-way roster and legacy, this is the dark horse.</div>
+
+  <h4>San Antonio-specific read</h4>
+  <div class="grid2">
+    <div class="card"><h4>Pros of LeBron to San Antonio</h4><ul class="tight scout"><li>The <b>exact</b> fix for the Finals gap: an all-time halfcourt creator and closer</li><li>Only suitor able to engineer real money (~$15–20M via a Keldon clear-out) — every rival offers an MLE or minimum</li><li>Mentorship for Wemby; Pop-era institutional pull; a two-way, ready-made contender</li></ul></div>
+    <div class="card"><h4>Cons / obstacles</h4><ul class="tight scout"><li>Age 41 vs. the youngest core in the contender class — a one-or-two-year rental on a five-year timeline</li><li>Usage overlap with Fox; both want the ball in the same spots late</li><li>Creating the room costs Keldon plus renounced depth — real roster pain if he picks GSW anyway</li></ul></div>
+  </div>
+  <div class="warnbox"><b>Verdict (14% league-wide, but the best pitch in basketball):</b> San Antonio should pursue aggressively at the engineered-room number and walk away from anything more. If LeBron chooses Curry's gravity over Wemby's future, pivot the same week to the <a href="#creative">Simons/Markkanen trade tracks</a> — the money and matching salary are already lined up either way.</div>
+</section>
+
+<!-- ============ SHOOTING REPORT ============ -->
+<section id="shooting">
+  <h2><span class="num">10</span>Shot Creation Report — Closing the Finals Gap</h2>
+  <p>New York beat San Antonio 4–1 by mucking the game up: walled off Fox's rim pressure, switched Wemby's short rolls, and dared anyone else to create. In the halfcourt, the Spurs' offense fell off a cliff in the Finals. <b>A second high-level creator/shot-maker is the single highest-leverage addition on the roster.</b> Ranked targets, filtered for what San Antonio's flexibility can actually buy.</p>
+  <table>
+    <tr><th>Target</th><th>Status</th><th>Creation</th><th>Fit w/ Fox + Wemby</th><th>Cost</th><th class="r">Likelihood</th></tr>
+    <tr><td><b>LeBron James</b></td><td>UFA (signs after Jul 6)</td><td>All-time</td><td>The complete fix; defense stays elite</td><td>Engineered room (~$15–20M)</td><td class="r">Med</td></tr>
+    <tr><td><b>Anfernee Simons</b></td><td>Trade (POR guard logjam post-Morant)</td><td>Deep shooting + PnR scoring</td><td>Instant halfcourt points; hide him defensively next to Wemby</td><td>Keldon + Kornet + pick(s)</td><td class="r">Med-High</td></tr>
+    <tr><td><b>Lauri Markkanen</b></td><td>Trade (UTA rebuilding)</td><td>Elite off-ball, self-creation vs closeouts</td><td>7-foot spacing next to Wemby is a cheat code</td><td>Vassell/Keldon + picks</td><td class="r">Med</td></tr>
+    <tr><td><b>James Harden</b></td><td>UFA — deep in CLE talks</td><td>Elite PnR brain, declining burst</td><td>Would run the bench units</td><td>MLE-plus</td><td class="r">Low</td></tr>
+    <tr><td><b>Cam Thomas</b></td><td>RFA (~$6M QO)</td><td>Volume shot-making</td><td>Bench scoring; defense hidden by Wemby</td><td>S&amp;T / offer sheet</td><td class="r">Low-Med</td></tr>
+    <tr><td><b>Gary Trent Jr. / Malik Beasley</b></td><td>UFA</td><td>Shooting, not creation</td><td>Spacing raise for the current core</td><td>MLE / min</td><td class="r">Med-High</td></tr>
+  </table>
+  <div class="grid2">
+    <div class="card"><h4>Recommendation — Plan A</h4><p class="scout">Run the <b>LeBron pursuit to its conclusion first</b> (decision expected after July 6). Simultaneously agree to terms with an MLE shooter (Trent Jr. tier) contingent on cap sequencing, and re-sign Olynyk/Barnes on minimums.</p></div>
+    <div class="card"><h4>Recommendation — Plan B</h4><p class="scout">If LeBron goes elsewhere, execute the <b>Simons trade</b> (Keldon + Kornet + a pick) the same week — the cleanest creation upgrade at the lowest core cost — and keep the Markkanen package (Vassell-based) in reserve for the deadline.</p></div>
+  </div>
+  <div class="note">Creation/fit grades are archetype-level scouting; playoff tracking splits will be attached as 2025-26 postseason data finalizes.</div>
+</section>
+
+<!-- ============ CREATIVE TRADES ============ -->
+<section id="creative">
+  <h2><span class="num">11</span>Creative Spurs Trades <span class="pill hot">Think like the front office</span></h2>
+  <p class="muted">CBA-legal, flexibility-aware concepts — not rehashes. San Antonio is not hard-capped, so unlike most contenders these deals use the full toolbox. Salary figures approximate; confirm before pursuit.</p>
+
+  <details open>
+    <summary>Realistic — Keldon Johnson salary-clear to Brooklyn</summary>
+    <p class="scout"><b>Spurs send:</b> Keldon Johnson ($17.5M exp) + a second. <b>Spurs get:</b> nothing but room — Brooklyn absorbs into cap space. <b>Why SAS:</b> opens the engineered LeBron money (or clean MLE + tax cushion). <b>Why BKN:</b> a productive expiring plus a pick for nothing. <b>Probability:</b> High if LeBron signals yes. <b>Grade:</b> <span class="grade B">B+</span>.</p>
+  </details>
+  <details>
+    <summary>Aggressive — Keldon + Kornet + pick for Anfernee Simons</summary>
+    <p class="scout"><b>Spurs send:</b> Keldon ($17.5M) + Kornet ($10.3M) + a protected first. <b>Spurs get:</b> Anfernee Simons ($27.7M). <b>Why SAS:</b> the exact creation/deep-shooting archetype, age-aligned with the core; matching is clean. <b>Why POR:</b> Morant's arrival makes Simons redundant; they get a scoring wing, a rotation big and a pick. <b>Probability:</b> Med-High. <b>Grade:</b> <span class="grade A">A-</span> — <b>Plan B if LeBron passes</b>. Preloaded in the <a href="#trademachine">Trade Machine</a>.</p>
+  </details>
+  <details>
+    <summary>Big swing — Vassell + Keldon for Lauri Markkanen</summary>
+    <p class="scout"><b>Spurs send:</b> Devin Vassell ($27M) + Keldon ($17.5M) (+ pick sweetener). <b>Spurs get:</b> Lauri Markkanen (~$46.4M). <b>Why SAS:</b> a 7-foot elite shooter next to Wemby bends every playoff defense; Utah is deep in a rebuild and Markkanen is the obvious next domino. <b>Risk:</b> costs their best two-way wing. <b>Probability:</b> Med. <b>Grade:</b> <span class="grade B">B+</span>. Also preloaded in the machine.</p>
+  </details>
+  <details>
+    <summary>Opportunistic — absorb a shooter into the apron cushion</summary>
+    <p class="scout"><b>Structure:</b> a taxed-out contender dumps a $8–14M shooter; San Antonio absorbs with its ~$20M of apron headroom for a second. <b>Why SAS:</b> buys real rotation talent with money instead of assets. <b>Probability:</b> Med. <b>Grade:</b> <span class="grade B">B</span>.</p>
+  </details>
+  <details>
+    <summary>Deadline / Buyout — veteran closer insurance</summary>
+    <p class="scout"><b>Move:</b> add a bought-out veteran shot-maker in February on the BAE/minimum. <b>Why SAS:</b> playoff creation insurance at near-zero cost; no hard-cap anxiety. <b>Probability:</b> High. <b>Grade:</b> <span class="grade A">A-</span>.</p>
+  </details>
+</section>
+
+<!-- ============ BIG BOARD ============ -->
+<section id="bigboard">
+  <h2><span class="num">12</span>Front Office Big Board — Realistic Targets</h2>
+  <p class="muted">Ranked by fit-adjusted value to San Antonio's actual need (shot creation + shooting) given full cap flexibility. The swing-for-the-fences names live on the <a href="#dreamboard">Dream Board</a> below.</p>
+  <table>
+    <tr><th>#</th><th>Player</th><th>Team/Status</th><th>Acq. cost</th><th>Fit</th><th>Age</th><th class="r">Likelihood</th><th>Rec.</th></tr>
+    <tr><td>1</td><td>LeBron James</td><td>UFA (Jul 6)</td><td>Engineered room ~$15–20M</td><td>The Finals-gap fix; only SAS can pay real money</td><td>41</td><td class="r">Med</td><td><span class="grade A">Pursue</span></td></tr>
+    <tr><td>2</td><td>Anfernee Simons</td><td>Trade (POR)</td><td>Keldon + Kornet + pick</td><td>Creation + deep shooting, age-aligned</td><td>27</td><td class="r">Med-High</td><td><span class="grade A">Pursue</span></td></tr>
+    <tr><td>3</td><td>Lauri Markkanen</td><td>Trade (UTA)</td><td>Vassell/Keldon + picks</td><td>7-foot elite spacing next to Wemby</td><td>29</td><td class="r">Med</td><td><span class="grade A">Target</span></td></tr>
+    <tr><td>4</td><td>Gary Trent Jr.</td><td>UFA</td><td>MLE</td><td>Starter-level 3&amp;D shooting</td><td>27</td><td class="r">Med-High</td><td><span class="grade A">Target</span></td></tr>
+    <tr><td>5</td><td>Malik Beasley</td><td>UFA</td><td>MLE / min</td><td>Movement shooting, gravity</td><td>29</td><td class="r">Med</td><td><span class="grade B">Target</span></td></tr>
+    <tr><td>6</td><td>De'Anthony Melton</td><td>UFA</td><td>MLE / min</td><td>3&amp;D combo guard</td><td>28</td><td class="r">Med</td><td><span class="grade B">Value</span></td></tr>
+    <tr><td>7</td><td>Cam Thomas</td><td>RFA (~$6M QO)</td><td>Offer sheet / S&amp;T</td><td>Bench shot-making, defense hidden by Wemby</td><td>24</td><td class="r">Low-Med</td><td><span class="grade C">Monitor</span></td></tr>
+    <tr><td>8</td><td>Kelly Olynyk</td><td>Own UFA</td><td>Min</td><td>Frontcourt passing/spacing continuity</td><td>35</td><td class="r">High</td><td><span class="grade B">Re-sign</span></td></tr>
+    <tr><td>9</td><td>Harrison Barnes</td><td>Own UFA</td><td>Min</td><td>Vet wing, locker-room glue</td><td>34</td><td class="r">High</td><td><span class="grade B">Re-sign</span></td></tr>
+    <tr><td>10</td><td>Backup PG (min/2-way)</td><td>Min</td><td>Min</td><td>McLaughlin-tier insurance</td><td>—</td><td class="r">High</td><td><span class="grade B">Fill</span></td></tr>
+    <tr><td>11</td><td>February buyout shot-maker</td><td>Feb buyout</td><td>Pro-rated min/BAE</td><td>Playoff creation insurance</td><td>—</td><td class="r">High</td><td><span class="grade A">Plan</span></td></tr>
+  </table>
+  <p class="muted" style="font-size:12px">Unlike apron-locked rivals, San Antonio can realistically execute #1 <i>or</i> #2/#3 <i>plus</i> #4 — the full toolbox is live. Sequencing (LeBron first, trades second) is the whole game.</p>
+</section>
+
+<!-- ============ DREAM BOARD ============ -->
+<section id="dreamboard">
+  <h2><span class="num">12B</span>The Dream Board <span class="pill hot">Swing for the fences</span></h2>
+  <p class="lead">If the market broke San Antonio's way, these are the moves that turn the reigning West champs into a <b>runaway title favorite</b>. Unlike Miami's version of this board, none of these require cap gymnastics — the Spurs' flexibility and pick chest make every one legally straightforward. The question is price and willingness.</p>
+
+  <div class="warnbox"><b>The flexibility reality check:</b> San Antonio sits ~$188.6M committed with no hard cap, ~$20M of first-apron headroom, aggregation rights, the full MLE, and one of the best pick chests in basketball. Matching salary is trivial: Keldon ($17.5M) + Kornet ($10.3M) legally returns up to ~$56M; add Vassell ($27M) and a max player matches. The binding constraint isn't the CBA — it's <b>how much of the Castle/Harper/Bryant future to spend on the present</b>. Model any of these in the <a href="#trademachine">Trade Machine</a> — the Simons and Markkanen templates are preloaded.</div>
+
+  <h3>Tier 1 — Attainable dreams (hard but real)</h3>
+  <table>
+    <tr><th>Target</th><th>Path</th><th>Realistic cost</th><th>Why it's a dream next to Fox + Wemby</th><th class="r">Odds</th></tr>
+    <tr><td><b>Anfernee Simons</b> (SG)</td><td>Trade</td><td>Keldon + Kornet + protected 1st</td><td>Deep-range gravity and PnR scoring — the halfcourt oxygen the Finals lacked, at the lowest core cost.</td><td class="r">~25%</td></tr>
+    <tr><td><b>Lauri Markkanen</b> (PF)</td><td>Trade</td><td>Vassell + Keldon + pick</td><td>A 7-foot 40% shooter who turns Wemby's rim gravity into open threes forever. Utah's rebuild makes him gettable.</td><td class="r">~18%</td></tr>
+    <tr><td><b>LeBron James</b> (F)</td><td>Free agency</td><td>Engineered room (~$15–20M) + Keldon clear-out</td><td>An all-time closer and the loudest possible torch-pass to Wemby. The one suitor who can pay him real money is this one.</td><td class="r">~14%</td></tr>
+  </table>
+
+  <h3>Tier 2 — Long-shot dreams (need a market shift)</h3>
+  <table>
+    <tr><th>Target</th><th>Path</th><th>Realistic cost</th><th>Why it's a dream</th><th class="r">Odds</th></tr>
+    <tr><td><b>Jaylen Brown</b> (SF)</td><td>3-team trade</td><td>Vassell + Keldon + Kornet + 2 firsts (+3rd team)</td><td>A two-way wing star in his prime; Boston's second-apron math keeps this door theoretically ajar. Preloaded in the machine.</td><td class="r">~6%</td></tr>
+    <tr><td><b>Zach LaVine</b> (SG)</td><td>Trade (SAC)</td><td>Keldon + Kornet + pick</td><td>25+ ppg shot-making; Sacramento's confused timeline could shake him loose.</td><td class="r">~8%</td></tr>
+    <tr><td><b>Trae Young</b> (PG)</td><td>Trade (WAS)</td><td>Vassell + picks</td><td>Elite PnR maestro feeding Wemby lobs — but he just re-signed (4/$212M) and duplicates Fox.</td><td class="r">~3%</td></tr>
+  </table>
+
+  <h3>Tier 3 — Pure fantasy (dream-scenario only)</h3>
+  <table>
+    <tr><th>Target</th><th>Why it's the dream</th><th class="r">Odds</th></tr>
+    <tr><td><b>Devin Booker</b> (SG)</td><td>Booker–Fox–Wemby is a dynasty starter kit — three shot-makers around the best defender alive. Phoenix has no reason to call; the pick chest is the only bid big enough. File under "if the phone rings."</td><td class="r">~1%</td></tr>
+    <tr><td><b>A disgruntled superstar wing</b></td><td>If any top-15 two-way wing forces his way out mid-season, San Antonio's combination of matching salary, apron room and picks makes it the best-positioned bidder in the league. Standing deadline posture.</td><td class="r">Monitor</td></tr>
+  </table>
+
+  <div class="callout"><b>Dream Board doctrine:</b> the single most valuable archetype for <i>this</i> roster is a <b>high-volume shot-maker who scales off-ball</b> — Simons and Markkanen are the platonic fits, LeBron is the transcendence option. Wemby's rim gravity is the fulcrum; every dream here is about weaponizing it. Spend flexibility, protect Castle/Harper/Bryant, and never trade the 2027+ unprotecteds for anyone on the wrong side of 30 not named LeBron.</div>
+</section>
+
+<!-- ============ BLUEPRINT ============ -->
+<section id="blueprint">
+  <h2><span class="num">13</span>Championship Blueprint — "If I ran the Spurs"</h2>
+  <p>A step-by-step plan from July 1 to opening night, with the championship-probability effect of each move.</p>
+  <table>
+    <tr><th>Step</th><th>Move</th><th>Mechanism</th><th class="r">Title odds after</th></tr>
+    <tr><td>0</td><td>Baseline (West champs + Harris/Champagnie)</td><td>—</td><td class="r">~+700</td></tr>
+    <tr><td>1</td><td>Re-sign Olynyk &amp; Barnes; fill 2-ways</td><td>Minimums</td><td class="r">~+700</td></tr>
+    <tr><td>2</td><td>Sign an MLE shooter (Trent Jr. / Beasley)</td><td>Full NT-MLE</td><td class="r">~+600</td></tr>
+    <tr><td>3</td><td>Run the LeBron pursuit to a decision (Jul 6–8)</td><td>Keldon clear-out ready</td><td class="r">gate</td></tr>
+    <tr><td>4a</td><td><b>If yes:</b> sign LeBron to the engineered number</td><td>Room after clear-out</td><td class="r">~+400</td></tr>
+    <tr><td>4b</td><td><b>If no:</b> execute Simons (or Markkanen) that week</td><td>Keldon+Kornet(+Vassell) trade</td><td class="r">~+450</td></tr>
+    <tr><td>5</td><td><b>Deadline/buyout:</b> veteran closer insurance</td><td>BAE / pro-rated min</td><td class="r">~+400</td></tr>
+  </table>
+  <div class="grid2">
+    <div class="card"><h4>Regular-season rotation (10)</h4><p class="scout">Fox / Castle / Vassell / Harris / Wemby; bench Harper, Champagnie, [creator or shooter add], Kornet, Bryant. Defend at #1, run off misses, keep Wemby under 34 minutes until April.</p></div>
+    <div class="card"><h4>Playoff closing five</h4><p class="scout"><b>Fox — Harper — Vassell — [Creator] — Wemby.</b> Rim pressure on one end, a wall on the other, and — finally — a second closer for the six possessions that decided the New York series. This is the lineup that wins Game 7s.</p></div>
+  </div>
+  <div class="callout"><b>Blueprint conclusion:</b> San Antonio is the rare Finals loser whose fix is purchasable. Execute steps 1–5 and the Spurs open next June as co-favorites at roughly <b>+400</b> — with the youngest core and cleanest books of any contender, win or lose.</div>
+</section>
+
+<!-- ============ 30 TEAMS ============ -->
+<section id="teams">
+  <h2><span class="num">14</span>Team-by-Team Reports (30)</h2>
+  <p class="muted">San Antonio's full report lives in the <a href="#war">War Room</a>. Every other team below in front-office format: projected lineup, bench, identity, salary/apron, draft assets, needs, priorities, and an offseason grade. Rosters reflect verified 2026 offseason moves; role-player projections firm up on each update.</p>
+
+  <h3 style="color:var(--heat-yellow)">Eastern Conference</h3>
+
+  <details>
+    <summary>Atlanta Hawks <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Core:</b> Jalen Johnson, Dyson Daniels, Zaccharie Risacher, Onyeka Okongwu, Kristaps Porziņģis. <b>Draft:</b> Kingston Flemings (No. 8). <b>Offseason:</b> declined Kuminga's $24.3M team option, then re-signed him at $24.3M after a brief free-agency scare; added Henri Veesaar (No. 52). <b>Starters (proj.):</b> Daniels–Risacher–J. Johnson–Porziņģis–Okongwu. <b>Strengths:</b> elite point-of-attack defense (Daniels), length, youth. <b>Weaknesses:</b> half-court shot creation, Porziņģis availability. <b>Identity:</b> long, switchy defense; transition. <b>Salary:</b> mid-market, under the tax. <b>Assets:</b> healthy pick stock. <b>Needs:</b> a lead creator, shooting. <b>Priority:</b> decide whether to buy or stay flexible. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Boston Celtics <span class="grade B" style="float:right">B-</span></summary>
+    <p class="scout"><b>Core:</b> Jayson Tatum, Jaylen Brown, Derrick White, Payton Pritchard. <b>Offseason:</b> added Mitchell Robinson (3/$47.4M, from NYK) for rim protection; drafted Chris Cenac Jr. (No. 27); managing a deep second-apron sheet. <b>Starters (proj.):</b> White–Brown–Tatum–[PF]–Robinson. <b>Strengths:</b> two-way wings, championship pedigree, shooting. <b>Weaknesses:</b> second-apron rigidity, frontcourt depth, health. <b>Identity:</b> switch defense + high-volume threes. <b>Salary:</b> over the 2nd apron — no aggregation, no MLE. <b>Assets:</b> limited picks. <b>Needs:</b> cheap frontcourt &amp; guard depth. <b>Priority:</b> stay under the hard restrictions while contending. <b>Grade B-.</b></p>
+  </details>
+  <details>
+    <summary>Brooklyn Nets <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Core:</b> young, flexible roster. <b>Draft:</b> Mikel Brown Jr. (No. 6) — shot creation. <b>Offseason:</b> the league's clearest cap-space team, a natural facilitator/absorber in trades. <b>Strengths:</b> financial flexibility, picks, developmental runway. <b>Weaknesses:</b> talent, near-term wins. <b>Identity:</b> rebuild — pace &amp; player development. <b>Salary:</b> well under the cap. <b>Assets:</b> deep pick war-chest. <b>Needs:</b> a franchise cornerstone. <b>Priority:</b> convert cap space into young talent/picks (the ideal facilitator in Spurs dream trades). <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Charlotte Hornets <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Offseason:</b> traded LaMelo Ball (+ Josh Green) to Minnesota for <b>Naz Reid</b>, a 2033 first, three swaps and three seconds; traded Miles Bridges to Phoenix for Grayson Allen, Royce O'Neale and a 2033 first; re-signed Coby White (3/$74M). <b>Core:</b> Brandon Miller, Coby White, Naz Reid, Grayson Allen, Royce O'Neale. <b>Strengths:</b> asset accumulation, shooting, veteran stability. <b>Weaknesses:</b> lost star power &amp; upside. <b>Identity:</b> rebuild reset around Miller. <b>Salary:</b> flexible. <b>Assets:</b> loaded pick chest. <b>Needs:</b> a new No. 1. <b>Priority:</b> develop Miller; flip vets for youth. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Chicago Bulls <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Additions:</b> Norman Powell (2/$45M) and Zach Collins via cap space; re-signed Josh Giddey ($25M/yr); drafted Caleb Wilson (No. 4) and Dailyn Swain (No. 15). <b>Core:</b> Giddey, Powell, Buzelis, Wilson, Patrick Williams, Dillingham. <b>Starters (proj.):</b> Giddey–Powell–Buzelis–Williams–Collins. <b>Strengths:</b> perimeter scoring, playmaking, young forward pipeline. <b>Weaknesses:</b> defense, direction. <b>Identity:</b> pace &amp; playmaking. <b>Salary:</b> cap space spent; $9.4M room exception left; ~$47M under the tax. <b>Assets:</b> moderate. <b>Needs:</b> defense, a wing stopper. <b>Priority:</b> spend the exception on stops; December decides buyer-or-seller. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Cleveland Cavaliers <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Core:</b> Donovan Mitchell, Evan Mobley, Darius Garland, Jarrett Allen, Max Strus. <b>Offseason:</b> in active talks with James Harden (declined his option) for half-court creation. <b>Starters (proj.):</b> Garland–Mitchell–Strus–Mobley–Allen. <b>Strengths:</b> DPOY-caliber front line (Mobley), guard scoring, regular-season floor. <b>Weaknesses:</b> playoff half-court offense, second-apron pressure, wing size. <b>Identity:</b> two-big defense + Mitchell shot-making. <b>Salary:</b> into the aprons. <b>Assets:</b> limited. <b>Needs:</b> a playoff-proof creator/wing. <b>Priority:</b> resolve Harden; find switchable wing size. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Detroit Pistons <span class="grade B" style="float:right">B+</span></summary>
+    <p class="scout"><b>Core:</b> Cade Cunningham, Jaden Ivey, Ausar Thompson, Jalen Duren, Jaden Ivey. <b>Offseason:</b> added John Collins for frontcourt scoring/spacing; intends to keep RFA Jalen Duren despite Lakers/Kings pressure. <b>Starters (proj.):</b> Cunningham–Ivey–Thompson–Collins–Duren. <b>Strengths:</b> size, athleticism, a rising All-NBA guard, elite young defense (Thompson). <b>Weaknesses:</b> shooting consistency. <b>Identity:</b> big, physical, downhill. <b>Salary:</b> healthy — room to grow. <b>Assets:</b> good. <b>Needs:</b> more shooting. <b>Priority:</b> keep ascending; extend the young core. <b>Grade B+.</b></p>
+  </details>
+  <details>
+    <summary>Indiana Pacers <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Core:</b> Tyrese Haliburton (health TBD), Pascal Siakam, Bennedict Mathurin, Andrew Nembhard, Myles Turner-type frontcourt. <b>Offseason:</b> added Kelly Oubre Jr. (2/~$17M) for wing scoring; managing Haliburton's status. <b>Strengths:</b> pace, ball movement, depth. <b>Weaknesses:</b> availability of their engine, rim protection. <b>Identity:</b> fastest offense in the league when healthy. <b>Salary:</b> mid. <b>Assets:</b> moderate. <b>Needs:</b> interior defense, a healthy Haliburton. <b>Priority:</b> stay the course, protect the timeline. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Miami Heat <span class="grade B" style="float:right">B+</span></summary>
+    <p class="scout"><b>Offseason:</b> the summer's blockbuster — acquired <b>Giannis Antetokounmpo</b> &amp; Bobby Portis from Milwaukee (Herro, Ware, Jaquez, Jakučionis, No. 13, 2031/2033 firsts, 2030 swap out); Wiggins opted in + extended (3/$64M); added Tim Hardaway Jr. (1/$6.5M), re-signed Fontecchio. <b>Hard-capped at the first apron</b> with ~$10.7M of room. <b>Starters (proj.):</b> Mitchell–Larsson–Wiggins–Giannis–Bam. <b>Strengths:</b> the best defensive frontcourt alive, rim pressure, Spoelstra. <b>Weaknesses:</b> halfcourt spacing after losing Herro/Powell; no financial flexibility. <b>Identity:</b> downhill, switch-everything. <b>Needs:</b> a movement shooter. <b>Priority:</b> partial-MLE sniper + February buyout market. <b>Grade B+.</b></p>
+  </details>
+  <details>
+    <summary>Milwaukee Bucks <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Offseason:</b> traded Giannis &amp; Portis to Miami for Tyler Herro, Kel'el Ware, Jaime Jaquez Jr., Kašparas Jakučionis, Nate Ament (No. 13), 2031 &amp; 2033 firsts and a 2030 swap. <b>Core:</b> Herro, Ware, Jaquez, Jakučionis, Ament. <b>Strengths:</b> young, cost-controlled talent + a fresh pick chest. <b>Weaknesses:</b> no star, near-term wins evaporated. <b>Identity:</b> full rebuild. <b>Salary:</b> reset, flexible. <b>Assets:</b> strong going forward. <b>Needs:</b> a new cornerstone. <b>Priority:</b> develop Ware/Jakučionis; weaponize picks. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>New York Knicks <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>2026 NBA CHAMPIONS — first title since 1973.</b> <b>Core:</b> Jalen Brunson, Karl-Anthony Towns, Mikal Bridges, OG Anunoby, Josh Hart. <b>Offseason:</b> lost Mitchell Robinson to Boston; operating over the second apron. <b>Starters (proj.):</b> Brunson–Bridges–Anunoby–Towns–[C]. <b>Strengths:</b> elite starting five, shot-making, wing defense. <b>Weaknesses:</b> center depth after Robinson, no aggregation/MLE tools, bench. <b>Identity:</b> iso + switch defense. <b>Salary:</b> 2nd apron. <b>Assets:</b> thin. <b>Needs:</b> center depth, cheap bench. <b>Priority:</b> patch the five spot on the minimum and defend the crown. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Orlando Magic <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Core:</b> Paolo Banchero, Franz Wagner, Jalen Suggs, Wendell Carter Jr. <b>Offseason:</b> re-signed Jonathan Isaac (1/$8M) to keep the defensive identity; continuity around an elite young core; still hunting shooting. <b>Starters (proj.):</b> Suggs–[SG]–Wagner–Banchero–Carter. <b>Strengths:</b> size, top-tier defense, two ascending stars. <b>Weaknesses:</b> shooting/spacing, half-court offense. <b>Identity:</b> the league's most physical defense. <b>Salary:</b> healthy — room to extend. <b>Assets:</b> good. <b>Needs:</b> shooting, a lead guard. <b>Priority:</b> add spacing; extend the core. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Philadelphia 76ers <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Core:</b> Joel Embiid (health), Tyrese Maxey, Paul George (health), Jared McCain. <b>Offseason:</b> added Dean Wade (4/$39M) for shooting/switchability. <b>Starters (proj.):</b> Maxey–McCain–George–Wade–Embiid. <b>Strengths:</b> ceiling if healthy, elite guard scoring. <b>Weaknesses:</b> availability of two stars, age. <b>Identity:</b> Embiid-centric — when available. <b>Salary:</b> tax-adjacent. <b>Assets:</b> limited. <b>Needs:</b> health, depth. <b>Priority:</b> stay flexible; hope for availability. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Toronto Raptors <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Offseason:</b> acquired Kawhi Leonard (from LAC) for Brandon Ingram, Gradey Dick and picks. <b>Core:</b> Scottie Barnes, Kawhi Leonard, Immanuel Quickley, RJ Barrett, Jakob Poeltl. <b>Starters (proj.):</b> Quickley–Barrett–Kawhi–Barnes–Poeltl. <b>Strengths:</b> two-way ceiling &amp; playoff shot-making if Kawhi's healthy. <b>Weaknesses:</b> Kawhi's availability is the entire thesis; shooting. <b>Identity:</b> big, positional, defensive. <b>Salary:</b> tax-adjacent. <b>Assets:</b> reduced. <b>Needs:</b> shooting, load management. <b>Priority:</b> maximize Kawhi's games. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Washington Wizards <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Offseason:</b> won the lottery, drafted <b>AJ Dybantsa</b> (No. 1); re-signed Trae Young (4/$212M). <b>Core:</b> Dybantsa, Trae Young, Bilal Coulibaly, Alex Sarr, Kyshawn George. <b>Starters (proj.):</b> Young–Coulibaly–Dybantsa–George–Sarr. <b>Strengths:</b> most cap flexibility in the league, a franchise wing, a scoring engine. <b>Weaknesses:</b> defense, the Young contract's fit on a rebuild timeline. <b>Identity:</b> young, high-pace. <b>Salary:</b> huge room. <b>Assets:</b> strong. <b>Needs:</b> defense, patience. <b>Priority:</b> develop Dybantsa/Sarr; use cap space as a weapon. <b>Grade C+.</b></p>
+  </details>
+
+  <h3 style="color:var(--heat-yellow)">Western Conference</h3>
+
+  <details>
+    <summary>Dallas Mavericks <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Core:</b> Cooper Flagg, Anthony Davis, Kyrie Irving (health), Klay Thompson, Daniel Gafford. <b>Draft:</b> Morez Johnson Jr. (No. 9). <b>Starters (proj.):</b> [PG]–Flagg–Thompson–Davis–Gafford. <b>Strengths:</b> a generational rookie next to a two-way star big, size. <b>Weaknesses:</b> guard health, spacing/creation while Kyrie recovers. <b>Identity:</b> size + defense. <b>Salary:</b> tax-adjacent. <b>Assets:</b> limited near-term. <b>Needs:</b> guard creation, shooting. <b>Priority:</b> develop Flagg; bridge the guard minutes. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Denver Nuggets <span class="grade B" style="float:right">B-</span></summary>
+    <p class="scout"><b>Core:</b> Nikola Jokić, Jamal Murray, Michael Porter Jr., Aaron Gordon, Christian Braun. <b>Offseason:</b> first-apron team fighting to keep depth. <b>Starters (proj.):</b> Murray–Braun–MPJ–Gordon–Jokić. <b>Strengths:</b> the best player alive, elite starting five, championship offense. <b>Weaknesses:</b> thin, expensive bench; apron limits. <b>Identity:</b> Jokić-hub half-court mastery. <b>Salary:</b> 1st apron. <b>Assets:</b> limited. <b>Needs:</b> cheap wing/guard depth. <b>Priority:</b> maximize the Jokić window; MPJ remains their prime trade chip. <b>Grade B-.</b></p>
+  </details>
+  <details>
+    <summary>Golden State Warriors <span class="grade C" style="float:right">Inc.</span></summary>
+    <p class="scout"><b>Core:</b> Stephen Curry, Jimmy Butler, Brandin Podziemski, Moses Moody. <b>Draft:</b> Yaxel Lendeborg (No. 11). <b>Offseason:</b> Draymond Green opted out of a guaranteed $27.7M specifically to open the $15.1M MLE for a <b>LeBron James</b> run (AD also pursued); re-signed Al Horford (2/$14M) on the cheap. A franchise-defining swing that would push deep into the second apron. <b>Strengths:</b> pedigree, Curry gravity, two-way versatility. <b>Weaknesses:</b> age, depth, apron. <b>Identity:</b> motion + switching. <b>Salary:</b> apron-sensitive. <b>Needs:</b> a third star, youth. <b>Priority:</b> land one star without gutting the role players. <b>Grade: incomplete pending LeBron.</b></p>
+  </details>
+  <details>
+    <summary>Houston Rockets <span class="grade B" style="float:right">B+</span></summary>
+    <p class="scout"><b>Core:</b> Alperen Şengün, Amen Thompson, Jabari Smith Jr., Reed Sheppard, Fred VanVleet. <b>Offseason:</b> continuity + youth on the rise; added Bogdan Bogdanović (1yr) for bench shot-making. <b>Starters (proj.):</b> VanVleet–Sheppard–A. Thompson–Smith–Şengün. <b>Strengths:</b> length, defense, offensive rebounding, two-way athleticism. <b>Weaknesses:</b> half-court shot creation, shooting. <b>Identity:</b> physical, switchy, crash-the-glass defense. <b>Salary:</b> flexible. <b>Assets:</b> excellent pick stock. <b>Needs:</b> shot creation/shooting. <b>Priority:</b> hunt a scoring upgrade with their assets. <b>Grade B+.</b></p>
+  </details>
+  <details>
+    <summary>LA Clippers <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Offseason:</b> traded Kawhi Leonard to Toronto for Brandon Ingram, Gradey Dick and picks — a youth pivot. <b>Draft:</b> Keaton Wagler (No. 5). <b>Core:</b> James Harden (aging), Ivica Zubac, Brandon Ingram, Gradey Dick, Wagler. <b>Strengths:</b> reclaimed picks, younger scoring. <b>Weaknesses:</b> transition year, spacing/defense fit. <b>Identity:</b> reset in motion. <b>Salary:</b> flexible. <b>Assets:</b> improved. <b>Needs:</b> a new timeline anchor. <b>Priority:</b> integrate youth; keep building the pick chest. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>LA Lakers <span class="grade A" style="float:right">A-</span></summary>
+    <p class="scout"><b>Offseason:</b> LeBron left; traded for &amp; extended <b>Walker Kessler</b> (4/$130M), re-signed Austin Reaves (4/$185M), added Quentin Grimes (4/$60M), Collin Sexton (2/$19M) and Sandro Mamukelashvili (4/$52M); meeting RFA Jalen Duren. <b>Core:</b> Luka Dončić, Reaves, Grimes, Sexton, Kessler. <b>Starters (proj.):</b> Dončić–Reaves–Grimes–[PF]–Kessler. <b>Strengths:</b> elite offense, a young franchise guard, finally a rim-running center. <b>Weaknesses:</b> perimeter defense, frontcourt depth. <b>Identity:</b> Luka pick-and-roll with a lob threat. <b>Salary:</b> first apron. <b>Needs:</b> a defensive PF/wing. <b>Priority:</b> round out the frontcourt on value deals. <b>Grade A-.</b></p>
+  </details>
+  <details>
+    <summary>Memphis Grizzlies <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Offseason:</b> traded Ja Morant to Portland for Jerami Grant &amp; Kris Murray; drafted <b>Cameron Boozer</b> (No. 3). <b>Core:</b> Jaren Jackson Jr., Boozer, Grant, Murray, Zach Edey. <b>Strengths:</b> a plug-and-play rookie big, defensive anchor in JJJ, shooting (Grant). <b>Weaknesses:</b> lead guard vacuum, offensive creation. <b>Identity:</b> retool around JJJ &amp; Boozer. <b>Salary:</b> flexible. <b>Assets:</b> good. <b>Needs:</b> a lead guard. <b>Priority:</b> reshape the timeline; develop Boozer. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Minnesota Timberwolves <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Offseason:</b> acquired <b>LaMelo Ball</b> &amp; Josh Green (dealt Naz Reid + picks). <b>Core:</b> Anthony Edwards, LaMelo Ball, Rudy Gobert, Jaden McDaniels, Julius Randle. <b>Starters (proj.):</b> LaMelo–Edwards–McDaniels–Randle–Gobert. <b>Strengths:</b> two dynamic shot creators, rim protection, elite wing defense. <b>Weaknesses:</b> LaMelo's defense, second-apron rigidity, backcourt size. <b>Identity:</b> star-driven offense + Gobert/McDaniels defense. <b>Salary:</b> deep 2nd apron. <b>Assets:</b> thin post-trade. <b>Needs:</b> cheap two-way guards. <b>Priority:</b> make the offense elite without breaking the defense. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>New Orleans Pelicans <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Core:</b> Zion Williamson (availability), Trey Murphy III, Herb Jones, Yves Missi, Dejounte Murray. <b>Offseason:</b> health-dependent continuity. <b>Strengths:</b> two-way wings (Murphy, Jones), rim pressure when Zion plays. <b>Weaknesses:</b> availability, spacing. <b>Identity:</b> athletic, defense-first. <b>Salary:</b> some flexibility. <b>Assets:</b> moderate. <b>Needs:</b> reliability, shooting. <b>Priority:</b> get healthy; decide Zion's long-term fit. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Oklahoma City Thunder <span class="grade A" style="float:right">A</span></summary>
+    <p class="scout"><b>Lost a Game-7 WCF heartbreaker to San Antonio after another 60-win season.</b> <b>Core:</b> Shai Gilgeous-Alexander (MVP), Chet Holmgren, Jalen Williams, Isaiah Hartenstein (ext 3/$75M), Lu Dort. <b>Draft:</b> Aday Mara (No. 12). <b>Starters (proj.):</b> SGA–Dort–J. Williams–Holmgren–Hartenstein. <b>Strengths:</b> best two-way team in basketball, elite defense, an all-time pick war-chest, cheap stars. <b>Weaknesses:</b> essentially none near-term. <b>Identity:</b> switch-everything defense + SGA shot-making. <b>Salary:</b> manageable, future aprons loom. <b>Needs:</b> nothing material. <b>Priority:</b> continuity &amp; internal development. <b>Grade A.</b></p>
+  </details>
+  <details>
+    <summary>Phoenix Suns <span class="grade C" style="float:right">C+</span></summary>
+    <p class="scout"><b>Offseason:</b> acquired Miles Bridges (dealt Grayson Allen, Royce O'Neale, a 2033 first). <b>Core:</b> Devin Booker, Miles Bridges, Mark Williams (3/$38M) and a reshaping supporting cast. <b>Strengths:</b> elite shot-making (Booker), a downhill scoring wing. <b>Weaknesses:</b> defense, apron limits, depth. <b>Identity:</b> Booker-led scoring. <b>Salary:</b> first-apron pressure. <b>Assets:</b> limited. <b>Needs:</b> defense, two-way wings. <b>Priority:</b> maximize the Booker window under the apron. <b>Grade C+.</b></p>
+  </details>
+  <details>
+    <summary>Portland Trail Blazers <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Offseason:</b> acquired <b>Ja Morant</b> (dealt Jerami Grant &amp; Kris Murray); extended Robert Williams III (3/$44M). <b>Core:</b> Morant, Shaedon Sharpe, Deni Avdija, Toumani Camara, Donovan Clingan. <b>Starters (proj.):</b> Morant–Sharpe–Avdija–Camara–Clingan. <b>Strengths:</b> athletic, downhill star, elite young perimeter defense (Camara), rim protection. <b>Weaknesses:</b> shooting, Morant/Williams health. <b>Identity:</b> fast, long, defensive. <b>Salary:</b> flexible. <b>Assets:</b> decent. <b>Needs:</b> shooting. <b>Priority:</b> a win-now leap around Morant. <b>Grade B.</b></p>
+  </details>
+  <details>
+    <summary>Sacramento Kings <span class="grade C" style="float:right">C</span></summary>
+    <p class="scout"><b>Core:</b> Domantas Sabonis, DeMar DeRozan, Zach LaVine-type scoring wing, Keegan Murray. <b>Draft:</b> Darius Acuff Jr. (No. 7). <b>Offseason:</b> re-signed Precious Achiuwa (2/$11.5M); lurking on RFA Jalen Duren after missing Kuminga. <b>Strengths:</b> half-court scoring, a hub big (Sabonis). <b>Weaknesses:</b> defense, spacing, roster balance. <b>Identity:</b> Sabonis DHO offense. <b>Salary:</b> tax-adjacent. <b>Assets:</b> limited. <b>Needs:</b> defense, a lead PG of the future. <b>Priority:</b> add two-way pieces (Duren the new target). <b>Grade C.</b></p>
+  </details>
+  <details>
+    <summary>San Antonio Spurs <span class="grade A" style="float:right">A-</span></summary>
+    <p class="scout"><b>See the full <a href="#war">Spurs War Room</a>.</b> Reigning Western Conference champions — beat OKC in a Game-7 WCF, lost the Finals to New York in five. Added Tobias Harris (2/$31M), re-signed Julian Champagnie (3/$45M), drafted Quaintance/Reed/Gillespie/Brown; the live LeBron suitor with real money. The summer's one job: a Finals-level shot creator. <b>Grade A-.</b></p>
+  </details>
+  <details>
+    <summary>Utah Jazz <span class="grade B" style="float:right">B</span></summary>
+    <p class="scout"><b>Offseason:</b> traded Walker Kessler to the Lakers for two unprotected firsts (2031, 2033) and two swaps (2028, 2030); drafted <b>Darryn Peterson</b> (No. 2); signed Jaxson Hayes (2/$12M) to man the middle. <b>Core:</b> Lauri Markkanen, Peterson, young wings. <b>Strengths:</b> a franchise-guard rookie, a movable star (Markkanen), an enormous pick war-chest. <b>Weaknesses:</b> talent, wins now. <b>Identity:</b> full rebuild. <b>Salary:</b> deep cap room. <b>Assets:</b> among the league's best. <b>Needs:</b> a frontcourt cornerstone. <b>Priority:</b> develop Peterson; keep stacking picks. <b>Grade B.</b></p>
+  </details>
+
+  <div class="note">Depth charts, exact salary sheets, and full two-deep rotations for each club will keep firming up on each "Update the Guide" as camps and remaining signings resolve.</div>
+</section>
+
+<!-- ============ POWER RANKINGS ============ -->
+<section id="power">
+  <h2><span class="num">15</span>Power Rankings — Tiers &amp; Full 1–30</h2>
+  <p class="muted">Two views of the same board: championship tiers for the shape of the league, then a full 1–30 ranking with a one-line justification for every spot. Post-July 1 rosters; re-ranked every update (the LeBron decision will shuffle the top ten).</p>
+  <div class="grid2">
+    <div class="card">
+      <h4>Championship tiers (post-July 1)</h4>
+      <p><b>Tier 1 — Favorites:</b> New York (champs), Oklahoma City.</p>
+      <p><b>Tier 2 — Contenders:</b> Cleveland, <b>Miami</b>, San Antonio, LA Lakers, Denver.</p>
+      <p><b>Tier 3 — Dark horses:</b> Houston, Minnesota, Golden State (pending LeBron), Toronto.</p>
+      <p><b>Tier 4 — Playoff class:</b> Detroit, Orlando, Boston, Philadelphia, Dallas, Portland, Atlanta.</p>
+      <p><b>Tier 5 — Play-in / frisky:</b> Chicago, Indiana, Sacramento, Memphis, Phoenix, New Orleans.</p>
+      <p><b>Tier 6 — Rebuilders:</b> LA Clippers, Milwaukee, Utah, Washington, Charlotte, Brooklyn.</p>
+    </div>
+    <div class="card">
+      <h4>Movement</h4>
+      <p><b>Most improved:</b> Miami (Giannis), LA Lakers (Kessler + Grimes + Sexton), Minnesota (LaMelo), Toronto (Kawhi), Portland (Morant).</p>
+      <p><b>Got worse (short-term):</b> Milwaukee (traded Giannis), LA Clippers (Kawhi out), Memphis (Morant out), Charlotte (LaMelo out).</p>
+      <p><b>Best value signings:</b> Dean Wade (PHI 4/$39M), Al Horford (GSW 2/$14M), Robert Williams III (POR 3/$44M), any Heat minimum sniper.</p>
+    </div>
+  </div>
+
+  <h3>The full 1–30</h3>
+  <table>
+    <tr><th>#</th><th>Team</th><th>Tier</th><th>Why they're here</th></tr>
+    <tr><td><b>1</b></td><td><b>New York</b></td><td>1</td><td>2026 champions — first title since 1973. The elite five returns; losing Robinson thins the rim and the 2nd apron blocks patches.</td></tr>
+    <tr><td><b>2</b></td><td><b>Oklahoma City</b></td><td>1</td><td>62-win juggernaut that took a Game-7 WCF gut punch; kept everything and extended Hartenstein — still the deepest two-way roster alive.</td></tr>
+    <tr><td><b>3</b></td><td><b>Cleveland</b></td><td>2</td><td>Mitchell–Mobley core plus live Harden (and LeBron) talks; the East's most complete challenger to the champs.</td></tr>
+    <tr><td><b>4</b></td><td><b>Miami</b></td><td>2</td><td>Giannis + Bam is the best defensive frontcourt alive; one movement shooter from true co-favorite status.</td></tr>
+    <tr><td><b>5</b></td><td><b>San Antonio</b></td><td>2</td><td>Reigning West champs a year ahead of schedule; Harris and Champagnie deepen it, and they're the only team that can hand LeBron real money.</td></tr>
+    <tr><td><b>6</b></td><td><b>LA Lakers</b></td><td>2</td><td>Best offseason so far: Dončić finally gets a lob threat (Kessler) plus Grimes, Sexton, Mamukelashvili and a re-signed Reaves.</td></tr>
+    <tr><td><b>7</b></td><td><b>Denver</b></td><td>2</td><td>Jokić alone guarantees contention; the bench and apron math are the only things holding them back.</td></tr>
+    <tr><td><b>8</b></td><td><b>Houston</b></td><td>3</td><td>Longest, deepest young two-way roster in the West; added Bogdanović's shot-making. One creator short.</td></tr>
+    <tr><td><b>9</b></td><td><b>Minnesota</b></td><td>3</td><td>Edwards + LaMelo is dazzling offense; the defense and deep-2nd-apron rigidity cap the ceiling.</td></tr>
+    <tr><td><b>10</b></td><td><b>Golden State</b></td><td>3</td><td>Curry + Butler + Horford back on value money — and this jumps to top-4 if the engineered LeBron plan lands.</td></tr>
+    <tr><td><b>11</b></td><td><b>Detroit</b></td><td>4</td><td>Cade's ascension plus Collins' spacing; big, physical, and finally balanced. Shooting still swings series.</td></tr>
+    <tr><td><b>12</b></td><td><b>Toronto</b></td><td>4</td><td>Kawhi next to Barnes is a real two-way ceiling — if he plays 65 games. That "if" is the whole ranking.</td></tr>
+    <tr><td><b>13</b></td><td><b>Orlando</b></td><td>4</td><td>Banchero–Wagner–Suggs defense travels; re-signing Isaac keeps the identity. Offense remains the question.</td></tr>
+    <tr><td><b>14</b></td><td><b>Boston</b></td><td>4</td><td>Tatum &amp; Brown keep the floor high and Robinson patches the rim, but the 2nd apron froze the roster.</td></tr>
+    <tr><td><b>15</b></td><td><b>Philadelphia</b></td><td>4</td><td>Maxey + McCain + Wade around two brittle stars — top-6 healthy, lottery-adjacent if not.</td></tr>
+    <tr><td><b>16</b></td><td><b>Dallas</b></td><td>4</td><td>Flagg + AD is a monster defensive axis; guard health (Kyrie) decides whether it's playoffs or purgatory.</td></tr>
+    <tr><td><b>17</b></td><td><b>Portland</b></td><td>4</td><td>Morant turbocharges an athletic, defensive young core; shooting and health are the swing factors.</td></tr>
+    <tr><td><b>18</b></td><td><b>Atlanta</b></td><td>4</td><td>Daniels-led defense and length, and Kuminga is back ($24.3M) — but the lead-creator hole caps it.</td></tr>
+    <tr><td><b>19</b></td><td><b>Chicago</b></td><td>5</td><td>Giddey + Powell + Wilson is real offensive talent; the defense hasn't been addressed at all.</td></tr>
+    <tr><td><b>20</b></td><td><b>Indiana</b></td><td>5</td><td>Everything rides on Haliburton's health; Oubre adds wing scoring but the margin is thin without the engine.</td></tr>
+    <tr><td><b>21</b></td><td><b>Sacramento</b></td><td>5</td><td>Sabonis hub + DeRozan shot-making + a run at RFA Duren; still nobody to stop anyone.</td></tr>
+    <tr><td><b>22</b></td><td><b>Memphis</b></td><td>5</td><td>JJJ + Boozer is a sturdy new spine, but trading Morant leaves a lead-guard vacuum.</td></tr>
+    <tr><td><b>23</b></td><td><b>Phoenix</b></td><td>5</td><td>Booker + Bridges + Mark Williams is a playable trio; the depth and defense around them aren't.</td></tr>
+    <tr><td><b>24</b></td><td><b>New Orleans</b></td><td>5</td><td>Murphy/Jones wings are excellent; the ranking is a bet on Zion's availability, as always.</td></tr>
+    <tr><td><b>25</b></td><td><b>LA Clippers</b></td><td>6</td><td>The Kawhi teardown nets Ingram, Dick, Wagler and picks — a competent, going-nowhere-yet reset.</td></tr>
+    <tr><td><b>26</b></td><td><b>Milwaukee</b></td><td>6</td><td>Herro, Ware and a fresh pick chest is a clean rebuild start — but the post-Giannis wins evaporate now.</td></tr>
+    <tr><td><b>27</b></td><td><b>Utah</b></td><td>6</td><td>Peterson at No. 2 plus the Kessler pick haul = a war chest; Markkanen is the next domino.</td></tr>
+    <tr><td><b>28</b></td><td><b>Washington</b></td><td>6</td><td>Dybantsa changes the franchise's trajectory; Young's $212M keeps them frisky-but-confused near-term.</td></tr>
+    <tr><td><b>29</b></td><td><b>Charlotte</b></td><td>6</td><td>Coby White returns and the asset haul is genuinely elite — but they traded their two best players.</td></tr>
+    <tr><td><b>30</b></td><td><b>Brooklyn</b></td><td>6</td><td>Max cap space, max picks, minimum talent — the league's designated facilitator (and Heat 3-team partner).</td></tr>
+  </table>
+  <p class="muted" style="font-size:12px">Tiers shift on the LeBron decision and remaining RFA dominoes.</p>
+</section>
+
+<!-- ============ CONTRACTS ============ -->
+<section id="contracts">
+  <h2><span class="num">16</span>Best &amp; Worst Contracts · Value Signings</h2>
+  <div class="grid3">
+    <div class="card"><h4>Best contracts</h4><ul class="tight scout"><li>SGA / Chet / J-Dub (OKC) — superstar production, sub-max youth deals</li><li>Hartenstein 3/$75M — elite two-way center value</li><li>Dean Wade 4/$39M — playoff shooting at a bargain</li><li>Al Horford 2/$14M (GSW) — championship IQ for the MLE-adjacent price</li></ul></div>
+    <div class="card"><h4>Worst / riskiest</h4><ul class="tight scout"><li>Trae Young 4/$212M — max money, defensive &amp; fit questions</li><li>Kessler 4/$130M — good player, rich number for a non-scoring big</li><li>Kawhi $50.3M — value entirely health-dependent</li></ul></div>
+    <div class="card"><h4>Most underrated moves</h4><ul class="tight scout"><li>OKC extending Hartenstein (continuity)</li><li>Miami’s Wiggins opt-in-and-extend (3/$64M ext years at ~$17M AAV — clean matching salary)</li><li>Charlotte's asset accumulation (Bridges + LaMelo returns)</li></ul></div>
+  </div>
+</section>
+
+<!-- ============ PREDICTIONS ============ -->
+<section id="predictions">
+  <h2><span class="num">17</span>Predictions &amp; Awards</h2>
+  <div class="grid2">
+    <div class="card">
+      <h4>Rest of free agency &amp; deadline</h4>
+      <ul class="tight scout">
+        <li>LeBron signs after July 6 — Golden State the pick, Cleveland close behind, San Antonio the live dark horse (see the <a href="#lebron">suitor ranking</a>).</li>
+        <li>Harden finalizes with Cleveland; Duren stays in Detroit on a matched offer; Cam Thomas plays on the QO.</li>
+        <li>Miami adds a shooter via MLE, then a buyout sniper in February.</li>
+        <li>LaMelo &amp; Morant return packages get finalized as multi-piece youth + picks deals.</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h4>Opening night &amp; awards (early)</h4>
+      <ul class="tight scout">
+        <li><b>Title:</b> the Knicks defend as narrow favorites over OKC and Cleveland; Miami and San Antonio are the biggest risers.</li>
+        <li><b>East:</b> Cleveland / New York / Miami top group.</li>
+        <li><b>MVP:</b> SGA / Dončić / Giannis / Wembanyama.</li>
+        <li><b>DPOY:</b> Bam Adebayo or Evan Mobley — Giannis+Bam make Miami a DPOY factory.</li>
+        <li><b>ROY:</b> AJ Dybantsa.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="muted" style="font-size:12px">Championship odds and award boards are directional and will be re-priced each update as rosters finalize.</p>
+</section>
+
+<!-- ============ CHANGELOG ============ -->
+<section id="changelog">
+  <h2><span class="num">18</span>Changelog</h2>
+  <table>
+    <tr><th>Version</th><th>Date</th><th>Changes</th></tr>
+    <tr><td><b>1.1</b></td><td>Jul 1, 2026</td><td>Added the <b>&#8644; Bulls War Room</b> switch link (third companion edition launched). Corrected the Bulls team report (Coby White → CHA, Vučević off the books, Collins/Okoro/Dillingham and the room exception added).</td></tr>
+    <tr><td><b>1.0</b></td><td>Jul 1, 2026</td><td><b>Spurs Edition launched</b> as a companion to the Heat War Room guide (use the switch link in the sidebar). Inherits the shared league engine — Newswire Hub, Salary Cap Machine (defaulting to SAS), Trade Machine with three preloaded Spurs dream templates (Simons 2-team, Markkanen 2-team, Jaylen Brown 3-team), timeline, full 60-pick draft board, FA power ranking + moves tracker, LeBron suitor ranking, all 30 team reports and the corrected post-Finals power rankings (Knicks champs, Spurs West champs). New Spurs-specific sections: <b>War Room</b> (projected roster/cap sheet, ~$188.6M committed, full-toolbox flexibility), <b>Shot Creation Report</b> (closing the 4–1 Finals gap), <b>Creative Trades</b>, <b>Front Office Big Board</b>, <b>Dream Board</b> (Simons / Markkanen / LeBron tiers) and <b>Championship Blueprint</b> (+700 → ~+400 path). Silver-and-black theme; official logo embedded (base64) — file is fully portable.</td></tr>
+  </table>
+  <div class="callout"><b>Say "Update the Guide"</b> and I will: re-search every NBA transaction since this build, refresh the Newswire/FA boards/timeline, re-price the LeBron pursuit and Spurs odds, sync all 30 team reports, and append a changelog entry describing exactly what changed. Scheduled auto-refreshes run at 8am, 12pm and 5pm daily.</div>
+</section></section>
+
+<!-- ============ SOURCES ============ -->
+<section id="sources" style="border-bottom:none">
+  <h2><span class="num">19</span>Sources</h2>
+  <p class="muted" style="font-size:12.5px">Verified across multiple outlets as of July 1, 2026:</p>
+  <ul class="tight two-col-list" style="font-size:12.5px">
+    <li><a href="https://www.espn.com/nba/story/_/id/49149967/">ESPN — Bucks trade Giannis to Heat</a></li>
+    <li><a href="https://www.nba.com/news/reports-heat-acquire-giannis-antetokounmpo-in-blockbuster-deal">NBA.com — Heat acquire Giannis</a></li>
+    <li><a href="https://hothothoops.com/2026/06/24/how-giannis-antetokounmpo-trade-shapes-miami-heat-2026-27-salary-cap/">Hot Hot Hoops — Heat cap after Giannis</a></li>
+    <li><a href="https://hoopswire.com/nba-officially-sets-salary-cap-tax-aprons-for-2026-27-season/">HoopsWire — 2026-27 cap &amp; aprons</a></li>
+    <li><a href="https://bleacherreport.com/articles/25448479-">B/R — cap/apron/tax levels</a></li>
+    <li><a href="https://www.espn.com/nba/story/_/id/49226472/">ESPN — LeBron to play elsewhere</a></li>
+    <li><a href="https://www.nba.com/news/lebron-james-free-agency-2026">NBA.com — LeBron free agency</a></li>
+    <li><a href="https://hothothoops.com/2026/07/01/what-is-next-miami-heat-norman-powell-departure-chicago-bulls/">Hot Hot Hoops — Powell to Bulls</a></li>
+    <li><a href="https://www.nba.com/news/raptors-clippers-kawhi-leonard-trade">NBA.com — Kawhi to Toronto</a></li>
+    <li><a href="https://www.nba.com/news/2026-nba-draft-order">NBA.com — 2026 Draft results</a></li>
+    <li><a href="https://www.cbssports.com/nba/news/2026-nba-draft-order-complete-list-picks/">CBS — Draft order (Wizards No.1)</a></li>
+    <li><a href="https://sports.yahoo.com/nba/live/nba-free-agency-news-trade-rumors-contracts-signings-live-updates-lebron-james-kawhi-leonard-jaylen-brown-144958712.html">Yahoo — FA news (Collins, Powell, Kessler)</a></li>
+    <li><a href="https://www.spotrac.com/nba/san-antonio-spurs/cap">Spotrac — Spurs 2026-27 cap table</a></li>
+    <li><a href="https://bleacherreport.com/articles/25426632-spurs-active-roster-draft-class-2026-27-salary-info-and-free-agents-after-nba-draft-results">B/R — Spurs roster &amp; salary info post-draft</a></li>
+    <li><a href="https://bleacherreport.com/articles/25417872-examining-spurs-salary-cap-decisions-2026-nba-free-agency-after-finals-loss">B/R — Spurs cap decisions after the Finals loss</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/2026_NBA_Finals">2026 NBA Finals — Knicks over Spurs in five</a></li>
+    <li><a href="https://www.npr.org/2026/05/31/g-s1-125047/wembanyama-san-antonio-spurs-win-west-oklahoma-thunder-nba">NPR — Spurs win the West (G7 over OKC)</a></li>
+    <li><a href="https://www.spotrac.com/nba/player/_/id/13328/giannis-antetokounmpo">Spotrac — Giannis contract</a></li>
+    <li><a href="https://www.espn.com/nba/story/_/id/49190331/">ESPN — What all 30 teams can spend</a></li>
+    <li><a href="https://www.hoopsrumors.com/2026/07/free-agent-rumors-lebron-wolves-grimes-s-jones-bulls.html">Hoops Rumors — RFA holding pattern</a></li>
+    <li><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades">NBC — FA live tracker (Day-1 wave)</a></li>
+    <li><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html">Yahoo — Day-1 winners/losers (Kuminga, Draymond MLE)</a></li>
+    <li><a href="https://www.cbssports.com/nba/news/nba-free-agency-2026-live-updates-trade-rumors-news-june-30/live/">CBS — live updates (Robinson terms, Duren)</a></li>
+    <li><a href="https://www.nbcsports.com/nba/news/2026-nba-draft-complete-list-of-every-pick-from-round-1-and-round-2">NBC — complete draft list, all 60 picks</a></li>
+    <li><a href="https://sports.yahoo.com/nba/live/nba-free-agency-2026-james-harden-declines-option-while-negotiating-with-cavs-lebron-james-lakers-decision-looms-182955882.html">Yahoo — Harden/Cavs negotiations</a></li>
+  </ul>
+  <p class="foot">Prepared as an internal front-office strategy document. Financial figures are projections based on public reporting and are planning aids, not official league calculations. Confirm all cap math with Spotrac/team capologists before any transaction. — Spurs War Room (Spurs Edition v1.0), July 1, 2026.</p>
+</section>
+
+</main>
+</div>
+
+<script>
+/* ================= SALARY CAP MACHINE v2 ================= */
+const LEAGUE = { cap:164.961, tax:200.430, apron1:209.015, apron2:221.686 };
+
+/* Projected 2026-27 committed team salary ($M), hard-cap status, repeater flag, note.
+   Figures are planning projections; Miami anchored to reported ~$20.5M of first-apron space. */
+const TEAMS = {
+  ATL:{name:"Atlanta Hawks", committed:174, hardCap:null, rep:false, note:"Declined Kuminga's option; mid-market flexibility."},
+  BOS:{name:"Boston Celtics", committed:206, hardCap:"apron2", rep:true, note:"Retooling under the second apron; added Mitchell Robinson."},
+  BKN:{name:"Brooklyn Nets", committed:142, hardCap:null, rep:false, note:"Deep cap room; rebuild via Mikel Brown Jr."},
+  CHA:{name:"Charlotte Hornets", committed:150, hardCap:null, rep:false, note:"Traded LaMelo; got Naz Reid + picks."},
+  CHI:{name:"Chicago Bulls", committed:181, hardCap:null, rep:false, note:"Added Powell (2/$45M) + re-signed Giddey."},
+  CLE:{name:"Cleveland Cavaliers", committed:211, hardCap:"apron2", rep:true, note:"Deep in the aprons; Harden negotiations ongoing."},
+  DAL:{name:"Dallas Mavericks", committed:178, hardCap:null, rep:false, note:"Flagg-era core; tax-adjacent."},
+  DEN:{name:"Denver Nuggets", committed:201, hardCap:"apron1", rep:true, note:"Jokic core; first-apron pressure, thin bench money."},
+  DET:{name:"Detroit Pistons", committed:172, hardCap:null, rep:false, note:"Added John Collins; rising in the East."},
+  GSW:{name:"Golden State Warriors", committed:189, hardCap:"apron1", rep:true, note:"Draymond opted out; pursuing LeBron + AD."},
+  HOU:{name:"Houston Rockets", committed:186, hardCap:null, rep:false, note:"Young + physical; tax-adjacent."},
+  IND:{name:"Indiana Pacers", committed:176, hardCap:null, rep:false, note:"Continuity roster."},
+  LAC:{name:"LA Clippers", committed:178, hardCap:null, rep:false, note:"Traded Kawhi; youth pivot underway."},
+  LAL:{name:"LA Lakers", committed:196, hardCap:"apron1", rep:false, note:"Post-LeBron: Doncic/Reaves/Kessler/Grimes/Sexton."},
+  MEM:{name:"Memphis Grizzlies", committed:168, hardCap:null, rep:false, note:"Traded Morant; retool around Cam Boozer."},
+  MIA:{name:"Miami Heat", committed:198.3, hardCap:"apron1", rep:false, note:"Hard-capped @ 1st apron via Giannis trade exception. ~$10.7M left."},
+  MIL:{name:"Milwaukee Bucks", committed:164, hardCap:null, rep:false, note:"Reset after Giannis; young + picks."},
+  MIN:{name:"Minnesota Timberwolves", committed:214, hardCap:"apron2", rep:true, note:"Added LaMelo; deep second-apron team."},
+  NOP:{name:"New Orleans Pelicans", committed:165, hardCap:null, rep:false, note:"Flexibility if healthy."},
+  NYK:{name:"New York Knicks", committed:205, hardCap:"apron2", rep:true, note:"Lost Mitchell Robinson; second-apron tight."},
+  OKC:{name:"Oklahoma City Thunder", committed:190, hardCap:null, rep:false, note:"Champs; cheap stars, extended Hartenstein."},
+  ORL:{name:"Orlando Magic", committed:182, hardCap:null, rep:false, note:"Defense-first, ascending."},
+  PHI:{name:"Philadelphia 76ers", committed:188, hardCap:null, rep:false, note:"Added Dean Wade; health-dependent."},
+  PHX:{name:"Phoenix Suns", committed:207, hardCap:"apron1", rep:true, note:"Added Miles Bridges; first-apron pressure."},
+  POR:{name:"Portland Trail Blazers", committed:172, hardCap:null, rep:false, note:"Added Morant; extended Rob Williams."},
+  SAC:{name:"Sacramento Kings", committed:178, hardCap:null, rep:false, note:"Guard-heavy; drafted Acuff."},
+  SAS:{name:"San Antonio Spurs", committed:170, hardCap:null, rep:false, note:"Wemby core; huge future flexibility."},
+  TOR:{name:"Toronto Raptors", committed:189, hardCap:null, rep:false, note:"Added Kawhi; win-now in the East."},
+  UTA:{name:"Utah Jazz", committed:150, hardCap:null, rep:false, note:"Rebuild; Peterson + huge pick war-chest."},
+  WAS:{name:"Washington Wizards", committed:150, hardCap:null, rep:false, note:"No. 1 pick Dybantsa + Trae Young; most room in the league."}
+};
+
+/* Player pool: available FAs, notable trade targets, and modeling references.
+   pos, projected first-year salary ($M), and status tag. */
+const PLAYERS = [
+  {n:"LeBron James", pos:"F", s:3.6, tag:"UFA — min or S&T"},
+  {n:"Jonathan Kuminga", pos:"F", s:20, tag:"UFA"},
+  {n:"Cam Thomas", pos:"G", s:16, tag:"RFA"},
+  {n:"Gary Trent Jr.", pos:"SG", s:10, tag:"UFA — C&S"},
+  {n:"Malik Beasley", pos:"SG", s:8, tag:"UFA — movement shooter"},
+  {n:"Buddy Hield", pos:"SG", s:4, tag:"UFA — off-ball"},
+  {n:"De'Anthony Melton", pos:"G", s:6, tag:"UFA — 3&D"},
+  {n:"Precious Achiuwa", pos:"F/C", s:6, tag:"UFA — energy big"},
+  {n:"Chris Boucher", pos:"F/C", s:4, tag:"UFA — stretch big"},
+  {n:"Gary Harris", pos:"SG", s:3, tag:"UFA — vet 3&D"},
+  {n:"Amir Coffey", pos:"SF", s:5, tag:"UFA — 3&D wing"},
+  {n:"Bought-out vet sniper", pos:"SG", s:2.3, tag:"Feb buyout — min"},
+  {n:"Generic 3&D wing", pos:"SF", s:12, tag:"Trade target"},
+  {n:"Generic backup PG", pos:"PG", s:6, tag:"Trade / min"},
+  {n:"Generic stretch big", pos:"PF", s:9, tag:"Trade target"},
+  {n:"Movement shooter (min)", pos:"SG", s:2.3, tag:"Minimum"},
+  /* modeling references — bigger names for what-ifs */
+  {n:"Star scorer (max-ish)", pos:"G/F", s:45, tag:"What-if star"},
+  {n:"Mid-tier starter", pos:"F", s:22, tag:"What-if"},
+  {n:"Rotation vet", pos:"G", s:11, tag:"What-if"}
+];
+
+const $ = id => document.getElementById(id);
+const fmt = v => "$"+v.toFixed(1)+"M";
+const signed = v => (v>=0? "+"+fmt(v) : "-"+fmt(-v));
+
+/* Progressive luxury tax estimate (standard incremental brackets; repeater adds a surcharge). */
+function taxBill(over, repeater){
+  if(over<=0) return 0;
+  const rates=[1.50,1.75,2.50,3.25,3.75,4.25]; // per $ within each $5M band
+  const repAdd=1.00; // simplified repeater surcharge per $
+  let bill=0, remaining=over, band=0;
+  while(remaining>0){
+    const width=5;
+    const chunk=Math.min(width,remaining);
+    let rate = band<rates.length ? rates[band] : 4.75+0.5*(band-rates.length);
+    if(repeater) rate+=repAdd;
+    bill += chunk*rate;
+    remaining-=chunk; band++;
+  }
+  return bill;
+}
+
+function tier(total){
+  if(total<LEAGUE.cap) return "undercap";
+  if(total<LEAGUE.tax) return "overcap";
+  if(total<LEAGUE.apron1) return "tax";
+  if(total<LEAGUE.apron2) return "apron1";
+  return "apron2";
+}
+
+function initTool(){
+  const t=$("teamSel");
+  Object.keys(TEAMS).sort((a,b)=>TEAMS[a].name.localeCompare(TEAMS[b].name)).forEach(k=>{
+    const o=document.createElement("option"); o.value=k; o.textContent=TEAMS[k].name; t.appendChild(o);
+  });
+  const p=$("playerSel");
+  PLAYERS.forEach((pl,i)=>{
+    const o=document.createElement("option"); o.value=i;
+    o.textContent=`${pl.n} · ${pl.pos} · ${fmt(pl.s)} — ${pl.tag}`; p.appendChild(o);
+  });
+  t.value="SAS"; p.value="0"; $("salRange").value=PLAYERS[0].s;
+  ["teamSel","playerSel","salRange","method"].forEach(id=>$(id).addEventListener("input",render));
+  $("playerSel").addEventListener("change",()=>{ $("salRange").value=PLAYERS[$("playerSel").value].s; render(); });
+  placeMarkers();
+  window.addEventListener("resize",placeMarkers);
+  render();
+}
+
+/* position the cap/tax/apron markers on the bar (scale 130 -> 240M) */
+const BLO=130, BHI=240;
+function xpct(v){ return Math.max(0,Math.min(100,(v-BLO)/(BHI-BLO)*100)); }
+function placeMarkers(){
+  $("mkCap").style.left=xpct(LEAGUE.cap)+"%";
+  $("mkTax").style.left=xpct(LEAGUE.tax)+"%";
+  $("mkA1").style.left=xpct(LEAGUE.apron1)+"%";
+  $("mkA2").style.left=xpct(LEAGUE.apron2)+"%";
+}
+
+function render(){
+  const team=TEAMS[$("teamSel").value];
+  const sal=parseFloat($("salRange").value);
+  const method=$("method").value;
+  $("salLabel").textContent=fmt(sal);
+  $("teamMeta").textContent=`Committed (proj.): ${fmt(team.committed)}${team.hardCap?" · hard-capped @ "+(team.hardCap==="apron1"?"1st apron":"2nd apron"):""}${team.rep?" · repeater taxpayer":""}`;
+
+  // trade mode: outgoing salary offsets most of incoming (simplified) — only ~15% net counts
+  let total = method==="trade" ? team.committed + sal*0.15 : team.committed + sal;
+
+  $("roTeam").textContent=team.name;
+  $("roTotal").textContent=fmt(total);
+
+  // bar
+  $("barFill").style.width=xpct(total)+"%";
+
+  // flags
+  const mk=(l,c)=>`<span class="flag ${c}">${l}</span> `;
+  const tr=tier(total);
+  let flags="";
+  if(tr==="undercap") flags+=mk("Under the cap","ok");
+  else if(tr==="overcap") flags+=mk("Over cap · under tax","ok");
+  else if(tr==="tax") flags+=mk("In the luxury tax","tax");
+  else if(tr==="apron1") flags+=mk("Over the 1st apron","a1");
+  else flags+=mk("Over the 2nd apron","a2");
+  if(team.rep && total>LEAGUE.tax) flags+=mk("Repeater","tax");
+
+  // method hard-cap check
+  let hc="";
+  const capsAt1 = (method==="mle"||method==="bae"||method==="snt");
+  let effHard = team.hardCap;
+  if(capsAt1 && effHard!=="apron2") effHard="apron1"; // using these tools imposes a 1st-apron hard cap
+  if(effHard){
+    const line=effHard==="apron1"?LEAGUE.apron1:LEAGUE.apron2;
+    const lbl=effHard==="apron1"?"1st apron":"2nd apron";
+    if(total>line){ flags+=mk("❌ EXCEEDS HARD CAP","a2"); hc=`<b style="color:#ff8a80">Not allowed:</b> this puts ${team.name} over the ${lbl} hard cap (${fmt(line)}). Shed salary or use a smaller deal first.`; }
+    else hc=`Legal under the ${lbl} hard cap — <b>${fmt(line-total)}</b> of room remains.`;
+  }
+  $("flags").innerHTML=flags;
+
+  // distances + tax
+  const dTax=LEAGUE.tax-total, dA1=LEAGUE.apron1-total, dA2=LEAGUE.apron2-total;
+  $("dTax").textContent=signed(dTax)+(dTax>=0?" under":" over");
+  $("dA1").textContent=signed(dA1)+(dA1>=0?" under":" over");
+  $("dA2").textContent=signed(dA2)+(dA2>=0?" under":" over");
+  const bill=taxBill(total-LEAGUE.tax, team.rep);
+  $("taxBill").textContent = bill>0 ? "~"+fmt(bill)+(team.rep?" (repeater)":"") : "$0 (not a taxpayer)";
+
+  // method note
+  const mn={
+    cap:"Only teams under the cap can sign an outside free agent to brand-new money. Cap-room teams have a smaller 'room exception' instead of the MLE.",
+    bird:"Bird rights let a team exceed the cap to re-sign its OWN free agent — no new hard cap. The main way tax teams keep their core.",
+    mle:"The full Non-Taxpayer MLE (~$14.1M) is the biggest tool for over-the-cap teams — but using it HARD-CAPS you at the first apron all season.",
+    taxmle:"The Taxpayer MLE (~$5.7M) is the only MLE for teams near/over the first apron. Second-apron teams can't use even this.",
+    bae:"The Bi-Annual Exception (~$5.2M) is unavailable over the first apron, and using it hard-caps you there.",
+    min:"Veteran minimums are always available to everyone and never trigger a hard cap — the go-to tool for apron-locked contenders like Miami.",
+    snt:"Acquiring a player by sign-and-trade hard-caps you at the first apron and is banned entirely once you're over it.",
+    trade:"Outgoing salary offsets most of the incoming figure. Over the 1st apron you can't take back more than you send; over the 2nd you also can't aggregate salaries or send cash."
+  };
+  $("methodNote").innerHTML=mn[method];
+
+  // verdict
+  let v=`<b>${team.name}</b> lands at <b>${fmt(total)}</b> — ${
+    tr==="undercap"?"still under the cap":
+    tr==="overcap"?"over the cap but out of the tax":
+    tr==="tax"?"into luxury-tax territory":
+    tr==="apron1"?"over the FIRST apron":"over the SECOND apron"}.`;
+  if(hc) v+="<br>"+hc;
+  v+=`<br><span class="muted" style="font-size:12px">${team.note}</span>`;
+  $("verdict").innerHTML=v;
+
+  // consequences panel
+  $("consTeam").textContent=team.name;
+  $("consequences").innerHTML=consequenceHTML(tr, team.rep);
+}
+
+function consequenceHTML(tr, rep){
+  const li=a=>a.map(x=>`<li>${x}</li>`).join("");
+  const CAN={
+    undercap:["Sign any free agent outright to new money (up to your room)","Use the Room Exception (~$8.8M) after room is used","Absorb salary in trades without matching"],
+    overcap:["Full Non-Taxpayer MLE (~$14.1M) and Bi-Annual Exception (~$5.2M)","Re-sign own FAs with Bird rights","Take back up to ~200% of outgoing salary in trades","Execute sign-and-trades"],
+    tax:["Everything an over-cap team can do — the tax is a bill, not a ban","Full NT-MLE, BAE, Bird rights, sign-and-trades all available"],
+    apron1:["Vet minimums and Bird rights (re-sign your own guys)","Taxpayer MLE (~$5.7M) only","Standard trades where you take back ≤ what you send"],
+    apron2:["Vet minimums and Bird rights only","Straight, one-for-one style trades taking back ≤ outgoing salary"]
+  };
+  const CANT={
+    undercap:[],
+    overcap:[],
+    tax:rep?["Pay the punitive <b>repeater</b> tax rate — this team has been taxed 3 of the last 4 years"]:["Pay escalating luxury tax on every dollar over $200.43M"],
+    apron1:["Use the full Non-Taxpayer MLE (drops to ~$5.7M taxpayer MLE)","Use the Bi-Annual Exception","Acquire anyone via sign-and-trade","Sign a bought-out player who earned above the NT-MLE","Take back more salary than you send in a trade"],
+    apron2:["Use ANY mid-level exception (not even the taxpayer MLE)","Aggregate two or more salaries in a single trade","Send cash in trades","Trade your first-round pick seven years out (it gets frozen)","Use the full MLE, BAE, or sign-and-trades (all first-apron bans still apply)"]
+  };
+  let color = tr==="apron2"?"#ff8a80":tr==="apron1"?"#ffab6b":tr==="tax"?"#f5cd6b":"#5ff0a8";
+  let html=`<div class="grid2">`;
+  html+=`<div class="card"><h4 style="color:#5ff0a8">✓ Still allowed</h4><ul class="tight">${li(CAN[tr])}</ul></div>`;
+  html+=`<div class="card"><h4 style="color:${color}">${tr==="undercap"||tr==="overcap"?"○ No restrictions yet":"✕ Now restricted / penalized"}</h4>${CANT[tr].length?`<ul class="tight">${li(CANT[tr])}</ul>`:`<p class="scout muted">No apron restrictions at this spending level — full flexibility.</p>`}</div>`;
+  html+=`</div>`;
+  if(tr==="apron1"||tr==="apron2"){
+    html+=`<div class="warnbox" style="margin-top:12px"><b>Practical impact:</b> ${tr==="apron2"?"Second-apron teams are effectively frozen — they can only run back their roster and tweak at the margins with minimums. Any upgrade must be a same-salary swap.":"First-apron teams build almost entirely through minimums, Bird re-signings, and same-salary trades. This is exactly the box Miami is in — which is why the plan is shooters on the MLE and minimums, not another star."}</div>`;
+  }
+  return html;
+}
+
+/* ================= TRADE MACHINE v2 (2 & 3 team) ================= */
+/* Notable tradable salaries ($M) per team for quick-pick. Custom entry covers everyone else. */
+const ASSETS = {
+  MIA:[["Andrew Wiggins",30.2],["Nikola Jović",8.4],["Bobby Portis",13.4],["Davion Mitchell",10.5],["Tim Hardaway Jr.",6.5],["Pelle Larsson",2.9]],
+  LAL:[["Rui Hachimura",18.0],["Gabe Vincent",11.5],["Jarred Vanderbilt",11.6],["Maxi Kleber",11.0],["Dalton Knecht",4.0]],
+  GSW:[["Andrew Wiggins*",0],["Jonathan Kuminga (was)",0],["Buddy Hield",9.0],["Moses Moody",11.5],["Gary Payton II",9.0]],
+  CLE:[["Darius Garland",39.0],["Isaac Okoro",11.0],["Max Strus",16.0],["Dean Wade (was)",0]],
+  NYK:[["Mikal Bridges",25.0],["Josh Hart",20.0],["Deuce McBride",13.0],["Miles McBride",13.0]],
+  BKN:[["Nic Claxton",27.0],["Cam Johnson (was)",0],["Terance Mann",11.0],["Bojan-type expiring",10.0]],
+  WAS:[["Kyle Kuzma-type",22.0],["CJ McCollum-type",30.0],["Marvin Bagley",8.0],["Corey Kispert",14.0]],
+  UTA:[["Lauri Markkanen",46.0],["John Collins (was)",0],["Collin Sexton (was)",0],["Walker Kessler (was)",0]],
+  CHI:[["Coby White",18.0],["Nikola Vučević",21.5],["Patrick Williams",18.0],["Norman Powell",22.5]],
+  SAS:[["Devin Vassell",27.0],["Keldon Johnson",19.0],["Harrison Barnes",19.0]],
+  POR:[["Jerami Grant",30.0],["Deandre Ayton-type",34.0],["Robert Williams III",14.5]],
+  ATL:[["Trae Young (2027 note)",46.0],["Onyeka Okongwu",20.0],["Bogdan Bogdanović",16.0]],
+  DET:[["Tobias Harris",26.0],["Malik Beasley (mkt)",8.0],["Simone Fontecchio (was)",0]],
+  TOR:[["RJ Barrett",28.0],["Immanuel Quickley",32.0],["Jakob Poeltl",19.5]],
+  PHX:[["Bradley Beal-type",50.0],["Grayson Allen",18.0],["Royce O'Neale",11.0]]
+};
+
+const apronStatus = tm => { // classify apron tier for trade-rule purposes
+  const c = tm.committed;
+  if(tm.hardCap==="apron2" || c>=LEAGUE.apron2) return 2;
+  if(tm.hardCap==="apron1" || c>=LEAGUE.apron1) return 1;
+  return 0;
+};
+function matchLimit(outgoing, status){ // max legal incoming (over-cap teams)
+  if(status>=1) return outgoing + 0.25;      // over an apron: ~100% + $250k
+  return outgoing*2 + 0.25;                   // below aprons: ~200% + $250k
+}
+/* effective absorb limit: under-cap teams can also soak salary into cap room */
+function effLimit(tm, sent){
+  const st=apronStatus(tm);
+  const base=matchLimit(sent, st);
+  const room=Math.max(0, LEAGUE.cap - tm.committed);
+  return room>0 ? Math.max(base, room + sent + 0.25) : base;
+}
+
+/* Preloaded Dream Board scenarios. Player pieces set directly (custom-named). */
+const TEMPLATES={
+  simons:{mode:2, teams:{A:"SAS",B:"POR"},
+    picks:{A:[["Keldon Johnson",17.5],["Luke Kornet",10.3]], B:[["Anfernee Simons",27.7]], C:[]}},
+  mpj:{mode:2, teams:{A:"SAS",B:"UTA"},
+    picks:{A:[["Devin Vassell",27.0],["Keldon Johnson",17.5]], B:[["Lauri Markkanen",46.4]], C:[]}},
+  brown:{mode:3, teams:{A:"SAS",B:"BOS",C:"BKN"},
+    picks:{A:[["Devin Vassell",27.0],["Keldon Johnson",17.5],["Luke Kornet",10.3]], B:[["Jaylen Brown",53.1]], C:[]},
+    takes:{A:53.1, B:44.5, C:10.3}}
+};
+function loadTemplate(key){
+  const t=TEMPLATES[key]; if(!t) return;
+  TM.mode=t.mode;
+  document.querySelector(`input[name="tmMode"][value="${t.mode}"]`).checked=true;
+  ["A","B","C"].forEach(s=>{ if(t.teams[s]) TM.teamKey[s]=t.teams[s]; TM.picks[s]=(t.picks[s]||[]).map(p=>({name:p[0],sal:p[1]})); });
+  buildCards();
+  if(t.mode===3 && t.takes){ ["A","B","C"].forEach(s=>{ if($("tmTake"+s)) $("tmTake"+s).value=t.takes[s]; }); }
+  renderTrade();
+}
+
+const SLOTS=["A","B","C"];
+const TM={ mode:2, teamKey:{A:"SAS",B:"POR",C:"BKN"}, picks:{A:[],B:[],C:[]} };
+
+function initTrade(){
+  document.querySelectorAll('input[name="tmMode"]').forEach(r=>r.addEventListener("change",()=>{
+    TM.mode=parseInt(document.querySelector('input[name="tmMode"]:checked').value);
+    buildCards(); renderTrade();
+  }));
+  document.querySelectorAll('.tmpl-btn[data-tpl]').forEach(b=>b.addEventListener("click",()=>loadTemplate(b.dataset.tpl)));
+  $("tmReset").addEventListener("click",()=>{ SLOTS.forEach(s=>TM.picks[s]=[]); buildCards(); renderTrade(); });
+  buildCards(); renderTrade();
+}
+
+function activeSlots(){ return TM.mode===3?["A","B","C"]:["A","B"]; }
+
+function buildCards(){
+  const grid=$("tmTeamGrid"); grid.innerHTML="";
+  const colors={A:"var(--heat-red)",B:"var(--accent)",C:"var(--heat-yellow)"};
+  activeSlots().forEach((s,idx)=>{
+    const card=document.createElement("div"); card.className="card"; card.style.borderColor=colors[s];
+    card.innerHTML=`
+      <label class="fld">Team ${s} ${idx===0?'<span class="muted">(build around your team)</span>':''}</label>
+      <select id="tmTeam${s}"></select>
+      <div class="muted" id="tmMeta${s}" style="font-size:12px;margin-top:4px"></div>
+      <label class="fld">Add outgoing piece</label>
+      <div style="display:flex;gap:6px"><select id="tmPick${s}" style="flex:1"></select><button class="tmbtn" data-s="${s}" data-m="pick">Add</button></div>
+      <div style="display:flex;gap:6px;margin-top:6px"><input id="tmCust${s}" type="number" placeholder="Custom $M" step="0.1" min="0" class="tmnum" style="flex:1"><button class="tmbtn" data-s="${s}" data-m="custom">Add $</button></div>
+      <div id="tmChips${s}" style="margin-top:10px;min-height:20px"></div>
+      <div class="line" style="margin-top:6px"><span>Sends out</span><b id="tmOut${s}">$0.0M</b></div>
+      <label class="fld">Takes back ($M)</label>
+      <input id="tmTake${s}" type="number" step="0.1" min="0" class="tmnum">
+      <div class="muted" style="font-size:11px;margin-top:4px" id="tmTakeHint${s}"></div>`;
+    grid.appendChild(card);
+  });
+  // grid columns to match team count
+  grid.style.gridTemplateColumns = TM.mode===3 ? "1fr 1fr 1fr" : "1fr 1fr";
+
+  activeSlots().forEach(s=>{
+    const sel=$("tmTeam"+s);
+    Object.keys(TEAMS).sort((a,b)=>TEAMS[a].name.localeCompare(TEAMS[b].name)).forEach(k=>{
+      const o=document.createElement("option");o.value=k;o.textContent=TEAMS[k].name;sel.appendChild(o);
+    });
+    sel.value=TM.teamKey[s];
+    sel.addEventListener("change",()=>{ TM.teamKey[s]=sel.value; TM.picks[s]=[]; fillPick(s); renderTrade(); });
+    fillPick(s);
+    $("tmTake"+s).addEventListener("input",renderTrade);
+  });
+  grid.querySelectorAll(".tmbtn[data-s]").forEach(b=>b.addEventListener("click",()=>addPiece(b.dataset.s,b.dataset.m)));
+}
+
+function fillPick(s){
+  const team=TM.teamKey[s]; const sel=$("tmPick"+s); sel.innerHTML="";
+  const list=(ASSETS[team]||[]).filter(a=>a[1]>0);
+  if(!list.length){ const o=document.createElement("option");o.value="";o.textContent="(use custom $ entry)";sel.appendChild(o); return; }
+  list.forEach((a,i)=>{ const o=document.createElement("option");o.value=i;o.textContent=`${a[0]} — $${a[1].toFixed(1)}M`;sel.appendChild(o); });
+}
+function addPiece(s,mode){
+  const team=TM.teamKey[s];
+  if(mode==="pick"){
+    const list=(ASSETS[team]||[]).filter(a=>a[1]>0); const i=$("tmPick"+s).value;
+    if(i==="") return; TM.picks[s].push({name:list[i][0],sal:list[i][1]});
+  } else {
+    const v=parseFloat($("tmCust"+s).value); if(!v||v<=0) return;
+    TM.picks[s].push({name:"Custom",sal:v}); $("tmCust"+s).value="";
+  }
+  renderTrade();
+}
+
+function renderTrade(){
+  const slots=activeSlots();
+  const sent={}, teamObj={};
+  slots.forEach(s=>{
+    teamObj[s]=TEAMS[TM.teamKey[s]];
+    sent[s]=TM.picks[s].reduce((a,p)=>a+p.sal,0);
+    // meta + chips
+    const tm=teamObj[s];
+    $("tmMeta"+s).textContent=`Committed ${fmt(tm.committed)}`+(tm.hardCap?` · hard-capped @ ${tm.hardCap==="apron1"?"1st":"2nd"} apron`:"");
+    const box=$("tmChips"+s); box.innerHTML="";
+    TM.picks[s].forEach((p,i)=>{
+      const c=document.createElement("span");c.className="tmchip";
+      c.innerHTML=`${p.name} $${p.sal.toFixed(1)}M <button title="remove">✕</button>`;
+      c.querySelector("button").onclick=()=>{TM.picks[s].splice(i,1);renderTrade();};
+      box.appendChild(c);
+    });
+    $("tmOut"+s).textContent=fmt(sent[s]);
+  });
+
+  const totalSent=slots.reduce((a,s)=>a+sent[s],0);
+
+  // takes-back: 2-team auto (each gets the other's sent); 3-team manual
+  const take={};
+  if(TM.mode===2){
+    take.A=sent.B; take.B=sent.A;
+    slots.forEach(s=>{ const inp=$("tmTake"+s); inp.value=take[s].toFixed(1); inp.disabled=true; $("tmTakeHint"+s).textContent="auto (= what the other team sends)"; });
+  } else {
+    slots.forEach(s=>{ const inp=$("tmTake"+s); inp.disabled=false; take[s]=parseFloat(inp.value)||0; $("tmTakeHint"+s).textContent="set how much this team absorbs"; });
+  }
+  const totalTake=slots.reduce((a,s)=>a+take[s],0);
+
+  $("tmSumOut").textContent=fmt(totalSent);
+  $("tmSumIn").textContent=fmt(totalTake);
+  const balanced=Math.abs(totalSent-totalTake)<0.11;
+  $("tmBalance").innerHTML = totalSent===0 ? "—" : (balanced?`<span style="color:var(--good)">✓ balanced</span>`:`<span style="color:#ff8a80">off by ${fmt(Math.abs(totalSent-totalTake))}</span>`);
+
+  // per-team evaluation
+  const problems=[]; let allOK=true;
+  const tierCls=t=>tier(t)==="apron2"?"a2":tier(t)==="apron1"?"a1":tier(t)==="tax"?"tax":"ok";
+  const tierLbl=t=>{const x=tier(t);return x==="apron2"?"over 2nd apron":x==="apron1"?"over 1st apron":x==="tax"?"in the tax":x==="overcap"?"over cap":"under cap";};
+  let res="";
+  slots.forEach(s=>{
+    const tm=teamObj[s], st=apronStatus(tm), lim=effLimit(tm, sent[s]);
+    const newTot=tm.committed - sent[s] + take[s];
+    let ok=true, why=[];
+    if(take[s]>lim+1e-9 && sent[s]>0){ ok=false; why.push(`absorbs ${fmt(take[s])} but limit is ${fmt(lim)} for ${fmt(sent[s])} sent`); }
+    if(st===2 && TM.picks[s].length>1){ ok=false; why.push(`2nd-apron team can't aggregate ${TM.picks[s].length} salaries`); }
+    if(tm.hardCap){ const line=tm.hardCap==="apron1"?LEAGUE.apron1:LEAGUE.apron2; if(newTot>line+1e-9){ ok=false; why.push(`exceeds hard cap ${fmt(line)}`);} }
+    if(!ok){ allOK=false; why.forEach(w=>problems.push(`${tm.name}: ${w}`)); }
+    res+=`<div class="tmcard-res"><b>${tm.name}</b> <span class="flag ${tierCls(newTot)}" style="float:right">Lands ${tierLbl(newTot)}</span>
+      <div class="line"><span>Sends / takes back</span><b>${fmt(sent[s])} / ${fmt(take[s])}</b></div>
+      <div class="line"><span>New payroll</span><b>${fmt(newTot)}</b></div>
+      <div class="line"><span>Match limit (sends ${fmt(sent[s])})</span><b>${sent[s]>0?fmt(lim):"—"}</b></div>
+      ${ok?'<span class="flag ok">✓ legal for this team</span>':'<span class="flag a2">✕ '+why.join("; ")+'</span>'}</div>`;
+  });
+  $("tmResults").innerHTML=res;
+
+  const anyActivity=totalSent>0;
+  const v=$("tmVerdict");
+  if(!anyActivity){ v.textContent="Add salary to evaluate…"; v.style.color="var(--muted)"; $("tmNotes").innerHTML=""; return; }
+  const legal = allOK && balanced;
+  v.innerHTML = legal ? "✅ LEGAL TRADE" : "❌ NOT LEGAL AS BUILT";
+  v.style.color = legal ? "var(--good)" : "#ff8a80";
+  let notes="";
+  if(!balanced) notes+=`<b>Unbalanced:</b> total taken back (${fmt(totalTake)}) must equal total sent (${fmt(totalSent)}). ${TM.mode===3?"Adjust each team's <i>takes back</i> so they sum to the total sent.":""}<br>`;
+  if(problems.length) notes+="<b>Team issues:</b><ul class='tight'>"+problems.map(p=>`<li>${p}</li>`).join("")+"</ul>";
+  if(legal) notes="<b>All teams match, clear their aprons, and the deal balances.</b> ";
+  notes+=`<span class="muted">Draft picks &amp; cash can be layered around this balanced core to sweeten any side (not modeled here).</span>`;
+  $("tmNotes").innerHTML=notes;
+}
+
+/* ========== CAMPFIRE behind the logo ==========
+   Rising plume: broad glowing gold/orange base, red flame tongues licking up,
+   ragged flickering tips. Heat-palette coloring. Sits behind the real logo. */
+
+
+initTool();
+initTrade();
+
+/* ===== EMBEDDED LOGO (baked in — file is fully portable) ===== */
+const LOGO_DATA="data:image/png;base64,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";
+document.querySelectorAll(".herologo,.navlogo img").forEach(el=>{el.src=LOGO_DATA;el.style.display="";});
+
+/* ===== DRAFT BOARD PAGINATION ===== */
+(function(){
+  const btn=document.getElementById("draftMoreBtn"); if(!btn) return;
+  const pages=document.querySelectorAll("#draftTable tbody.draftPage");
+  const labels=["Show picks 14\u201330","Show picks 31\u201360"];
+  let i=0; btn.textContent=labels[0];
+  btn.addEventListener("click",()=>{
+    if(i<pages.length){
+      pages[i].style.display=""; i++;
+      if(i<pages.length){ btn.textContent=labels[i]; }
+      else { btn.textContent="All 60 picks shown"; btn.disabled=true; btn.style.opacity=".55"; btn.style.cursor="default"; }
+    }
+  });
+})();
+</script>
+</body>
+</html>
