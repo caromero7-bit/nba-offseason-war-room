@@ -1274,7 +1274,7 @@
 <!-- ============ TRADE MACHINE ============ -->
 <section id="trademachine">
   <h2>Trade Machine <span class="pill hot">v2 · 2 &amp; 3-team</span></h2>
-  <p class="muted">Build a two- OR three-team trade and test whether it's legal. For each team, add the salary it <b>sends out</b> (quick-pick a team's notable contracts or type a custom figure) and set how much it <b>takes back</b>. The machine checks per-team salary-matching, apron restrictions (100% take-back over the first apron, no aggregation over the second), hard caps, and whether the whole deal <b>balances</b> — then shows every team's post-trade payroll and apron tier.</p>
+  <p class="muted">Build a two- OR three-team trade and test whether it's legal. For each team, add the salary it <b>sends out</b> (quick-pick a team's notable contracts or type a custom figure) and, in 3-team deals, pick which team each outgoing player goes to (take-backs total automatically). The machine checks per-team salary-matching, apron restrictions (100% take-back over the first apron, no aggregation over the second), hard caps, and whether the whole deal <b>balances</b> — then shows every team's post-trade payroll and apron tier.</p>
 
   <div style="margin:6px 0 14px">
     <label class="fld" style="display:inline;margin-right:8px">Teams in deal:</label>
@@ -1316,7 +1316,8 @@
 <!-- ============ CHANGELOG ============ -->
 <section id="changelog" style="border-bottom:none">
   <h2><span class="num">18</span>Changelog</h2>
-  <table>
+  <details class="clog"><summary style="cursor:pointer;color:var(--muted);font-size:13px;padding:6px 0;list-style:none">▸ Version history — tap to expand</summary>
+  <table style="margin-top:8px">
     <tr><th>Version</th><th>Date</th><th>Changes</th></tr>
     <tr><td><b>1.6</b></td><td>Jul 2, 2026</td><td><b>Phone menu + Simons pivot:</b> Added a sticky <b>Sections</b> jump menu for mobile (desktop sidebar untouched). <b>Anfernee Simons signed with Philadelphia</b> — logged in the tickers and Completed Moves Tracker, and San Antonio&#8217;s <b>Plan B is now Markkanen</b>: the creation plan, Dream Board, Blueprint and creative-trade tracks were repointed and the Simons entries flagged off the board (his Trade Machine template is labeled accordingly).</td></tr>
     <tr><td><b>1.5</b></td><td>Jul 2, 2026</td><td><b>Overnight wire:</b> Folded in the Grizzlies–Mavericks trade (Santi Aldama → DAL for AJ Johnson, a protected 2030 GSW first and two seconds) across the tickers, Latest Verified Reports, Completed Moves Tracker, timeline and the DAL/MEM power-ranking notes. Also logged: Knicks retain Landry Shamet (4yr/$24M) and Jose Alvarado (3yr/$14M+); Moritz Wagner → Nets (2yr). No change on LeBron (GSW/CLE lead; signable Jul 6) or Harden (CLE talks ongoing). Timestamps refreshed; older NEW pills cleared.</td></tr>
@@ -1326,6 +1327,7 @@
     <tr><td><b>1.1</b></td><td>Jul 1, 2026</td><td>Added the <b>&#8644; Bulls War Room</b> switch link (third companion edition launched). Corrected the Bulls team report (Coby White → CHA, Vučević off the books, Collins/Okoro/Dillingham and the room exception added).</td></tr>
     <tr><td><b>1.0</b></td><td>Jul 1, 2026</td><td><b>Spurs Edition launched</b> as a companion to the Heat War Room guide (use the switch link in the sidebar). Inherits the shared league engine — Newswire Hub, Salary Cap Machine (defaulting to SAS), Trade Machine with three preloaded Spurs dream templates (Simons 2-team, Markkanen 2-team, Jaylen Brown 3-team), timeline, full 60-pick draft board, FA power ranking + moves tracker, LeBron suitor ranking, all 30 team reports and the corrected post-Finals power rankings (Knicks champs, Spurs West champs). New Spurs-specific sections: <b>War Room</b> (projected roster/cap sheet, ~$188.6M committed, full-toolbox flexibility), <b>Shot Creation Report</b> (closing the 4–1 Finals gap), <b>Creative Trades</b>, <b>Front Office Big Board</b>, <b>Dream Board</b> (Simons / Markkanen / LeBron tiers) and <b>Championship Blueprint</b> (+700 → ~+400 path). Silver-and-black theme; official logo embedded (base64) — file is fully portable.</td></tr>
   </table>
+  </details>
   <div class="callout"><b>Say "Update the Guide"</b> and I will: re-search every NBA transaction since this build, refresh the Newswire/FA boards/timeline, re-price the LeBron pursuit and Spurs odds, sync all 30 team reports, and append a changelog entry describing exactly what changed. Scheduled auto-refreshes run at 8am, 12pm and 5pm daily.</div>
   <p class="foot" style="text-align:center;letter-spacing:3px;border-top:none">THE WAR ROOMS · 2026</p>
 </section></section>
@@ -1562,21 +1564,36 @@ function consequenceHTML(tr, rep){
 /* ================= TRADE MACHINE v2 (2 & 3 team) ================= */
 /* Notable tradable salaries ($M) per team for quick-pick. Custom entry covers everyone else. */
 const ASSETS = {
-  MIA:[["Andrew Wiggins",30.2],["Nikola Jović",8.4],["Bobby Portis",13.4],["Davion Mitchell",10.5],["Tim Hardaway Jr.",6.5],["Pelle Larsson",2.9]],
-  LAL:[["Rui Hachimura",18.0],["Gabe Vincent",11.5],["Jarred Vanderbilt",11.6],["Maxi Kleber",11.0],["Dalton Knecht",4.0]],
-  GSW:[["Andrew Wiggins*",0],["Jonathan Kuminga (was)",0],["Buddy Hield",9.0],["Moses Moody",11.5],["Gary Payton II",9.0]],
-  CLE:[["Darius Garland",39.0],["Isaac Okoro",11.0],["Max Strus",16.0],["Dean Wade (was)",0]],
-  NYK:[["Mikal Bridges",25.0],["Josh Hart",20.0],["Deuce McBride",13.0],["Miles McBride",13.0]],
-  BKN:[["Nic Claxton",27.0],["Cam Johnson (was)",0],["Terance Mann",11.0],["Bojan-type expiring",10.0]],
-  WAS:[["Kyle Kuzma-type",22.0],["CJ McCollum-type",30.0],["Marvin Bagley",8.0],["Corey Kispert",14.0]],
-  UTA:[["Lauri Markkanen",46.0],["John Collins (was)",0],["Collin Sexton (was)",0],["Walker Kessler (was)",0]],
-  CHI:[["Coby White",18.0],["Nikola Vučević",21.5],["Patrick Williams",18.0],["Norman Powell",22.5]],
-  SAS:[["Devin Vassell",27.0],["Keldon Johnson",19.0],["Harrison Barnes",19.0]],
-  POR:[["Jerami Grant",30.0],["Deandre Ayton-type",34.0],["Robert Williams III",14.5]],
-  ATL:[["Trae Young (2027 note)",46.0],["Onyeka Okongwu",20.0],["Bogdan Bogdanović",16.0]],
-  DET:[["Tobias Harris",26.0],["Malik Beasley (mkt)",8.0],["Simone Fontecchio (was)",0]],
-  TOR:[["RJ Barrett",28.0],["Immanuel Quickley",32.0],["Jakob Poeltl",19.5]],
-  PHX:[["Bradley Beal-type",50.0],["Grayson Allen",18.0],["Royce O'Neale",11.0]]
+  ATL:[["Jalen Johnson",30.0],["Kristaps Porziņģis",30.7],["Jonathan Kuminga",24.3],["Onyeka Okongwu",20.0],["Zaccharie Risacher",11.0],["Dyson Daniels",6.4]],
+  BOS:[["Jayson Tatum",54.1],["Jaylen Brown",53.1],["Derrick White",28.1],["Mitchell Robinson",15.8],["Sam Hauser",10.0],["Payton Pritchard",7.2]],
+  BKN:[["Nic Claxton",27.0],["Cam Thomas",14.0],["Terance Mann",11.0],["Day'Ron Sharpe",6.0],["Ziaire Williams",6.0],["Mikel Brown Jr.",5.0]],
+  CHA:[["Coby White",24.7],["Grayson Allen",18.0],["Naz Reid",15.0],["Brandon Miller",12.0],["Royce O'Neale",11.0],["Tidjane Salaün",5.0]],
+  CHI:[["Josh Giddey",25.0],["Norman Powell",22.0],["Patrick Williams",18.0],["Isaac Okoro",11.8],["Caleb Wilson",9.7],["Jalen Smith",9.4],["Tre Jones",8.0],["Rob Dillingham",6.9]],
+  CLE:[["Donovan Mitchell",46.4],["Evan Mobley",46.0],["Darius Garland",39.0],["De'Andre Hunter",23.3],["Jarrett Allen",20.0],["Max Strus",16.0]],
+  DAL:[["Anthony Davis",54.1],["Kyrie Irving",43.0],["Klay Thompson",16.6],["PJ Washington",15.0],["Daniel Gafford",14.4],["Cooper Flagg",13.8]],
+  DEN:[["Nikola Jokić",59.4],["Jamal Murray",46.0],["Michael Porter Jr.",40.8],["Aaron Gordon",23.0],["Christian Braun",15.0],["Peyton Watson",5.0]],
+  DET:[["Cade Cunningham",46.4],["John Collins",26.0],["Jalen Duren",20.0],["Jaden Ivey",17.5],["Isaiah Stewart",15.0],["Ausar Thompson",8.0]],
+  GSW:[["Stephen Curry",59.6],["Jimmy Butler",54.1],["Draymond Green",15.0],["Moses Moody",11.5],["Gary Payton II",9.0],["Buddy Hield",9.0],["Al Horford",7.0]],
+  HOU:[["Fred VanVleet",25.0],["Alperen Şengün",34.8],["Dorian Finney-Smith",14.0],["Jabari Smith Jr.",12.0],["Steven Adams",12.0],["Amen Thompson",9.0]],
+  IND:[["Tyrese Haliburton",45.6],["Pascal Siakam",42.4],["Andrew Nembhard",18.0],["Bennedict Mathurin",15.0],["Aaron Nesmith",11.0],["Kelly Oubre Jr.",8.5]],
+  LAC:[["Brandon Ingram",30.0],["James Harden",33.0],["Ivica Zubac",18.0],["Derrick Jones Jr.",10.0],["Gradey Dick",6.0],["Kris Dunn",6.0]],
+  LAL:[["Luka Dončić",43.6],["Austin Reaves",46.0],["Walker Kessler",32.0],["Rui Hachimura",18.0],["Quentin Grimes",15.0],["Sandro Mamukelashvili",13.0],["Gabe Vincent",11.5],["Collin Sexton",9.5]],
+  MEM:[["Jaren Jackson Jr.",34.0],["Jerami Grant",30.0],["Cameron Boozer",12.0],["Zach Edey",5.0],["Kris Murray",4.0],["Scotty Pippen Jr.",2.2]],
+  MIA:[["Giannis Antetokounmpo",58.5],["Bam Adebayo",49.8],["Andrew Wiggins",30.2],["Bobby Portis",13.4],["Davion Mitchell",10.5],["Nikola Jović",8.4],["Tim Hardaway Jr.",6.5],["Simone Fontecchio",3.3]],
+  MIL:[["Tyler Herro",31.0],["Kyle Kuzma",22.0],["Gary Trent Jr.",10.0],["Kel'el Ware",5.0],["Jaime Jaquez Jr.",5.0],["Kašparas Jakučionis",4.0],["Nate Ament",4.0]],
+  MIN:[["Anthony Edwards",46.0],["LaMelo Ball",37.0],["Rudy Gobert",43.8],["Julius Randle",33.0],["Jaden McDaniels",23.0],["Donte DiVincenzo",12.0],["Josh Green",12.0]],
+  NOP:[["Zion Williamson",39.4],["Jordan Poole",32.0],["Dejounte Murray",30.0],["Trey Murphy III",25.0],["Herb Jones",14.0],["Yves Missi",4.0]],
+  NYK:[["Karl-Anthony Towns",53.1],["OG Anunoby",39.6],["Jalen Brunson",34.9],["Mikal Bridges",25.0],["Josh Hart",20.0],["Miles McBride",13.0],["Landry Shamet",6.0]],
+  OKC:[["Shai Gilgeous-Alexander",38.3],["Isaiah Hartenstein",25.0],["Lu Dort",18.0],["Chet Holmgren",15.0],["Jalen Williams",14.0],["Alex Caruso",10.0],["Aaron Wiggins",9.0]],
+  ORL:[["Franz Wagner",38.7],["Jalen Suggs",30.0],["Paolo Banchero",15.0],["Wendell Carter Jr.",13.0],["Goga Bitadze",8.0],["Jonathan Isaac",8.0],["Anthony Black",8.0]],
+  PHI:[["Joel Embiid",55.2],["Paul George",51.7],["Tyrese Maxey",38.0],["Anfernee Simons",27.7],["VJ Edgecombe",12.0],["Dean Wade",9.8],["Jared McCain",5.0]],
+  PHX:[["Devin Booker",55.2],["Jalen Green",33.0],["Miles Bridges",25.0],["Dillon Brooks",22.0],["Mark Williams",12.7],["Ryan Dunn",4.0]],
+  POR:[["Ja Morant",39.4],["Jrue Holiday",32.5],["Shaedon Sharpe",20.0],["Deni Avdija",15.0],["Robert Williams III",14.5],["Donovan Clingan",12.0],["Scoot Henderson",12.0],["Toumani Camara",10.0]],
+  SAC:[["Zach LaVine",47.5],["Domantas Sabonis",43.6],["Keegan Murray",30.0],["DeMar DeRozan",24.0],["Malik Monk",18.0],["Precious Achiuwa",5.8]],
+  SAS:[["De'Aaron Fox",49.5],["Devin Vassell",27.0],["Keldon Johnson",17.5],["Victor Wembanyama",16.9],["Tobias Harris",15.2],["Julian Champagnie",14.4],["Dylan Harper",13.0],["Luke Kornet",10.3],["Stephon Castle",10.0]],
+  TOR:[["Kawhi Leonard",50.0],["Scottie Barnes",38.0],["Immanuel Quickley",32.0],["RJ Barrett",28.0],["Jakob Poeltl",19.5],["Ochai Agbaji",5.0]],
+  UTA:[["Lauri Markkanen",46.0],["Darryn Peterson",12.0],["Keyonte George",6.0],["Jaxson Hayes",6.0],["Cody Williams",5.0],["Taylor Hendricks",5.0],["Kyle Filipowski",4.0]],
+  WAS:[["Trae Young",53.0],["CJ McCollum",30.0],["Corey Kispert",14.0],["AJ Dybantsa",12.0],["Alex Sarr",12.0],["Bilal Coulibaly",6.0],["Kyshawn George",4.0]]
 };
 
 const apronStatus = tm => { // classify apron tier for trade-rule purposes
@@ -1611,7 +1628,7 @@ function loadTemplate(key){
   const t=TEMPLATES[key]; if(!t) return;
   TM.mode=t.mode;
   document.querySelector(`input[name="tmMode"][value="${t.mode}"]`).checked=true;
-  ["A","B","C"].forEach(s=>{ if(t.teams[s]) TM.teamKey[s]=t.teams[s]; TM.picks[s]=(t.picks[s]||[]).map(p=>({name:p[0],sal:p[1]})); });
+  ["A","B","C"].forEach(s=>{ if(t.teams[s]) TM.teamKey[s]=t.teams[s]; TM.picks[s]=(t.picks[s]||[]).map(p=>({name:p[0],sal:p[1],dest:p[2]})); });
   buildCards();
   if(t.mode===3 && t.takes){ ["A","B","C"].forEach(s=>{ if($("tmTake"+s)) $("tmTake"+s).value=t.takes[s]; }); }
   renderTrade();
@@ -1677,10 +1694,10 @@ function addPiece(s,mode){
   const team=TM.teamKey[s];
   if(mode==="pick"){
     const list=(ASSETS[team]||[]).filter(a=>a[1]>0); const i=$("tmPick"+s).value;
-    if(i==="") return; TM.picks[s].push({name:list[i][0],sal:list[i][1]});
+    if(i==="") return; TM.picks[s].push({name:list[i][0],sal:list[i][1],dest:activeSlots().find(x=>x!==s)});
   } else {
     const v=parseFloat($("tmCust"+s).value); if(!v||v<=0) return;
-    TM.picks[s].push({name:"Custom",sal:v}); $("tmCust"+s).value="";
+    TM.picks[s].push({name:"Custom",sal:v,dest:activeSlots().find(x=>x!==s)}); $("tmCust"+s).value="";
   }
   renderTrade();
 }
@@ -1696,8 +1713,15 @@ function renderTrade(){
     $("tmMeta"+s).textContent=`Committed ${fmt(tm.committed)}`+(tm.hardCap?` · hard-capped @ ${tm.hardCap==="apron1"?"1st":"2nd"} apron`:"");
     const box=$("tmChips"+s); box.innerHTML="";
     TM.picks[s].forEach((p,i)=>{
+      if(!p.dest||p.dest===s) p.dest=activeSlots().find(x=>x!==s);
       const c=document.createElement("span");c.className="tmchip";
-      c.innerHTML=`${p.name} $${p.sal.toFixed(1)}M <button title="remove">✕</button>`;
+      let destHtml="";
+      if(TM.mode===3){
+        const opts=activeSlots().filter(x=>x!==s).map(x=>`<option value="${x}" ${p.dest===x?"selected":""}>→ ${TEAMS[TM.teamKey[x]].name}</option>`).join("");
+        destHtml=` <select class="tmdest" style="font-size:11px;padding:1px 3px;border-radius:4px">${opts}</select>`;
+      }
+      c.innerHTML=`${p.name} $${p.sal.toFixed(1)}M${destHtml} <button title="remove">✕</button>`;
+      if(TM.mode===3){ c.querySelector("select").onchange=e=>{TM.picks[s][i].dest=e.target.value;renderTrade();}; }
       c.querySelector("button").onclick=()=>{TM.picks[s].splice(i,1);renderTrade();};
       box.appendChild(c);
     });
@@ -1706,14 +1730,14 @@ function renderTrade(){
 
   const totalSent=slots.reduce((a,s)=>a+sent[s],0);
 
-  // takes-back: 2-team auto (each gets the other's sent); 3-team manual
-  const take={};
+  // takes-back: 2-team auto (each gets the other's sent); 3-team from per-player destinations
+  const take={A:0,B:0,C:0};
   if(TM.mode===2){
     take.A=sent.B; take.B=sent.A;
-    slots.forEach(s=>{ const inp=$("tmTake"+s); inp.value=take[s].toFixed(1); inp.disabled=true; $("tmTakeHint"+s).textContent="auto (= what the other team sends)"; });
   } else {
-    slots.forEach(s=>{ const inp=$("tmTake"+s); inp.disabled=false; take[s]=parseFloat(inp.value)||0; $("tmTakeHint"+s).textContent="set how much this team absorbs"; });
+    slots.forEach(s=>{ TM.picks[s].forEach(p=>{ if(take[p.dest]!==undefined) take[p.dest]+=p.sal; }); });
   }
+  slots.forEach(s=>{ const inp=$("tmTake"+s); if(inp){ inp.value=take[s].toFixed(1); inp.disabled=true; $("tmTakeHint"+s).textContent = TM.mode===2 ? "auto (= what the other team sends)" : "auto (= players routed here)"; } });
   const totalTake=slots.reduce((a,s)=>a+take[s],0);
 
   $("tmSumOut").textContent=fmt(totalSent);
