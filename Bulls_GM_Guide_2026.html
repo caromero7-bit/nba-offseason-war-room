@@ -176,6 +176,17 @@
     .toolgrid,.grid2,.grid3,.toc-grid,.two-col-list{grid-template-columns:1fr;columns:1}
     h1.title{font-size:30px}
   }
+  /* ===== NEWS DECK: top story + last-move ticker ===== */
+  .topstory{margin:20px 0 6px;padding:16px 18px;border-radius:12px;background:linear-gradient(90deg,rgba(200,16,46,.14),transparent 70%);border:1px solid var(--heat-red);border-left:5px solid var(--heat-red2)}
+  .tsbadge{display:inline-block;background:var(--heat-red2);font-size:10px;font-weight:800;letter-spacing:1.5px;padding:3px 9px;border-radius:5px;margin-bottom:8px;text-transform:uppercase}
+  a.tshead{display:block;font-size:24px;line-height:1.18;font-weight:800;color:#fff;text-decoration:none;letter-spacing:-.3px}
+  a.tshead:hover{color:var(--heat-yellow);text-decoration:none}
+  .tssub{color:var(--muted);font-size:13.5px;margin-top:7px;max-width:760px}
+  .ticker{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;margin:10px 0 2px;padding:10px 14px;border:1px dashed var(--line);border-radius:10px;background:var(--panel)}
+  .tklabel{font-size:10px;letter-spacing:1.5px;color:var(--muted);text-transform:uppercase}
+  .ticker b{font-variant-numeric:tabular-nums;color:var(--heat-yellow);font-size:18px}
+  .tkmove{font-size:12.5px;color:var(--muted)}
+  @media(max-width:1100px){a.tshead{font-size:19px}}
 </style>
 </head>
 <body>
@@ -235,20 +246,93 @@
   <span class="kicker">Internal Front-Office Report · Chicago Bulls · Confidential</span>
   <h1 class="title">The <b>Timeline Decision</b>:<br>2026 Offseason GM Guide</h1>
   <p class="sub lead">A living strategic document covering the entire 2026 NBA offseason through July 1, 2026 — every trade, signing, option, and draft pick — built around one question: <b>after spending the cap space on Norman Powell and re-signing Josh Giddey, are the Bulls building around the kids or pushing for the playoffs now — and can one summer do both?</b></p>
+  <div class="topstory">
+    <span class="tsbadge" style="color:#fff">Top Story</span>
+    <a class="tshead" href="#newswire">BULLS GO ALL-IN ON OFFENSE: POWELL, GIDDEY, COLLINS</a>
+    <div class="tssub">Cap space spent on Day 1. A $9.4M room exception is left, a bottom-10 projected defense needs fixing, and December brings the timeline decision. <a href="#newswire">Full verified reports →</a></div>
+  </div>
+  <div class="ticker">
+    <span class="tklabel">Since the last move</span><b id="tkClock">—</b>
+    <span class="tkmove"><b style="font-size:12.5px;color:var(--text)">Latest:</b> Jonathan Kuminga re-signs with Atlanta ($24.3M) · Jul 1, late night</span>
+  </div>
   <div class="metarow">
-    <div class="chip">Report date: <b>July 1, 2026</b></div>
-    <div class="chip">Version <b>1.0 · Bulls Edition</b></div>
+    <div class="chip">Updated: <b>Jul 1, 2026 · late night</b></div>
     <div class="chip">2026-27 Cap: <b>$164.96M</b></div>
     <div class="chip">1st Apron: <b>$209.02M</b></div>
     <div class="chip">2nd Apron: <b>$221.69M</b></div>
     <div class="chip">Bulls status: <b>Cap space spent · $9.4M room exception live</b></div>
   </div>
-  <div class="note" style="margin-top:20px">
-    <b>How to use this document.</b> It is a <b>living guide</b>. Jump to the <a href="#tool">Salary Cap Machine</a> to drop any free agent or trade target onto any team and instantly see the effect on cap, tax, and both aprons. Say <b>“Update the Guide”</b> at any time and every affected section — depth charts, cap sheets, championship odds, big board — will be re-researched and revised, followed by a changelog. Figures verified against multiple public sources (ESPN, NBA.com, Spotrac, Hot Hot Hoops, Yahoo, B/R) as of the report date; forward-looking projections are explicitly labeled.
-  </div>
+  
   <hr class="flamediv">
   <div class="nationbar">SEE RED · MADHOUSE ON MADISON · DEFINE THE TIMELINE</div>
 </header>
+
+<!-- ============ NEWSWIRE HUB ============ -->
+<section id="newswire">
+  <h2>Newswire Hub <span class="pill hot">Your offseason command center</span></h2>
+  <p class="lead">One place to find anything and everything about the 2026 offseason — every insider, every tracker, every cap sheet, one click away — plus a running feed of reports I've already verified.</p>
+  <div class="note"><b>How this works:</b> a saved document can't stream live tweets on its own, so the launchpad below opens the <b>real, live</b> sources (Shams, Windhorst, Haynes, ESPN, NBA.com, Spotrac) in a new tab — always current. The <b>Latest Verified Reports</b> feed underneath is maintained by me: say <b>“Update the Guide”</b> and I re-scan every source and refresh it, or ask me to set a <b>daily auto-refresh</b> so it updates itself each morning.</p></div>
+
+  <h3>Live launchpad</h3>
+  <div class="wireGrid">
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Insiders on X (live)</h4>
+      <a href="https://x.com/ShamsCharania" target="_blank"><span class="dot"></span>Shams Charania</a>
+      <a href="https://x.com/ChrisBHaynes" target="_blank"><span class="dot"></span>Chris Haynes</a>
+      <a href="https://x.com/WindhorstESPN" target="_blank"><span class="dot"></span>Brian Windhorst</a>
+      <a href="https://x.com/TheSteinLine" target="_blank"><span class="dot"></span>Marc Stein</a>
+      <a href="https://x.com/JakeLFischer" target="_blank"><span class="dot"></span>Jake Fischer</a>
+      <a href="https://x.com/HoopsRumors" target="_blank"><span class="dot"></span>Hoops Rumors</a>
+      <a href="https://x.com/Underdog__NBA" target="_blank"><span class="dot"></span>Underdog NBA</a>
+    </div>
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Trade &amp; FA trackers (live)</h4>
+      <a href="https://www.espn.com/nba/story/_/id/48957844/" target="_blank"><span class="dot"></span>ESPN Trade Tracker</a>
+      <a href="https://www.nba.com/news/2026-offseason-trade-tracker" target="_blank"><span class="dot"></span>NBA.com Tracker</a>
+      <a href="https://www.hoopsrumors.com/" target="_blank"><span class="dot"></span>Hoops Rumors</a>
+      <a href="https://sports.yahoo.com/nba/" target="_blank"><span class="dot"></span>Yahoo NBA</a>
+      <a href="https://www.nbcsports.com/nba" target="_blank"><span class="dot"></span>NBC Sports Live</a>
+      <a href="https://basketball.realgm.com/wiretap" target="_blank"><span class="dot"></span>RealGM Wiretap</a>
+    </div>
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Cap &amp; contracts</h4>
+      <a href="https://www.spotrac.com/nba/" target="_blank"><span class="dot"></span>Spotrac</a>
+      <a href="https://www.basketball-reference.com/contracts/" target="_blank"><span class="dot"></span>Basketball-Reference</a>
+      <a href="https://www.spotrac.com/nba/cap/" target="_blank"><span class="dot"></span>Team Cap Tracker</a>
+      <a href="https://fanspo.com/nba" target="_blank"><span class="dot"></span>Fanspo (trade sim)</a>
+      <a href="https://sportsbusinessclassroom.com/nba-2026-27-apron-tracker/" target="_blank"><span class="dot"></span>Apron Tracker</a>
+    </div>
+    <div class="wireCard">
+      <h4 style="color:var(--heat-yellow)">Bulls beat</h4>
+      <a href="https://www.blogabull.com/" target="_blank"><span class="dot"></span>Blog a Bull</a>
+      <a href="https://www.si.com/nba/bulls" target="_blank"><span class="dot"></span>SI / OnSI Bulls</a>
+      <a href="https://www.nbcsportschicago.com/nba/chicago-bulls/" target="_blank"><span class="dot"></span>NBC Sports Chicago</a>
+      <a href="https://clutchpoints.com/nba/chicago-bulls" target="_blank"><span class="dot"></span>ClutchPoints Bulls</a>
+      <a href="https://pippenainteasy.com/" target="_blank"><span class="dot"></span>Pippen Ain't Easy</a>
+    </div>
+  </div>
+
+  <h3 style="margin-top:24px">Latest Verified Reports <span class="muted" style="font-size:12px">— last refreshed Jul 1, 2026 (late night)</span></h3>
+  <div class="feed">
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">Kuminga U-turn: after Atlanta declined his $24.3M team option, the Hawks re-signed him at $24.3M. Also: Kelly Oubre Jr. → Pacers (2yr/~$17M), Julian Champagnie re-signs SAS (3/$45M), Sandro Mamukelashvili → Lakers (4/$52M).</div><div class="s muted"><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>CBS/Yahoo</div><div class="h">Mitchell Robinson's Boston deal lands at 3yr/$47.4M. RFA Jalen Duren meets the Lakers again Wednesday; Detroit intends to keep him and Sacramento is lurking.</div><div class="s muted"><a href="https://www.cbssports.com/nba/news/nba-free-agency-2026-live-updates-trade-rumors-news-june-30/live/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Yahoo</div><div class="h">Draymond Green's opt-out (walking away from a guaranteed $27.7M) was engineered to open the Warriors' $15.1M MLE for a LeBron run — GSW now the clear market leader.</div><div class="s muted"><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">Day-1 signing flurry: Austin Reaves re-signs LAL (4yr/$185M), Coby White re-signs CHA (3/$74M), Al Horford declines $6M option &amp; returns to GSW (2/$14M), Mark Williams → Suns (3/$38M), Bogdan Bogdanović → Rockets (1yr).</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">More Day-1 deals: Tobias Harris → Spurs (2/$31M), Jaxson Hayes → Jazz (2/$12M), Jonathan Isaac re-signs ORL (1/$8M), Precious Achiuwa re-signs SAC (2/$11.5M), Mitchell Robinson → Celtics.</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Yahoo/HR</div><div class="h">James Harden declines his option and is negotiating with Cleveland — the Cavs' answer to their half-court creation gap.</div><div class="s muted"><a href="https://sports.yahoo.com/nba/live/nba-free-agency-2026-james-harden-declines-option-while-negotiating-with-cavs-lebron-james-lakers-decision-looms-182955882.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · <span class="breaking">Watch</span>ESPN</div><div class="h">LeBron James will not return to the Lakers; UFA weighing Golden State (can offer the $15.1M MLE), Cleveland (vet-min money only without a S&amp;T) &amp; San Antonio — 76ers and Magic have also registered interest. Cannot sign until July 6.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49226472/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jul 1 · Chris Haynes</div><div class="h">Heat sign Tim Hardaway Jr. (1yr/$6.5M) and re-sign Simone Fontecchio — adding bench shooting around Giannis.</div><div class="s muted"><a href="https://clutchpoints.com/nba/miami-heat/heat-news-tim-hardaway-jr-joins-giannis-antetokounmpo-in-miami" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · ESPN</div><div class="h">Andrew Wiggins opts in ($30.2M) and signs an opt-in-and-extend with Miami (3yr/$64M).</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49216841/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · Multiple</div><div class="h">Lakers land Quentin Grimes (4yr/$60M) and Collin Sexton (2yr/$19M); re-sign Austin Reaves (4/max).</div><div class="s muted"><a href="https://sports.yahoo.com/nba/live/nba-free-agency-news-trade-rumors-contracts-signings-live-updates-lebron-james-kawhi-leonard-jaylen-brown-144958712.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · NBC/ESPN</div><div class="h">Grizzlies trade Ja Morant to Portland for Jerami Grant &amp; Kris Murray.</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 29 · NBA.com</div><div class="h">Raptors acquire Kawhi Leonard from the Clippers for Brandon Ingram, Gradey Dick &amp; picks.</div><div class="s muted"><a href="https://www.nba.com/news/raptors-clippers-kawhi-leonard-trade" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 24 · ESPN</div><div class="h"><span class="breaking">Blockbuster</span>Bucks trade Giannis Antetokounmpo &amp; Bobby Portis to the Heat; Miami hard-capped at the first apron.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49149967/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 24 · ESPN</div><div class="h">Hornets trade LaMelo Ball &amp; Josh Green to Minnesota for Naz Reid, a 2033 first, three swaps and three seconds.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/48957844/" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun 30 · Hoops Rumors</div><div class="h">RFA holding pattern breaks: Josh Giddey re-signs with Chicago; Jonathan Kuminga hits UFA after Atlanta declines his $24.3M option.</div><div class="s muted"><a href="https://www.hoopsrumors.com/2026/07/free-agent-rumors-lebron-wolves-grimes-s-jones-bulls.html" target="_blank">Source ↗</a></div></div>
+    <div class="item"><div class="d">Jun · League</div><div class="h">2026-27 cap set: $164.96M cap · $200.43M tax · $209.02M first apron · $221.69M second apron.</div><div class="s muted"><a href="https://hoopswire.com/nba-officially-sets-salary-cap-tax-aprons-for-2026-27-season/" target="_blank">Source ↗</a></div></div>
+  </div>
+  <p class="muted" style="font-size:12px">Feed maintained from verified reporting. For breaking, unconfirmed items in real time, use the live launchpad above — then tell me “Update the Guide” to fold anything new into this feed and the rest of the document.</p>
+</section>
 
 <!-- ============ INTERACTIVE TOOL ============ -->
 <section id="tool">
@@ -379,73 +463,6 @@
 .tmnum:disabled{opacity:.55}
 .tmcard-res{background:#0c0e14;border:1px solid var(--line);border-radius:10px;padding:12px;margin:6px 0}
 </style>
-
-<!-- ============ NEWSWIRE HUB ============ -->
-<section id="newswire">
-  <h2>Newswire Hub <span class="pill hot">Your offseason command center</span></h2>
-  <p class="lead">One place to find anything and everything about the 2026 offseason — every insider, every tracker, every cap sheet, one click away — plus a running feed of reports I've already verified.</p>
-  <div class="note"><b>How this works:</b> a saved document can't stream live tweets on its own, so the launchpad below opens the <b>real, live</b> sources (Shams, Windhorst, Haynes, ESPN, NBA.com, Spotrac) in a new tab — always current. The <b>Latest Verified Reports</b> feed underneath is maintained by me: say <b>“Update the Guide”</b> and I re-scan every source and refresh it, or ask me to set a <b>daily auto-refresh</b> so it updates itself each morning.</p></div>
-
-  <h3>Live launchpad</h3>
-  <div class="wireGrid">
-    <div class="wireCard">
-      <h4 style="color:var(--heat-yellow)">Insiders on X (live)</h4>
-      <a href="https://x.com/ShamsCharania" target="_blank"><span class="dot"></span>Shams Charania</a>
-      <a href="https://x.com/ChrisBHaynes" target="_blank"><span class="dot"></span>Chris Haynes</a>
-      <a href="https://x.com/WindhorstESPN" target="_blank"><span class="dot"></span>Brian Windhorst</a>
-      <a href="https://x.com/TheSteinLine" target="_blank"><span class="dot"></span>Marc Stein</a>
-      <a href="https://x.com/JakeLFischer" target="_blank"><span class="dot"></span>Jake Fischer</a>
-      <a href="https://x.com/HoopsRumors" target="_blank"><span class="dot"></span>Hoops Rumors</a>
-      <a href="https://x.com/Underdog__NBA" target="_blank"><span class="dot"></span>Underdog NBA</a>
-    </div>
-    <div class="wireCard">
-      <h4 style="color:var(--heat-yellow)">Trade &amp; FA trackers (live)</h4>
-      <a href="https://www.espn.com/nba/story/_/id/48957844/" target="_blank"><span class="dot"></span>ESPN Trade Tracker</a>
-      <a href="https://www.nba.com/news/2026-offseason-trade-tracker" target="_blank"><span class="dot"></span>NBA.com Tracker</a>
-      <a href="https://www.hoopsrumors.com/" target="_blank"><span class="dot"></span>Hoops Rumors</a>
-      <a href="https://sports.yahoo.com/nba/" target="_blank"><span class="dot"></span>Yahoo NBA</a>
-      <a href="https://www.nbcsports.com/nba" target="_blank"><span class="dot"></span>NBC Sports Live</a>
-      <a href="https://basketball.realgm.com/wiretap" target="_blank"><span class="dot"></span>RealGM Wiretap</a>
-    </div>
-    <div class="wireCard">
-      <h4 style="color:var(--heat-yellow)">Cap &amp; contracts</h4>
-      <a href="https://www.spotrac.com/nba/" target="_blank"><span class="dot"></span>Spotrac</a>
-      <a href="https://www.basketball-reference.com/contracts/" target="_blank"><span class="dot"></span>Basketball-Reference</a>
-      <a href="https://www.spotrac.com/nba/cap/" target="_blank"><span class="dot"></span>Team Cap Tracker</a>
-      <a href="https://fanspo.com/nba" target="_blank"><span class="dot"></span>Fanspo (trade sim)</a>
-      <a href="https://sportsbusinessclassroom.com/nba-2026-27-apron-tracker/" target="_blank"><span class="dot"></span>Apron Tracker</a>
-    </div>
-    <div class="wireCard">
-      <h4 style="color:var(--heat-yellow)">Bulls beat</h4>
-      <a href="https://www.blogabull.com/" target="_blank"><span class="dot"></span>Blog a Bull</a>
-      <a href="https://www.si.com/nba/bulls" target="_blank"><span class="dot"></span>SI / OnSI Bulls</a>
-      <a href="https://www.nbcsportschicago.com/nba/chicago-bulls/" target="_blank"><span class="dot"></span>NBC Sports Chicago</a>
-      <a href="https://clutchpoints.com/nba/chicago-bulls" target="_blank"><span class="dot"></span>ClutchPoints Bulls</a>
-      <a href="https://pippenainteasy.com/" target="_blank"><span class="dot"></span>Pippen Ain't Easy</a>
-    </div>
-  </div>
-
-  <h3 style="margin-top:24px">Latest Verified Reports <span class="muted" style="font-size:12px">— last refreshed Jul 1, 2026 (late night)</span></h3>
-  <div class="feed">
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">Kuminga U-turn: after Atlanta declined his $24.3M team option, the Hawks re-signed him at $24.3M. Also: Kelly Oubre Jr. → Pacers (2yr/~$17M), Julian Champagnie re-signs SAS (3/$45M), Sandro Mamukelashvili → Lakers (4/$52M).</div><div class="s muted"><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>CBS/Yahoo</div><div class="h">Mitchell Robinson's Boston deal lands at 3yr/$47.4M. RFA Jalen Duren meets the Lakers again Wednesday; Detroit intends to keep him and Sacramento is lurking.</div><div class="s muted"><a href="https://www.cbssports.com/nba/news/nba-free-agency-2026-live-updates-trade-rumors-news-june-30/live/" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Yahoo</div><div class="h">Draymond Green's opt-out (walking away from a guaranteed $27.7M) was engineered to open the Warriors' $15.1M MLE for a LeBron run — GSW now the clear market leader.</div><div class="s muted"><a href="https://sports.yahoo.com/articles/nba-free-agency-2026-winners-150005370.html" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">Day-1 signing flurry: Austin Reaves re-signs LAL (4yr/$185M), Coby White re-signs CHA (3/$74M), Al Horford declines $6M option &amp; returns to GSW (2/$14M), Mark Williams → Suns (3/$38M), Bogdan Bogdanović → Rockets (1yr).</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Multiple</div><div class="h">More Day-1 deals: Tobias Harris → Spurs (2/$31M), Jaxson Hayes → Jazz (2/$12M), Jonathan Isaac re-signs ORL (1/$8M), Precious Achiuwa re-signs SAC (2/$11.5M), Mitchell Robinson → Celtics.</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">New</span>Yahoo/HR</div><div class="h">James Harden declines his option and is negotiating with Cleveland — the Cavs' answer to their half-court creation gap.</div><div class="s muted"><a href="https://sports.yahoo.com/nba/live/nba-free-agency-2026-james-harden-declines-option-while-negotiating-with-cavs-lebron-james-lakers-decision-looms-182955882.html" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · <span class="breaking">Watch</span>ESPN</div><div class="h">LeBron James will not return to the Lakers; UFA weighing Golden State (can offer the $15.1M MLE), Cleveland (vet-min money only without a S&amp;T) &amp; San Antonio — 76ers and Magic have also registered interest. Cannot sign until July 6.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49226472/" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jul 1 · Chris Haynes</div><div class="h">Heat sign Tim Hardaway Jr. (1yr/$6.5M) and re-sign Simone Fontecchio — adding bench shooting around Giannis.</div><div class="s muted"><a href="https://clutchpoints.com/nba/miami-heat/heat-news-tim-hardaway-jr-joins-giannis-antetokounmpo-in-miami" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 30 · ESPN</div><div class="h">Andrew Wiggins opts in ($30.2M) and signs an opt-in-and-extend with Miami (3yr/$64M).</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49216841/" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 30 · Multiple</div><div class="h">Lakers land Quentin Grimes (4yr/$60M) and Collin Sexton (2yr/$19M); re-sign Austin Reaves (4/max).</div><div class="s muted"><a href="https://sports.yahoo.com/nba/live/nba-free-agency-news-trade-rumors-contracts-signings-live-updates-lebron-james-kawhi-leonard-jaylen-brown-144958712.html" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 30 · NBC/ESPN</div><div class="h">Grizzlies trade Ja Morant to Portland for Jerami Grant &amp; Kris Murray.</div><div class="s muted"><a href="https://www.nbcsports.com/nba/live/2026-nba-free-agency-live-tracker-updates-news-rumors-top-players-signings-trades" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 29 · NBA.com</div><div class="h">Raptors acquire Kawhi Leonard from the Clippers for Brandon Ingram, Gradey Dick &amp; picks.</div><div class="s muted"><a href="https://www.nba.com/news/raptors-clippers-kawhi-leonard-trade" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 24 · ESPN</div><div class="h"><span class="breaking">Blockbuster</span>Bucks trade Giannis Antetokounmpo &amp; Bobby Portis to the Heat; Miami hard-capped at the first apron.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/49149967/" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 24 · ESPN</div><div class="h">Hornets trade LaMelo Ball &amp; Josh Green to Minnesota for Naz Reid, a 2033 first, three swaps and three seconds.</div><div class="s muted"><a href="https://www.espn.com/nba/story/_/id/48957844/" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun 30 · Hoops Rumors</div><div class="h">RFA holding pattern breaks: Josh Giddey re-signs with Chicago; Jonathan Kuminga hits UFA after Atlanta declines his $24.3M option.</div><div class="s muted"><a href="https://www.hoopsrumors.com/2026/07/free-agent-rumors-lebron-wolves-grimes-s-jones-bulls.html" target="_blank">Source ↗</a></div></div>
-    <div class="item"><div class="d">Jun · League</div><div class="h">2026-27 cap set: $164.96M cap · $200.43M tax · $209.02M first apron · $221.69M second apron.</div><div class="s muted"><a href="https://hoopswire.com/nba-officially-sets-salary-cap-tax-aprons-for-2026-27-season/" target="_blank">Source ↗</a></div></div>
-  </div>
-  <p class="muted" style="font-size:12px">Feed maintained from verified reporting. For breaking, unconfirmed items in real time, use the live launchpad above — then tell me “Update the Guide” to fold anything new into this feed and the rest of the document.</p>
-</section>
 
 <!-- ============ EXECUTIVE SUMMARY ============ -->
 <section id="exec">
@@ -1231,6 +1248,7 @@
   <h2><span class="num">18</span>Changelog</h2>
   <table>
     <tr><th>Version</th><th>Date</th><th>Changes</th></tr>
+    <tr><td><b>1.1</b></td><td>Jul 1, 2026</td><td><b>News-front redesign:</b> hero now leads with a Top Story banner and a live "since the last move" ticker (counts up from the most recent verified transaction). Removed the "How to use this document" box and the version chip — the page reads like a team news destination, not a manual. Version tracking lives here in the changelog only. Moved the Salary Cap Machine and Trade Machine below the Newswire so the news leads the page.</td></tr>
     <tr><td><b>1.0</b></td><td>Jul 1, 2026</td><td><b>Bulls Edition launched</b> as the third companion guide (switch links to the Heat and Spurs war rooms in the sidebar). Inherits the shared league engine — Newswire Hub, Salary Cap Machine (defaulting to CHI), Trade Machine with three preloaded Bulls templates (McDaniels 2-team, Duren S&amp;T, McDaniels 3-team), timeline, full 60-pick draft board, FA power ranking + moves tracker, LeBron suitor ranking, all 30 team reports and post-Finals power rankings. New Bulls-specific sections: <b>War Room</b> (projected roster/cap sheet ~$153M, $9.4M room exception, ~$47M tax cushion), <b>Defense Report</b> (fixing a bottom-10 projected defense), <b>Creative Trades</b> (incl. the December buy-or-sell fork), <b>Front Office Big Board</b>, <b>Dream Board</b> (McDaniels / Duren / Cam Thomas tiers) and <b>Season Blueprint</b> built around the Dec 15 checkpoint. Corrected the shared Bulls report (Coby White → CHA, Vučević off the books; Collins/Okoro/Dillingham added). Red-and-black theme; official logo embedded — file fully portable.</td></tr>
   </table>
   <div class="callout"><b>Say "Update the Guide"</b> and I will: re-search every NBA transaction since this build, refresh the Newswire/FA boards/timeline, re-price the Bulls' checkpoint math, sync all 30 team reports, and append a changelog entry. Scheduled auto-refreshes run at 8am, 12pm and 5pm daily.</div>
@@ -1717,6 +1735,20 @@ document.querySelectorAll(".herologo,.navlogo img").forEach(el=>{el.src=LOGO_DAT
       else { btn.textContent="All 60 picks shown"; btn.disabled=true; btn.style.opacity=".55"; btn.style.cursor="default"; }
     }
   });
+})();
+
+/* ===== LAST-MOVE TICKER ===== */
+const LAST_MOVE={ts:"2026-07-02T02:00:00Z"};
+(function(){
+  const el=document.getElementById("tkClock"); if(!el) return;
+  const t0=new Date(LAST_MOVE.ts).getTime();
+  function fmt(){ let d=Math.max(0,Date.now()-t0);
+    const dd=Math.floor(d/86400000); d-=dd*86400000;
+    const h=Math.floor(d/3600000); d-=h*3600000;
+    const m=Math.floor(d/60000); d-=m*60000;
+    const s=Math.floor(d/1000);
+    el.textContent=(dd?dd+"d ":"")+h+"h "+m+"m "+s+"s"; }
+  fmt(); setInterval(fmt,1000);
 })();
 </script>
 </body>
